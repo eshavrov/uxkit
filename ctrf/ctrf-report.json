@@ -20,7 +20,7 @@
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
-        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Autocomplete/Autocomplete.test.tsx",
         "retries": 0,
         "flaky": false,
         "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > down arrow"
@@ -31,7 +31,7 @@
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
-        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Autocomplete/Autocomplete.test.tsx",
         "retries": 0,
         "flaky": false,
         "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > down arrow"
@@ -42,7 +42,7 @@
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
-        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Autocomplete/Autocomplete.test.tsx",
         "retries": 0,
         "flaky": false,
         "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > alt + down arrow"
@@ -53,7 +53,7 @@
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
-        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Autocomplete/Autocomplete.test.tsx",
         "retries": 0,
         "flaky": false,
         "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > up arrow"
@@ -64,7 +64,7 @@
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
-        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Autocomplete/Autocomplete.test.tsx",
         "retries": 0,
         "flaky": false,
         "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > up arrow"
@@ -75,7 +75,7 @@
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
-        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Autocomplete/Autocomplete.test.tsx",
         "retries": 0,
         "flaky": false,
         "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > enter"
@@ -86,7 +86,7 @@
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
-        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Autocomplete/Autocomplete.test.tsx",
         "retries": 0,
         "flaky": false,
         "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > escape"
@@ -97,7 +97,7 @@
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
-        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Autocomplete/Autocomplete.test.tsx",
         "retries": 0,
         "flaky": false,
         "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > escape"
@@ -108,7 +108,7 @@
         "status": "other",
         "rawStatus": "todo",
         "type": "unit",
-        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Breadcrumb/breadcrumb.test.ts",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Breadcrumb/breadcrumb.test.ts",
         "retries": 0,
         "flaky": false,
         "suite": "breadcrumb.test.ts > breadcrumb trigger"

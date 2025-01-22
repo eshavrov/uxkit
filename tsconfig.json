@@ -29,7 +29,7 @@
     "noUnusedParameters": false,
     "outDir": "build",
     "paths": {
-      "@components/*": ["*"],
+      "@components/*": ["components/*"],
       "@hooks": ["hooks"],
       "@hooks/*": ["hooks/*"],
       "@utils": ["utils"],

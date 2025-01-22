@@ -1,0 +1,358 @@
+/* TODO: Move to Shared styles */
+.assistiveText {
+  position: absolute !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  text-transform: none !important;
+  white-space: nowrap !important;
+}
+
+.tableWrapper {
+  background-color: transparent;
+  color: var(--table-cell-color);
+  width: 100%;
+  border-top: 1px solid var(--table-border-color);
+}
+
+.nav {
+  overflow-x: auto;
+}
+
+.table {
+  background-color: var(--table-background);
+  display: table;
+  width: 100%;
+  border-collapse: separate; /* Don't collapse */
+  border-spacing: 0;
+  border-end-end-radius: var(--table-bottom-radius);
+  border-end-start-radius: var(--table-bottom-radius);
+  border-start-end-radius: var(--table-header-radius);
+  border-start-start-radius: var(--table-header-radius);
+  color: var(--table-cell-color);
+}
+
+.tr {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+  height: var(--table-row-height, 32px);
+  max-height: var(--table-row-height, 32px);
+  contain: strict;
+}
+
+.thead {
+  background-color: var(--table-header-background);
+  z-index: 2;
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+}
+
+.th {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: var(--table-header-font-size);
+  line-height: 1.5rem;
+  letter-spacing: 0.01em;
+  display: table-cell;
+
+  /* vertical-align: inherit; */
+  text-align: right;
+  padding: 0;
+  background-color: var(--table-header-background);
+  color: var(--table-header-color);
+  position: relative;
+  pointer-events: none;
+  user-select: none;
+  box-shadow:
+    inset -1px -1px 0 0 var(--table-header-border-color),
+    inset 0 1px 0 0 var(--table-header-border-color);
+  contain: strict;
+
+  /* --- */
+  border: 2px solid white;
+  border-right: none;
+  border-top: none;
+  vertical-align: bottom;
+  box-shadow: inset 0 0 56px 0 rgba(0, 0, 0, 0.03), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.03);
+}
+
+.cellFirst {
+  border-left: none;
+}
+
+.cellContent {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.group {
+  text-align: center !important;
+}
+
+.tbody {
+  border-collapse: separate;
+  border-spacing: 0;
+  outline: none;
+}
+
+.td {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.43;
+  letter-spacing: 0.01em;
+  display: table-cell;
+  vertical-align: inherit;
+  border-bottom: 1px solid var(--table-row-border-color);
+  text-align: right;
+  padding: 6px 8px;
+  color: var(--table-cell-color);
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  position: relative;
+}
+
+.marker:hover,
+.marker:focus {
+  cursor: cell;
+  color: var(--table-cell-outline);
+}
+
+.marker:hover::after,
+.marker:focus::after {
+  left: 2px;
+  top: calc(50% - 4px);
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 4px 0 4px 4px;
+  border-color: transparent transparent transparent #0094ffd1;
+  transform: rotate(0deg);
+}
+
+.noWrap {
+  white-space: nowrap;
+}
+
+.nav .td {
+  overflow: hidden;
+}
+
+.rowActive {
+  background-color: var(--table-row-selected-background);
+}
+
+.unsortable {
+  padding: 8px;
+}
+
+.stickyLeft {
+  position: sticky;
+  left: 0;
+  box-shadow: inset 2px 0 0 0 var(--table-header-border-color);
+  z-index: 1;
+  padding-left: 16px;
+  padding-right: 16px;
+  border-right: 1px solid var(--table-row-border-color);
+  border-bottom: 1px solid var(--table-row-border-color);
+}
+
+.btnDirection {
+  appearance: none;
+  border: none;
+  color: inherit;
+  cursor: pointer;
+  padding: 8px;
+  margin: 0;
+  background-color: transparent;
+  align-items: center;
+  pointer-events: all;
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: var(--table-header-font-size);
+  line-height: 1.5rem;
+  display: inline-flex;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.iconDirectionCaret {
+  margin-left: 2px;
+  width: 16px;
+  height: 16px;
+  place-self: end;
+  margin-bottom: 2px;
+}
+
+.rightAlign {
+  text-align: right;
+}
+
+.leftAlign {
+  text-align: left;
+}
+
+.centerAlign {
+  text-align: center;
+}
+
+.splitPage {
+  position: relative;
+}
+
+.splitPage .td {
+  border-top: 1px solid var(--table-row-separate-color);
+}
+
+.splitPage .td:first-child::before {
+  content: attr(data-page);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  transform: translate(-10%, -10%);
+  color: var(--table-cell-color);
+  border-radius: 4px;
+  background: var(--table-background);
+  opacity: 0.825;
+  padding: 0 2px;
+  font-size: 0.7em;
+  font-weight: 500;
+}
+
+.th:not([aria-sort]) {
+  padding: 8px;
+}
+
+/* .th:first-child {
+  box-shadow: inset 0 0 0 1px var(--table-header-border-color);
+} */
+
+.rightAlign .btnDirection {
+  flex-direction: row-reverse;
+}
+
+.centerAlign .btnDirection {
+  justify-content: center;
+}
+
+.move .td.cellActive {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--table-cell-outline);
+  background-color: var(--table-cell-selected-background);
+  border-radius: 4px;
+}
+
+.th:focus,
+.th > .btnDirection:focus-visible {
+  outline: none;
+  box-shadow: inset 0 0 0 2px var(--table-cell-outline);
+  border-radius: 4px;
+}
+
+.thead .th:first-child,
+.thead .th:first-child > .btnDirection:focus-visible {
+  border-start-start-radius: var(--table-header-radius);
+}
+
+.thead .th:last-child,
+.thead .th:last-child > .btnDirection:focus-visible {
+  border-start-end-radius: var(--table-header-radius);
+}
+
+.tfoot {
+  position: sticky;
+  background-color: var(--table-footer-background);
+  bottom: -2px;
+  box-shadow: inset 0 1px 0 0 rgb(214 214 214);
+}
+
+.tfoot .td {
+  height: 36px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--table-border-color);
+}
+
+
+.td.leftBorder {
+  border-left: 2px solid var(--table-cell-group-border-color);
+}
+
+.td.rightBorder + .td {
+  border-left: 2px solid var(--table-cell-group-border-color);;
+}
+
+/* Fixed */
+
+.cellFixLeft,
+.cellFixRight {
+  z-index: 2;
+}
+
+.cellFixRight:last-child:not(.cellFixSticky) {
+  border-right-color: transparent;
+}
+
+.cellFixLeftFirst::after,
+.cellFixLeftLast::after {
+  position: absolute;
+  top: 0;
+  right: -1px;
+  bottom: -1px;
+  width: 20px;
+  transform: translateX(100%);
+  transition: box-shadow 0.3s;
+  content: "";
+  pointer-events: none;
+}
+
+.cellFixLeft-all::after {
+  display: none;
+}
+
+.cellFixRightFirst,
+.cellFixRightLast {
+  box-shadow: -1px 0 0 red;
+}
+
+.cellFixRightFirst::after,
+.cellFixRightLast::after {
+  position: absolute;
+  top: 0;
+  bottom: -1px;
+  left: -1px;
+  width: 20px;
+  transform: translateX(-100%);
+  transition: box-shadow 0.3s;
+  content: "";
+  pointer-events: none;
+}
+
+.cellEllipsis {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+/* Fixed first or last should special process */
+.cellFixLeftFirst,
+.cellFixLeftLast,
+.cellFixRightFirst.cellFixRightLast {
+  overflow: visible;
+}
+
+.cellSpanContent {
+  pointer-events: auto;
+  display: inline-block;
+  cursor: default;
+}

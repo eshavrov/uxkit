@@ -1,20 +1,20 @@
 import React from "react";
 import cn from "classnames";
 
-import { Breadcrumb } from "./uikit/Breadcrumb";
-import { Button } from "./uikit/Button";
-import { Autocomplete } from "./uikit/Autocomplete";
-import { Select } from "./uikit/Select";
-import { Fieldset } from "./uikit/Fieldset";
-import { Field } from "./uikit/Field";
-import { Checkbox } from "./uikit/Checkbox";
-import { Checkboxes } from "./uikit/Checkboxes";
-import { DatePicker } from "./uikit/DatePicker";
-import { Group } from "./uikit/Group";
-import { Tabs } from "./uikit/Tabs";
-import { Tag } from "./uikit/Tag";
-import { Radio } from "./uikit/Radio/Radio";
-import { RadioGroup } from "./uikit/Radio/RadioGroup";
+import { Breadcrumb } from "./components/Breadcrumb";
+import { Button } from "./components/Button";
+import { Autocomplete } from "./components/Autocomplete";
+import { Select } from "./components/Select";
+import { Fieldset } from "./components/Fieldset";
+import { Field } from "./components/Field";
+import { Checkbox } from "./components/Checkbox";
+import { Checkboxes } from "./components/Checkboxes";
+import { DatePicker } from "./components/DatePicker";
+import { Group } from "./components/Group";
+import { Tabs } from "./components/Tabs";
+import { Tag } from "./components/Tag";
+import { Radio } from "./components/Radio/Radio";
+import { RadioGroup } from "./components/Radio/RadioGroup";
 
 import s from "App.module.css";
 
