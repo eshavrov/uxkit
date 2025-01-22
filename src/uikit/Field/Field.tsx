@@ -1,8 +1,8 @@
 import cn from 'classnames';
 import React from 'react';
 
-import get from '../../utils/get';
-import { FormContext } from '../Context/FormContext';
+import get from '@utils/get';
+import { FormContext } from '@components/Context/FormContext';
 
 import s from './Field.module.css';
 

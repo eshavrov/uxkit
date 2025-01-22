@@ -29,6 +29,11 @@
     "noUnusedParameters": false,
     "outDir": "build",
     "paths": {
+      "@components/*": ["*"],
+      "@hooks": ["hooks"],
+      "@hooks/*": ["hooks/*"],
+      "@utils": ["utils"],
+      "@utils/*": ["utils/*"]
     },
     "plugins": [
       {
@@ -62,7 +67,7 @@
     "*.config.js",
     "**/*.test.ts*"
   ],
-  "include": ["src", "src/**/*", "web/src", "web/src/**/*", "__webpack__", "__webpack__/**/*"],
+  "include": ["src", "src/**/*", "__webpack__", "__webpack__/**/*"],
   "ts-node": {
     "compilerOptions": {
       "module": "CommonJS",

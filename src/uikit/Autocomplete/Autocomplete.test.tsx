@@ -4,7 +4,7 @@ import { act, fireEvent, render } from '@testing-library/react';
 
 import { Autocomplete } from './Autocomplete';
 
-jest.mock('../hooks/useSize', () => ({
+jest.mock('@hooks/useSize', () => ({
     __esModule: true,
     default: () => ({ width: 600, height: 300 }),
     useElementSize: () => ({

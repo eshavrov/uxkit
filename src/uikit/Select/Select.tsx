@@ -2,7 +2,7 @@ import cn from 'classnames';
 import React from 'react';
 import { createPortal } from 'react-dom';
 
-import { useElementSize } from '../../hooks/useSize';
+import { useElementSize } from '@hooks/useSize';
 
 import s from './Select.module.css';
 import { getPosition } from './helpers';

@@ -1,7 +1,10 @@
 {
   "scripts": {
     "build": "cross-env-shell NODE_ENV=production webpack ${npm_package_config_prod} --stats-children",
-    "start": "cross-env-shell NODE_ENV=development webpack serve ${npm_package_config_dev}"
+    "start": "cross-env-shell NODE_ENV=development webpack serve ${npm_package_config_dev}",
+    "test": "cross-env-shell jest --config __jest__/jest.config.js --maxWorkers 2 --watchAll=false --ci",
+    "test-coverage": "jest --coverage --config __jest__/jest.config.js",
+    "test-watch": "jest --watch --config __jest__/jest.config.js"
   },
   "config": {
     "dev": "--config __webpack__/dev.config.ts",
@@ -22,6 +25,7 @@
     "@babel/preset-typescript": "^7.26.0",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.5.15",
     "@swc/core": "^1.10.9",
+    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/react": "^19.0.7",
     "@types/react-dom": "^19.0.3",
@@ -34,9 +38,12 @@
     "fork-ts-checker-webpack-plugin": "^9.0.2",
     "html-loader": "^5.1.0",
     "interpolate-html-plugin": "^4.0.0",
+    "jest-css-modules-transform": "^4.4.2",
+    "jest-environment-jsdom": "^29.7.0",
     "mini-css-extract-plugin": "^2.9.2",
     "style-loader": "^4.0.0",
     "terser-webpack-plugin": "^5.3.11",
+    "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
     "tsconfig-paths-webpack-plugin": "^4.2.0",
     "typescript": "^5.7.3",

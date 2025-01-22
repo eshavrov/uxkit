@@ -8,6 +8,8 @@ npm i --save-dev @babel/preset-react
 npm i --save-dev @babel/preset-typescript
 npm i --save-dev @pmmmwh/react-refresh-webpack-plugin
 npm i --save-dev @swc/core
+npm i --save-dev @testing-library/jest-dom
+npm i --save-dev @testing-library/react
 npm i --save-dev @testing-library/react
 npm i --save-dev @types/react
 npm i --save-dev @types/react-dom
@@ -20,9 +22,12 @@ npm i --save-dev dotenv
 npm i --save-dev fork-ts-checker-webpack-plugin
 npm i --save-dev html-loader
 npm i --save-dev interpolate-html-plugin
+npm i --save-dev jest-css-modules-transform
+npm i --save-dev jest-environment-jsdom
 npm i --save-dev mini-css-extract-plugin
 npm i --save-dev style-loader
 npm i --save-dev terser-webpack-plugin
+npm i --save-dev ts-jest
 npm i --save-dev ts-node
 npm i --save-dev tsconfig-paths-webpack-plugin
 npm i --save-dev typescript
