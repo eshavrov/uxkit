@@ -1,0 +1,118 @@
+{
+  "results": {
+    "tool": {
+      "name": "jest"
+    },
+    "summary": {
+      "tests": 9,
+      "passed": 8,
+      "failed": 0,
+      "pending": 0,
+      "skipped": 0,
+      "other": 1,
+      "start": 1737583638920,
+      "stop": 1737583639774
+    },
+    "tests": [
+      {
+        "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger keyboard interaction down arrow If the textbox is not empty and the listbox is displayed, moves visual focus to the first suggested value.",
+        "duration": 31,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "retries": 0,
+        "flaky": false,
+        "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > down arrow"
+      },
+      {
+        "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger keyboard interaction down arrow If the textbox is empty and the listbox is not displayed, opens the listbox and moves visual focus to the first option.",
+        "duration": 10,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "retries": 0,
+        "flaky": false,
+        "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > down arrow"
+      },
+      {
+        "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger keyboard interaction alt + down arrow Opens the listbox without moving focus or changing selection.",
+        "duration": 6,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "retries": 0,
+        "flaky": false,
+        "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > alt + down arrow"
+      },
+      {
+        "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger keyboard interaction up arrow If the textbox is not empty and the listbox is displayed, moves visual focus to the last suggested value.",
+        "duration": 6,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "retries": 0,
+        "flaky": false,
+        "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > up arrow"
+      },
+      {
+        "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger keyboard interaction up arrow If the textbox is empty, first opens the listbox if it is not already displayed and then moves visual focus to the last option.",
+        "duration": 6,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "retries": 0,
+        "flaky": false,
+        "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > up arrow"
+      },
+      {
+        "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger keyboard interaction enter Closes the listbox if it is displayed.",
+        "duration": 7,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "retries": 0,
+        "flaky": false,
+        "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > enter"
+      },
+      {
+        "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger keyboard interaction escape If the listbox is displayed, closes it.",
+        "duration": 4,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "retries": 0,
+        "flaky": false,
+        "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > escape"
+      },
+      {
+        "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger keyboard interaction escape If the listbox is not displayed, clears the textbox.",
+        "duration": 7,
+        "status": "passed",
+        "rawStatus": "passed",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Autocomplete/Autocomplete.test.tsx",
+        "retries": 0,
+        "flaky": false,
+        "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] textbox trigger > keyboard interaction > escape"
+      },
+      {
+        "name": "breadcrumb trigger need test cases for breadcrumbs",
+        "duration": 0,
+        "status": "other",
+        "rawStatus": "todo",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/uikit/Breadcrumb/breadcrumb.test.ts",
+        "retries": 0,
+        "flaky": false,
+        "suite": "breadcrumb.test.ts > breadcrumb trigger"
+      }
+    ]
+  }
+}

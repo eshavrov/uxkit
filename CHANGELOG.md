@@ -41,3 +41,4 @@ npm i --save-dev webpack-cli
 npm i --save-dev webpack-dev-server
 npm i --save-dev webpack-merge
 npm i --save-dev webpackbar
+npm i --save-dev jest-ctrf-json-reporter
