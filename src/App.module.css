@@ -1,21 +1,27 @@
 .root {
-  background-color: #eee;
-  position: absolute;
-  padding: 5rem;
-
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 .container {
-  margin: 1rem 0;
+  margin: 0rem 0;
 }
 
 .block {
+  background-color: #fafafa;
+  border-radius: 4px;
+  border: 1px solid #c0c0c0;
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
   position: relative;
-  border: 1px solid gray;
-  padding: 1rem 1.5rem;
-  margin: 1rem;
+}
+
+.hide {
+  background-color: #ffdddd;
+  border: 1px dashed red;
+  color: black;
+  opacity: 0.1;
+}
+
+.divider {
+  border-bottom: var(--card-border-bottom);
+  padding-bottom: var(--layout-fieldset-gap);
 }

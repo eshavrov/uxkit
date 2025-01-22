@@ -1,0 +1,191 @@
+.wrapper {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 1rem;
+  line-height: unset;
+  list-style: none;
+  font-family: var(--font-family);
+  display: inline-flex;
+  align-items: baseline;
+  cursor: pointer;
+}
+
+.wrapper::after {
+  display: inline-block;
+  width: 0;
+  overflow: hidden;
+  content: "\a0";
+}
+
+.wrapper + .wrapper {
+  margin-inline-start: 8px;
+}
+
+.root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 1rem;
+  line-height: 1;
+  list-style: none;
+  font-family: var(--font-family);
+  top: 0.2em;
+  position: relative;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.inner {
+  box-sizing: border-box;
+  position: relative;
+  top: 0;
+  inset-inline-start: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  direction: ltr;
+  background-color: #fff;
+  border: 1px solid var(--border-color-base);
+  border-radius: 4px;
+  border-collapse: separate;
+  transition: all 0.3s;
+}
+
+.checked .inner {
+  background-color: #1677ff;
+  border-color: #1677ff;
+}
+
+.checked::after {
+  position: absolute;
+  top: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 4px;
+  visibility: hidden;
+  border: 2px solid #1677ff;
+  content: "";
+  transition: all 0.3s;
+}
+
+.inner::after {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  inset-inline-start: 21.5%;
+  display: table;
+  width: 5.7142857142857135px;
+  height: 9.142857142857142px;
+  border: 2px solid #fff;
+  border-top: 0;
+  border-inline-start: 0;
+  transform: rotate(45deg) scale(0) translate(-50%, -50%);
+  opacity: 0;
+  content: "";
+  transition: all 0.1s cubic-bezier(0.71, -0.46, 0.88, 0.6), opacity 0.1s;
+}
+
+.disabled .inner {
+  background: rgba(0, 0, 0, 0.04);
+  border-color: var(--border-color-base);
+}
+
+.input:focus-visible + .inner {
+  outline: 2px solid var(--primary-focus);
+  outline-offset: 2px;
+  transition: outline-offset 0s, outline 0s;
+}
+
+.root + .span {
+  padding-inline-start: 8px;
+  padding-inline-end: 8px;
+  user-select: none;
+}
+
+.rootIndeterminate .inner::after {
+  top: 50%;
+  inset-inline-start: 50%;
+  width: 8px;
+  height: 8px;
+  background-color: #1677ff;
+  border: 0;
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+  content: "";
+}
+
+.wrapper:hover .root::after {
+  visibility: visible;
+}
+
+.wrapper:not(.wrapperDisabled):hover .inner,
+.root:not(.disabled):hover .inner {
+  border-color: #1677ff;
+}
+
+.wrapperChecked:not(.wrapperDisabled):hover .inner,
+.checked:not(.disabled):hover .inner {
+  background-color: #4096ff;
+  border-color: transparent;
+}
+
+.wrapper:not(.wrapperDisabled):hover .checked:not(.disabled) .inner {
+  background-color: #4096ff;
+  border-color: transparent;
+}
+
+.wrapper:not(.wrapperDisabled):hover .checked:not(.disabled)::after {
+  border-color: #4096ff;
+}
+
+.inside {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.checked .inner::after {
+  opacity: 1;
+  transform: rotate(45deg) scale(1) translate(-50%, -50%);
+  transition: all 0.2s cubic-bezier(0.12, 0.4, 0.29, 1.46) 0.1s;
+}
+
+.wrapperChecked:not(.wrapperDisabled):hover .root::after,
+.checked:not(.disabled):hover .root::after {
+  border-color: #4096ff;
+}
+
+.wrapperDisabled {
+  cursor: not-allowed;
+}
+
+.disabled,
+.disabled .input {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.disabled .inner::after {
+  border-color: rgba(0, 0, 0, 0.25);
+}
+
+.disabled::after {
+  display: none;
+}
+
+.disabled + .span {
+  color: rgba(0, 0, 0, 0.25);
+}

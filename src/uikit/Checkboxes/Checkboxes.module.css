@@ -1,0 +1,88 @@
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: var(--table-cell-color);
+  background-color: var(--table-background);
+  border-radius: 6px;
+  box-shadow: inset 0 0 0 1px var(--table-header-border-color);
+}
+
+.thead {
+  border-radius: 6px 6px 0 0;
+  background-color: var(--table-header-background);
+  z-index: 1;
+  position: sticky;
+  top: 0; /* Don't forget this, required for the stickiness */
+}
+
+.headers {
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+  color: var(--table-header-color);
+  contain: strict;
+}
+
+.disabled {
+  color: #333;
+  opacity: 0.9;
+}
+
+.th {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: var(--table-header-font-size);
+  line-height: 1.5rem;
+  letter-spacing: 0.01em;
+  display: table-cell;
+  vertical-align: baseline;
+  text-align: center;
+  padding: 0;
+  background-color: var(--table-header-background);
+  position: relative;
+  pointer-events: none;
+  user-select: none;
+  box-shadow:
+    inset -1px -1px 0 0 var(--table-header-border-color),
+    inset 0 1px 0 0 var(--table-header-border-color);
+  contain: strict;
+}
+
+.tbody {
+  border-collapse: collapse;
+  border-spacing: 0;
+  outline: none;
+}
+
+.tr {
+  color: inherit;
+  display: table-row;
+  vertical-align: middle;
+  outline: 0;
+  height: var(--table-row-height, 2.4rem);
+  max-height: var(--table-row-height, 2.4rem);
+  contain: strict;
+}
+
+.td {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.43;
+  letter-spacing: 0.01em;
+  display: table-cell;
+  vertical-align: baseline;
+  border-bottom: 1px solid rgb(224 224 224);
+  text-align: center;
+  color: var(--table-cell-color);
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.checkbox {
+  display: block;
+  padding: 6px 8px;
+}

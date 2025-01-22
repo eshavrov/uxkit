@@ -1,0 +1,12 @@
+.root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  container-type: inline-size;
+}
+
+.body {
+  position: relative;
+  padding: calc(var(--span) - 2px) var(--span) calc(var(--span) + 5px);
+}

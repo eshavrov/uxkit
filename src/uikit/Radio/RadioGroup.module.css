@@ -1,0 +1,17 @@
+.root {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.88);
+  font-size: 0;
+  line-height: 1.5714285714285714;
+  list-style: none;
+  font-family: var(--font-family);
+  display: inline-block;
+  display: flex;
+  flex-direction: column;
+}
+
+.root.root-rtl {
+  direction: rtl;
+}

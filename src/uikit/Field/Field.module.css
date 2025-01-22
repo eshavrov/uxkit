@@ -1,0 +1,58 @@
+.root {
+  --field-label-color: rgba(0, 0, 0, 0.65);
+  --field-label-required-color: rgba(0, 0, 0, 0.65);
+  --field-label-readonly-color: #575757;
+  --field-label-weight: 600;
+
+  padding: 0;
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.label {
+  display: block;
+  touch-action: manipulation;
+  user-select: none;
+  white-space: nowrap;
+  color: var(--field-label-color);
+  font-weight: var(--field-label-weight);
+}
+
+.labelRequired {
+  color: var(--field-label-required-color);
+}
+
+.labelReadonly {
+  color: var(--field-label-readonly-color);
+}
+
+.required {
+  margin-left: 1px;
+}
+
+/* TODO: Move to Shared styles */
+.labelHidden {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.error {
+  color: red;
+}
+
+.errorDetail {
+  padding-left: 1em;
+  margin: 0;
+}
+
+.message {
+  color: red;
+}

@@ -2,7 +2,7 @@ import cn from 'classnames';
 import React from 'react';
 import { createPortal } from 'react-dom';
 
-import useSize, { useElementSize } from '../hooks/useSize';
+import useSize, { useElementSize } from '../../hooks/useSize';
 import { getPosition } from '../Autocomplete/helpers';
 
 import s from './Autocomplete.module.css';

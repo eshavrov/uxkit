@@ -1,0 +1,59 @@
+.root {
+  --card-head-background-color: rgba(0, 0, 0, 0.08);
+  --span: 12px;
+
+  border-radius: 2px;
+  box-sizing: border-box;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 1rem;
+  line-height: 1.5;
+  list-style: none;
+  margin-bottom: 6px;
+  margin: 0;
+  position: relative;
+  background-color: var(--card-background-color);
+  border: var(--card-border);
+  padding: 0;
+  container-type: inline-size;
+}
+
+.legend:not(:focus):not(:active) {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  width: 1px;
+  height: 1px;
+  white-space: nowrap;
+}
+
+.header {
+  /*  The legend replacement  */
+  position: relative; /* sticky; */
+  top: 0;
+  padding: 4px 12px;
+  line-height: 20px;
+  user-select: none;
+
+  /* background-color: black;
+  color: white; */
+
+  background-color: var(--card-head-background-color);
+  margin-bottom: -1px;
+  font-weight: 500;
+  font-size: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  border-radius: 2px 2px 0 0;
+
+  /* display: inline-block; */
+  flex: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: black;
+}
+
+.body {
+  position: relative;
+  padding: calc(var(--span) - 2px) var(--span) calc(var(--span) + 5px);
+}
