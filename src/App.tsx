@@ -15,6 +15,7 @@ import { Tabs } from "./components/Tabs";
 import { Tag } from "./components/Tag";
 import { Radio } from "./components/Radio/Radio";
 import { RadioGroup } from "./components/Radio/RadioGroup";
+import { Table } from "./components/Table";
 
 import s from "App.module.css";
 
@@ -276,6 +277,42 @@ export const App = () => {
         <Tag color="blue">Blue</Tag>
       </Component>
 
+      <Component title="Table">
+        <Table 
+          columns={[{
+            dataIndex: 'c1',
+            title: 'Col 1'
+          },
+          {
+            dataIndex: 'c2',
+            title: 'Col 2',
+            children: [
+              {
+                dataIndex: 'c3',
+                title: 'Col 3',
+              },
+              {
+                dataIndex: 'c4',
+                title: 'Col 4',
+              }
+            ]
+          },
+          {
+            dataIndex: 'c5',
+            title: 'Col 5'
+          }]}
+
+          dataSource={[
+            { c1: 'Boysenberry'},
+            { c2: 'Huckleberry', c1: 'Guava'},
+            { c4: 'Fig'},
+            { c3: 'Eggplant'},
+            { c5: 'Boysenberry', c2: 'Cranberry'},
+            { c1: 'Grape'},
+          ]}
+        />
+      </Component>
+
       <Component title="Alert" />
       <Component title="Avatar" />
       <Component title="Badge" />
@@ -306,7 +343,6 @@ export const App = () => {
       <Component title="Spacing" />
       <Component title="Spin" />
       <Component title="StatusBar" />
-      <Component title="Table" />
       <Component title="Title" />
       <Component title="Toolbar" />
       <Component title="TreeSelect" />
