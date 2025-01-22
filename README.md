@@ -33,7 +33,7 @@ Useful scripts include:
 
 #### `npm run lint`
 
-> boolean check if code conforms to linting rules - uses remark & eslint
+> boolean check if code conforms to linting rules - uses eslint
 
 - `npm run lint:fix` - will automatically fix
 
