@@ -31,6 +31,12 @@ Useful scripts include:
 
 > build project
 
+#### `npm run lint`
+
+> boolean check if code conforms to linting rules - uses remark & eslint
+
+- `npm run lint:fix` - will automatically fix
+
 #### `npm run test`
 
 > boolean check if unit tests all pass - uses jest

@@ -43,7 +43,7 @@ const stringToPath = function(str: string) {
 
 /** Used to match property names within property paths. */
 const reIsDeepProp = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/,
-    reIsPlainProp = /^\w*$/;
+  reIsPlainProp = /^\w*$/;
 
 /**
  * Checks if `value` is a property name and not a property path.
@@ -79,7 +79,7 @@ const baseGet = (object: any, path: string | string[]) => {
   path = castPath(path, object);
 
   const index = 0,
-      length = path.length;
+    length = path.length;
 
   while (object != null && index < length) {
     // @ts-expect-error: ...

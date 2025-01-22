@@ -6,7 +6,9 @@ npm i --save react-router-dom
 npm i --save-dev @babel/preset-env
 npm i --save-dev @babel/preset-react
 npm i --save-dev @babel/preset-typescript
+npm i --save-dev @eslint/js
 npm i --save-dev @pmmmwh/react-refresh-webpack-plugin
+npm i --save-dev @stylistic/eslint-plugin
 npm i --save-dev @swc/core
 npm i --save-dev @testing-library/jest-dom
 npm i --save-dev @testing-library/react
@@ -19,6 +21,7 @@ npm i --save-dev cross-env-shell
 npm i --save-dev css-loader
 npm i --save-dev css-minimizer-webpack-plugin
 npm i --save-dev dotenv
+npm i --save-dev eslint
 npm i --save-dev fork-ts-checker-webpack-plugin
 npm i --save-dev html-loader
 npm i --save-dev interpolate-html-plugin

@@ -101,11 +101,11 @@ const filterOptions = <Option extends AutocompleteOption>(
 
   const filteredOptions = isNone
     ? // do not filter any options if autocomplete is none
-      options
+    options
     : options.filter(
-        (opt) =>
-          filter.length === 0 || opt.label.toLowerCase().startsWith(filter),
-      );
+      (opt) =>
+        filter.length === 0 || opt.label.toLowerCase().startsWith(filter),
+    );
 
   // Use populated options array to initialize firstOption and lastOption.
   const numItems = filteredOptions.length;
