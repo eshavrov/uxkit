@@ -37,7 +37,7 @@ const isDev = mode === 'development';
 const plugins = [
   isDev &&
     new WebpackBar({
-      name: `5M WEB Client`,
+      name: `UxKit`,
       color: '#004fb0',
       profile: true,
     }),
