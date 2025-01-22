@@ -1,4 +1,4 @@
-/* eslint-disable complexity */
+ 
 import cn from 'classnames';
 import React from 'react';
 

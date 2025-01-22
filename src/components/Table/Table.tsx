@@ -757,7 +757,7 @@ export const Table = React.memo(
      *  Triggered on keydown. Checks if an arrow key was pressed, and (if possible)
      *  moves focus to the next valid cell in the direction of the arrow key.
      */
-    // eslint-disable-next-line complexity
+     
     const checkFocusChange = (event: any) => {
       if (!event || navigationDisabled) {
         return;

@@ -155,9 +155,9 @@ const Header = React.forwardRef(
     const columnFillPercentage =
       stretchWidthPercent != null && Number.isInteger(stretchWidthPercent)
         ? Math.max(
-            1,
-            Math.floor((10 * (100 - stretchWidthPercent)) / columnCount) / 10,
-          )
+          1,
+          Math.floor((10 * (100 - stretchWidthPercent)) / columnCount) / 10,
+        )
         : undefined;
 
     const rows = React.useMemo(

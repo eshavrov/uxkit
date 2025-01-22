@@ -147,7 +147,7 @@ export function useColumns<RecordType>(
   columns: Columns<RecordType>,
   flattenColumns: readonly Column<RecordType>[],
   realScrollWidth: number | undefined,
-] {
+  ] {
   const baseColumns = React.useMemo<Columns<RecordType>>(
     () => columns ?? convertChildrenToColumns(children),
     [columns, children],
