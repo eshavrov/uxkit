@@ -1,0 +1,21 @@
+.root {
+  background-color: #eee;
+  position: absolute;
+  padding: 5rem;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.container {
+  margin: 1rem 0;
+}
+
+.block {
+  position: relative;
+  border: 1px solid gray;
+  padding: 1rem 1.5rem;
+  margin: 1rem;
+}

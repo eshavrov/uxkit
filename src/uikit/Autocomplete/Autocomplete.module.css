@@ -1,0 +1,179 @@
+.comboboxList {
+  position: relative;
+  width: 100%;
+}
+
+.listboxContainer {
+  display: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  overflow: hidden;
+  position: absolute;
+  cursor: pointer;
+  font-size: 1rem;
+  font-variant: initial;
+  z-index: 1050;
+  background-color: var(--autocomplete-fill);
+  border: 2px var(--autocomplete-fill) solid;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  color: var(--autocomplete-color);
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+}
+
+.listbox {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: fit-content;
+  overflow: auto;
+}
+
+.li {
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  min-height: 32px;
+  padding: 5px 12px;
+  position: relative;
+  transition: background 0.3s ease;
+  line-height: var(--line-height);
+  color: var(--autocomplete-color);
+}
+
+.group {
+  cursor: pointer;
+  display: inline-flex;
+  padding: 0;
+  width: 100%;
+}
+
+.disabled {
+  cursor: not-allowed;
+}
+
+.status {
+  border-radius: 4px;
+  box-sizing: border-box;
+  cursor: not-allowed;
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 400;
+  margin: 0;
+  min-height: 32px;
+  padding: 5px 12px;
+  position: relative;
+  user-select: none;
+  line-height: var(--line-height);
+  color: var(--autocomplete-status-color);
+}
+
+/* TODO: Move to Shared styles */
+.assistiveText {
+  position: absolute;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  text-transform: none;
+  white-space: nowrap;
+}
+
+.input,
+.button {
+  border: 1px solid var(--border-color-base);
+  box-sizing: border-box;
+  display: flex;
+  font-size: 1rem;
+  height: 2.3rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+  vertical-align: bottom;
+  background-color: var(--autocomplete-fill);
+  color: var(--autocomplete-color);
+  font-family: var(--font-family);
+  line-height: var(--line-height);
+}
+
+.input {
+  border-radius: var(--autocomplete-border-radius) 0 0 var(--autocomplete-border-radius);
+  border-right: none;
+  outline: none;
+  padding-block: 0;
+  padding-inline: 10px 6px;
+  width: 100%;
+  cursor: text;
+}
+
+.button {
+  border-left: none;
+  border-radius: 0 var(--autocomplete-border-radius) var(--autocomplete-border-radius) 0;
+  color: rgb(0 90 156);
+  cursor: inherit;
+  outline: none;
+  padding-right: 6px;
+  padding-top: 6px;
+  width: 24px;
+}
+
+input[disabled],
+button[disabled] {
+  background-color: var(--autocomplete-disabled-fill);
+  cursor: not-allowed;
+}
+
+.button[aria-expanded="true"] svg {
+  transform: rotate(180deg) translate(0, -3px);
+
+  /* only chrome */
+  forced-color-adjust: auto;
+}
+
+/* focus and hover styling */
+
+.group.focus:not(.disabled),
+.group:hover:not(.disabled) {
+  border-radius: var(--autocomplete-border-radius);
+  outline-offset: 0;
+  border-color: var(--primary-focus-group-border);
+  box-shadow: var(--primary-focus-shadow);
+}
+
+.group:hover:not(.disabled) {
+  outline: 2px solid var(--primary-hover);
+  outline-offset: 2px;
+}
+
+.group.focus:not(.disabled) {
+  outline: 2px solid var(--primary-focus);
+  outline-offset: 2px;
+}
+
+.group.focus polygon,
+.group:hover polygon {
+  fill-opacity: 1;
+}
+
+.listbox.focus .li[aria-selected="true"],
+.li:hover {
+  background-color: var(--autocomplete-option-fill);
+  border: 2px solid currentColor;
+  padding: 3px 10px;
+}
+
+.li:hover {
+  border: 2px solid var(--primary-hover);
+}

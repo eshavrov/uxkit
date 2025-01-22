@@ -12,7 +12,7 @@ export const devServer: DevServerConfiguration = {
     progress: true, // Prints compilation progress in percentage in the browser.
   },
 
-  port: 4000,
+  port: 4321,
   /**
    * Writes files to output path (default: false)
    * Build dir is not cleared using <output: {clean:true}>
