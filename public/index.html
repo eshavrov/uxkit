@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="%PUBLIC_URL%/apple-touch-icon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="%PUBLIC_URL%/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="%PUBLIC_URL%/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="%PUBLIC_URL%/android-chrome-192x192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="%PUBLIC_URL%/android-chrome-512x512.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="theme-color" content="#000000"/>
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+  <title>5M</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root">
+      <style>
+        .container {
+          margin: auto;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          top: 0;
+          right: 0;
+          width: 36px;
+          height: 36px;
+        }
+        @-moz-keyframes spin {
+          from { -moz-transform: rotate(0deg); }
+          to { -moz-transform: rotate(360deg); }
+        }
+        @-webkit-keyframes spin {
+          from { -webkit-transform: rotate(0deg); }
+          to { -webkit-transform: rotate(360deg); }
+        }
+        @keyframes spin {
+          from {transform:rotate(0deg);}
+          to {transform:rotate(360deg);}
+        }
+      </style>
+      <div
+        role="progressbar"
+        aria-valuemax="1"
+        aria-valuemin="0"
+        class="container"
+      >
+        <div
+          style="width:36px;height:36px;animation: spin 0.75s infinite linear"
+        >
+          <svg height="100%" viewBox="0 0 32 32" width="100%">
+            <circle cx="16" cy="16" fill="none" r="14" strokeWidth="4" style="stroke: #84d2e4;stroke-width: 4px;opacity: 0.5" />
+            <circle cx="16" cy="16" fill="none" r="14" strokeWidth="4" style="stroke: #1976D2;stroke-width: 4px;stroke-dasharray: 80;stroke-dashoffset: 60" />
+          </svg>
+        </div>
+      </div>
+    </div>
+    <table class="shortcuts"></table>
+</body>
+</html>

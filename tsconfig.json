@@ -1,0 +1,73 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "allowUnreachableCode": false,
+    "alwaysStrict": true,
+    "baseUrl": "src/",
+    "composite": true,
+    "declaration": true,
+    "declarationMap": true,
+    "downlevelIteration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "importHelpers": true,
+    "incremental": true,
+
+    "isolatedModules": true,
+    "jsx": "react",
+    "lib": ["dom", "dom.iterable", "esnext"],
+
+    "module": "esnext",
+    "moduleResolution": "node",
+    "noEmit": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noResolve": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "outDir": "build",
+    "paths": {
+    },
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "customTemplate": "./customTemplate.js"
+        }
+      }
+    ],
+    "preserveSymlinks": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
+
+    "rootDirs": ["src", "__jest__", "__webpack__"],
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "target": "es2020",
+    "typeRoots": ["node_modules/@types", "src/types", "src/@types"],
+    "useUnknownInCatchVariables": false
+  },
+  "exclude": [
+    "node_modules",
+    "build",
+    "coverage",
+    "webpack.*.js",
+    "*.config.js",
+    "**/*.test.ts*"
+  ],
+  "include": ["src", "src/**/*", "web/src", "web/src/**/*", "__webpack__", "__webpack__/**/*"],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS",
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true
+    }
+  }
+}
