@@ -179,16 +179,18 @@ function getUpdatedIndex(
 
 // check if element is visible in browser view port
 function isElementInView(element: HTMLElement) {
-  const bounding = element.getBoundingClientRect();
+  return false;
+  // TODO: Add optimization
+  // const bounding = element.getBoundingClientRect();
 
-  return (
-    bounding.top >= 0 &&
-    bounding.left >= 0 &&
-    bounding.bottom <=
-      (window.innerHeight || document.documentElement.clientHeight) &&
-    bounding.right <=
-      (window.innerWidth || document.documentElement.clientWidth)
-  );
+  // return (
+  //   bounding.top >= 0 &&
+  //   bounding.left >= 0 &&
+  //   bounding.bottom <=
+  //     (window.innerHeight || document.documentElement.clientHeight) &&
+  //   bounding.right <=
+  //     (window.innerWidth || document.documentElement.clientWidth)
+  // );
 }
 
 // check if an element is currently scrollable
