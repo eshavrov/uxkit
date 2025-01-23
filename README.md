@@ -43,3 +43,11 @@ Useful scripts include:
 
 - `npm run test-coverage` - indicates that test coverage information should be collected and reported in the output. 
 - `npm run test-watch` - will run core tests in watch-mode
+
+### Standards
+
+- Web Content Accessibility Guidelines (WCAG) 2.2 publication history [WCAG-2.2](https://www.w3.org/standards/history/WCAG22/)
+- W3C Accessibility Guidelines (WCAG) 3.0 publication history [WCAG-3.0](https://www.w3.org/standards/history/wcag-3.0/)
+- Section 508 [link](https://www.section508.gov/)
+- ARIA Authoring Practices Guide [APG](https://www.w3.org/WAI/ARIA/apg/)
+
