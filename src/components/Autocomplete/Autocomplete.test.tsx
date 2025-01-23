@@ -58,11 +58,11 @@ const AutocompleteComponent = () => {
   );
 };
 
-/* See https://www.w3.org/WAI/ARIA/apg/example-index/combobox/combobox-autocomplete-list.html#kbd_label */
+/* See https://www.w3.org/WAI/ARIA/apg/example-index/combobox/combobox-autocomplete-list.html#kbd_label_textbox */
 describe('autocomplete[aria-autocomplete="list"] textbox trigger', () => {
-  describe('keyboard interaction', () => {
+  describe('Textbox. keyboard interaction', () => {
     describe('down arrow', () => {
-      test('If the textbox is not empty and the listbox is displayed, moves visual focus to the first suggested value.', () => {
+      test('If the textbox is not empty and the listbox is displayed, moves visual focus to the first suggested value. DOM focus remains on the textbox.', () => {
         const { getByLabelText } = render(<AutocompleteComponent />);
 
         const textbox = getByLabelText('AutocompleteFruits');
@@ -86,7 +86,7 @@ describe('autocomplete[aria-autocomplete="list"] textbox trigger', () => {
         expect(textbox).toHaveFocus();
       });
 
-      test('If the textbox is empty and the listbox is not displayed, opens the listbox and moves visual focus to the first option.', () => {
+      test('If the textbox is empty and the listbox is not displayed, opens the listbox and moves visual focus to the first option. DOM focus remains on the textbox.', () => {
         const { getByLabelText, debug } = render(<AutocompleteComponent />);
 
         const textbox = getByLabelText('AutocompleteFruits');
@@ -147,7 +147,7 @@ describe('autocomplete[aria-autocomplete="list"] textbox trigger', () => {
     });
 
     describe('up arrow', () => {
-      test('If the textbox is not empty and the listbox is displayed, moves visual focus to the last suggested value.', () => {
+      test('If the textbox is not empty and the listbox is displayed, moves visual focus to the last suggested value. DOM focus remains on the textbox.', () => {
         const { getByLabelText } = render(<AutocompleteComponent />);
 
         const textbox = getByLabelText('AutocompleteFruits');
@@ -171,7 +171,7 @@ describe('autocomplete[aria-autocomplete="list"] textbox trigger', () => {
         expect(textbox).toHaveFocus();
       });
 
-      test('If the textbox is empty, first opens the listbox if it is not already displayed and then moves visual focus to the last option.', () => {
+      test('If the textbox is empty, first opens the listbox if it is not already displayed and then moves visual focus to the last option. DOM focus remains on the textbox.', () => {
         const { getByLabelText, debug } = render(<AutocompleteComponent />);
 
         const textbox = getByLabelText('AutocompleteFruits');
@@ -277,6 +277,56 @@ describe('autocomplete[aria-autocomplete="list"] textbox trigger', () => {
         // check the textbox is  empty
         expect(textbox.value).toEqual('');
       });
+    });
+  });
+});
+
+/* See https://www.w3.org/WAI/ARIA/apg/example-index/combobox/combobox-autocomplete-list.html#kbd_label_listbox */
+describe('autocomplete[aria-autocomplete="list"] listbox trigger', () => {
+  describe('Listbox Popup. keyboard interaction', () => {
+    describe('enter', () => {
+      test.todo('Sets the textbox value to the content of the focused option in the listbox.');
+      test.todo('Closes the listbox.');
+      test.todo('Sets visual focus on the textbox.');
+    });
+
+    describe('escape', () => {
+      test.todo('Closes the listbox.');
+      test.todo('Sets visual focus on the textbox.');
+    });
+
+    describe('down arrow', () => {
+      test.todo('Moves visual focus to the next option.');
+      test.todo('If visual focus is on the last option, moves visual focus to the first option.');
+      test.todo('Note: This wrapping behavior is useful when [Home] and [End] move the editing cursor as described below.');
+    });
+
+    describe('up arrow', () => {
+      test.todo('Moves visual focus to the previous option.');
+      test.todo('If visual focus is on the first option, moves visual focus to the last option.');
+      test.todo('Note: This wrapping behavior is useful when [Home] and [End] move the editing cursor as described below.');
+    });
+
+    describe('right arrow', () => {
+      test.todo('Moves visual focus to the textbox and moves the editing cursor one character to the right.');
+    });
+
+    describe('left arrow', () => {
+      test.todo('Moves visual focus to the textbox and moves the editing cursor one character to the left.');
+    });
+
+    describe('home', () => {
+      test.todo('Moves visual focus to the textbox and places the editing cursor at the beginning of the field.');
+    });
+
+    describe('end', () => {
+      test.todo('Moves visual focus to the textbox and places the editing cursor at the end of the field.');
+    });
+
+    describe('printable characters', () => {
+      test.todo('Moves visual focus to the textbox.');
+      test.todo('Types the character in the textbox.');
+      test.todo('Options in the listbox are filtered based on characters in the textbox.');
     });
   });
 });
