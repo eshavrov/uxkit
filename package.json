@@ -3,12 +3,12 @@
     "build": "cross-env-shell NODE_ENV=production webpack ${npm_package_config_prod} --stats-children",
     "start": "cross-env-shell NODE_ENV=development webpack serve ${npm_package_config_dev}",
     "test": "cross-env-shell jest --config __jest__/jest.config.js --maxWorkers 2 --watchAll=false --ci",
-    "test-coverage": "jest --coverage --config __jest__/jest.config.js",
-    "test-watch": "jest --watch --config __jest__/jest.config.js",
+    "test:coverage": "jest --coverage --config __jest__/jest.config.js",
+    "test:watch": "jest --watch --config __jest__/jest.config.js",
     "lint": "eslint src/**",
     "lint:fix": "eslint src/** --fix",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "storybook": "storybook dev -p 4323",
+    "storybook:build": "storybook build"
   },
   "config": {
     "dev": "--config __webpack__/dev.config.ts",

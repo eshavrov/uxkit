@@ -23,26 +23,59 @@ _Two steps_
 
 Useful scripts include:
 
-#### `npm run start`
+#### Run project
 
-> run project
+   ```sh
+   npm run start
+   ```
 
-#### `npm run build`
+#### Build project
 
-> build project
+   ```sh
+   npm run build
+   ```
 
-#### `npm run lint`
+#### Linting
 
 > boolean check if code conforms to linting rules - uses eslint
 
-- `npm run lint:fix` - will automatically fix
+   ```sh
+   npm run lint
+   ```
 
-#### `npm run test`
+> will automatically fix
+
+   ```sh
+   npm run lint:fix
+   ```
+
+#### Run tests
 
 > boolean check if unit tests all pass - uses jest
 
-- `npm run test-coverage` - indicates that test coverage information should be collected and reported in the output. 
-- `npm run test-watch` - will run core tests in watch-mode
+   ```sh
+   npm run test
+   ```
+
+> indicates that test coverage information should be collected and reported in the output.
+   ```sh
+   npm run test:coverage
+   ```
+
+> will run core tests in watch-mode
+   ```sh
+   npm run test:watch
+   ```
+
+#### Storybook
+
+   ```sh
+   npm run storybook
+   ```
+
+   ```sh
+   npm run storybook:build
+   ```
 
 ### Standards
 
