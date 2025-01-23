@@ -9,7 +9,7 @@ type ButtonSize = 'large' | 'middle' | 'small';
 
 export type ButtonType = 'dashed' | 'default' | 'link' | 'primary' | 'text';
 
-interface Props {
+export interface Props {
   [key: `data-${string}`]: string;
 
   /** Option to fit button width to its parent width */

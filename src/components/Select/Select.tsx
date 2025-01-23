@@ -26,7 +26,6 @@ export interface Props {
   name?: string;
   options: SelectOption[];
   placeholder?: string;
-  title?: string;
   value: string;
   disabled?: boolean;
 
