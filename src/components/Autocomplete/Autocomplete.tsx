@@ -3,7 +3,7 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 
 import useSize, { useElementSize } from '@hooks/useSize';
-import { getPosition } from './helpers';
+import { getPosition } from '@components/Select/helpers';
 
 import s from './Autocomplete.module.css';
 
@@ -221,17 +221,17 @@ export const Autocomplete = React.memo(
             setActivedescendant(option.id);
 
             // TODO: Add optimization?
-            // if (!isOptionInView(option, listboxNode.current)) {
-            option.scrollIntoView?.({
-              behavior: 'auto',
-              block: 'center',
-            });
-            // }
+            if (isListboxOpened) {
+              option.scrollIntoView?.({
+                behavior: 'smooth',
+                block: 'nearest',
+              });
+            }
           } else {
             setActivedescendant('');
           }
         },
-        [listboxHasVisualFocus],
+        [listboxHasVisualFocus, isListboxOpened],
       );
 
       React.useEffect(() => {
@@ -896,6 +896,7 @@ export const Autocomplete = React.memo(
           comboboxContainerNode.current,
           listboxContainerNode.current,
           listboxScrollNode.current.offsetWidth,
+          listboxScrollNode.current.clientHeight,
         );
 
         setListboxContainerStyle(styles);
@@ -929,6 +930,13 @@ export const Autocomplete = React.memo(
       }, [disabled]);
 
       const assistiveText = assistiveStatus ?? status;
+
+      // React.useEffect(()=>{
+      //   if (isListboxOpened) {
+      //     lock()
+      //     return () => { unlock() };
+      //   }
+      // }, [isListboxOpened]);
 
       return (
         <div className={cn(s.combobox, s.comboboxList, className)}>

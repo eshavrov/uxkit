@@ -15,6 +15,7 @@ export const getPosition = (
   const listboxRect = listboxContainer.getBoundingClientRect();
 
   const space = 8;
+  const scrollY = self.scrollY;
 
   const bodyHeight = document.body.clientHeight;
   const bodyRight = document.body.clientWidth - space;
@@ -24,10 +25,10 @@ export const getPosition = (
   const maxHeightBottom = bodyHeight - space - comboboxRect.bottom - space;
 
   if (maxHeightBottom >= maxHeightTop || maxHeightBottom >= preferredHeight) {
-    style.top = comboboxRect.bottom + space;
+    style.top = comboboxRect.bottom + space + scrollY;
     style.maxHeight = maxHeightBottom;
   } else {
-    style.top = comboboxRect.top - listboxRect.height - space;
+    style.top = comboboxRect.top - listboxRect.height - space + scrollY;
     style.maxHeight = maxHeightTop;
   }
 
