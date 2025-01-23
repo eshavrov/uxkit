@@ -4,19 +4,19 @@
       "name": "jest"
     },
     "summary": {
-      "tests": 26,
+      "tests": 28,
       "passed": 8,
       "failed": 0,
       "pending": 0,
       "skipped": 0,
-      "other": 18,
-      "start": 1737657816097,
-      "stop": 1737657817064
+      "other": 20,
+      "start": 1737667018830,
+      "stop": 1737667020080
     },
     "tests": [
       {
         "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger Textbox. keyboard interaction down arrow If the textbox is not empty and the listbox is displayed, moves visual focus to the first suggested value. DOM focus remains on the textbox.",
-        "duration": 36,
+        "duration": 28,
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
@@ -27,7 +27,7 @@
       },
       {
         "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger Textbox. keyboard interaction down arrow If the textbox is empty and the listbox is not displayed, opens the listbox and moves visual focus to the first option. DOM focus remains on the textbox.",
-        "duration": 13,
+        "duration": 9,
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
@@ -38,7 +38,7 @@
       },
       {
         "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger Textbox. keyboard interaction alt + down arrow Opens the listbox without moving focus or changing selection.",
-        "duration": 16,
+        "duration": 9,
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
@@ -49,7 +49,7 @@
       },
       {
         "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger Textbox. keyboard interaction up arrow If the textbox is not empty and the listbox is displayed, moves visual focus to the last suggested value. DOM focus remains on the textbox.",
-        "duration": 6,
+        "duration": 5,
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
@@ -60,7 +60,7 @@
       },
       {
         "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger Textbox. keyboard interaction up arrow If the textbox is empty, first opens the listbox if it is not already displayed and then moves visual focus to the last option. DOM focus remains on the textbox.",
-        "duration": 7,
+        "duration": 6,
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
@@ -71,7 +71,7 @@
       },
       {
         "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger Textbox. keyboard interaction enter Closes the listbox if it is displayed.",
-        "duration": 8,
+        "duration": 6,
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
@@ -82,7 +82,7 @@
       },
       {
         "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger Textbox. keyboard interaction escape If the listbox is displayed, closes it.",
-        "duration": 5,
+        "duration": 4,
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
@@ -93,7 +93,7 @@
       },
       {
         "name": "autocomplete[aria-autocomplete=\"list\"] textbox trigger Textbox. keyboard interaction escape If the listbox is not displayed, clears the textbox.",
-        "duration": 5,
+        "duration": 8,
         "status": "passed",
         "rawStatus": "passed",
         "type": "unit",
@@ -299,6 +299,28 @@
         "retries": 0,
         "flaky": false,
         "suite": "Autocomplete.test.tsx > autocomplete[aria-autocomplete=\"list\"] listbox trigger > Listbox Popup. keyboard interaction > printable characters"
+      },
+      {
+        "name": "breadcrumb trigger need test cases for breadcrumbs",
+        "duration": 0,
+        "status": "other",
+        "rawStatus": "todo",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Breadcrumb/breadcrumb.test.ts",
+        "retries": 0,
+        "flaky": false,
+        "suite": "breadcrumb.test.ts > breadcrumb trigger"
+      },
+      {
+        "name": "Table keyboard interaction",
+        "duration": 0,
+        "status": "other",
+        "rawStatus": "todo",
+        "type": "unit",
+        "filePath": "/Users/eshavrov/uxkit/uxkit/src/components/Table/Table.test.tsx",
+        "retries": 0,
+        "flaky": false,
+        "suite": "Table.test.tsx > Table"
       }
     ]
   }

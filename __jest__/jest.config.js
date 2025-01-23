@@ -54,8 +54,8 @@ module.exports = {
     'react-markdown':
       '<rootDir>/node_modules/react-markdown/react-markdown.min.js',
   }),
-  reporters: [
-    'default',
-    ['jest-ctrf-json-reporter', {}],
-  ],
+  // reporters: [
+  //   'default',
+  //   ['jest-ctrf-json-reporter', {}],
+  // ],
 };
