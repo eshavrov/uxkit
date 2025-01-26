@@ -583,7 +583,7 @@ export const Select = React.memo((props: Props) => {
         value={options[comboActiveIndex]?.label}
         disabled={disabled}
       />
-      {<Portal>
+      {<Portal asChild>
         <div
           ref={listboxNodeContainer}
           className={cn(s.comboMenuContainer, {

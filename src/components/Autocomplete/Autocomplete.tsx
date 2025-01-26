@@ -995,7 +995,7 @@ export const Autocomplete = React.memo(
               </svg>
             </button>
           </div>
-          {<Portal>
+          {<Portal asChild>
             <div
               ref={listboxContainerNode}
               className={s.listboxContainer}
