@@ -1,10 +1,9 @@
 // @ts-nocheck
 import React from 'react';
 
-import observeRect from './observeRect';
+import { useIsomorphicLayoutEffect } from '@hooks/useIsomorphicLayoutEffect'
 
-export const useIsomorphicLayoutEffect =
-  typeof window !== 'undefined' ? React.useLayoutEffect : React.useEffect;
+import observeRect from './observeRect';
 
 export default function useRect(
   nodeRef,

@@ -2,7 +2,9 @@
 // @ts-nocheck
 import React from 'react';
 
-import useRect, { useIsomorphicLayoutEffect } from './useRect';
+import { useIsomorphicLayoutEffect } from '@hooks/useIsomorphicLayoutEffect'
+
+import useRect from './useRect';
 
 const defaultEstimateSize = () => 32;
 
