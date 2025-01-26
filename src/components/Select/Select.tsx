@@ -1,11 +1,12 @@
 import cn from 'classnames';
 import React from 'react';
-import { createPortal } from 'react-dom';
 
 import { useElementSize } from '@hooks/useSize';
+import { Portal } from '@components/Portal';
+
+import { getPosition } from './helpers';
 
 import s from './Select.module.css';
-import { getPosition } from './helpers';
 
 export interface SelectOption {
   [key: string]: any;
@@ -582,7 +583,7 @@ export const Select = React.memo((props: Props) => {
         value={options[comboActiveIndex]?.label}
         disabled={disabled}
       />
-      {createPortal(
+      {<Portal>
         <div
           ref={listboxNodeContainer}
           className={cn(s.comboMenuContainer, {
@@ -602,9 +603,10 @@ export const Select = React.memo((props: Props) => {
               {optionList}
             </div>
           </div>
-        </div>,
-        document.body,
-      )}
+        </div>
+      </Portal>}
     </div>
   );
 });
+
+Select.displayName = 'Select';

@@ -1,9 +1,9 @@
 import cn from 'classnames';
 import React from 'react';
-import { createPortal } from 'react-dom';
 
 import useSize, { useElementSize } from '@hooks/useSize';
 import { getPosition } from '@components/Select/helpers';
+import { Portal } from '@components/Portal';
 
 import s from './Autocomplete.module.css';
 
@@ -995,7 +995,7 @@ export const Autocomplete = React.memo(
               </svg>
             </button>
           </div>
-          {createPortal(
+          {<Portal>
             <div
               ref={listboxContainerNode}
               className={s.listboxContainer}
@@ -1030,11 +1030,12 @@ export const Autocomplete = React.memo(
                   {assistiveText}
                 </div>
               </div>
-            </div>,
-            document.body,
-          )}
+            </div>
+          </Portal>}
         </div>
       );
     },
   ),
 );
+
+Autocomplete.displayName = 'Autocomplete';
