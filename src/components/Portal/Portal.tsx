@@ -1,9 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import { Node } from '@components/Node';
 import { useLayoutEffect } from '@hooks/useLayoutEffect';
 
-type PortalElement = React.ElementRef<'div'>;
-type PortalBaseProps = React.ComponentPropsWithoutRef<'div'>;
+type PortalElement = React.ElementRef<typeof Node.div>;
+type PortalBaseProps = React.ComponentPropsWithoutRef<typeof Node.div>;
 
 export interface PortalProps extends PortalBaseProps {
   /** An optional container where the portaled content should be appended. */
@@ -29,7 +31,7 @@ export const Portal = React.forwardRef<PortalElement, PortalProps>((props, forwa
   const container = containerProp || (mounted && globalThis?.document?.body);
 
   return container
-    ? ReactDOM.createPortal(<div {...portalProps} ref={forwardedRef} />, container)
+    ? ReactDOM.createPortal(<Node.div {...portalProps} ref={forwardedRef} />, container)
     : null;
 });
 
