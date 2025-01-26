@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { useLayoutEffect } from '@hooks/useLayoutEffect';
 
 type PortalElement = React.ElementRef<'div'>;
 type PortalBaseProps = React.ComponentPropsWithoutRef<'div'>;
@@ -23,7 +24,7 @@ export const Portal = React.forwardRef<PortalElement, PortalProps>((props, forwa
 
   const [mounted, setMounted] = React.useState(false);
 
-  React.useLayoutEffect(() => setMounted(true), []);
+  useLayoutEffect(() => setMounted(true), []);
 
   const container = containerProp || (mounted && globalThis?.document?.body);
 

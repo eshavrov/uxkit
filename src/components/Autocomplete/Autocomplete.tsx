@@ -1,7 +1,8 @@
 import cn from 'classnames';
 import React from 'react';
 
-import useSize, { useElementSize } from '@hooks/useSize';
+import { useSize } from '@hooks/useSize';
+
 import { getPosition } from '@components/Select/helpers';
 import { Portal } from '@components/Portal';
 
@@ -824,14 +825,14 @@ export const Autocomplete = React.memo(
           }
         };
 
-        document.body.addEventListener(
+        globalThis?.document?.body.addEventListener(
           'pointerup',
           onBackgroundPointerUp,
           true,
         );
 
         return () => {
-          document.body.removeEventListener(
+          globalThis?.document?.body.removeEventListener(
             'pointerup',
             onBackgroundPointerUp,
             true,
@@ -879,9 +880,8 @@ export const Autocomplete = React.memo(
         );
       });
 
-      const containerSize = useElementSize(document.body);
-      // @ts-expect-error: ...
-      const listboxSize = useSize(listboxScrollNode);
+      const containerSize = useSize(globalThis?.document?.body);
+      const listboxSize = useSize(listboxScrollNode.current);
 
       React.useEffect(() => {
         if (

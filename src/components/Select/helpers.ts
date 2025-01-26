@@ -17,8 +17,8 @@ export const getPosition = (
   const space = 8;
   const scrollY = self.scrollY;
 
-  const bodyHeight = document.body.clientHeight;
-  const bodyRight = document.body.clientWidth - space;
+  const bodyHeight = globalThis?.document?.body.clientHeight;
+  const bodyRight = globalThis?.document?.body.clientWidth - space;
   const style: PositionProps = {};
 
   const maxHeightTop = comboboxRect.top - space - space;

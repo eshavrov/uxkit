@@ -2,7 +2,7 @@
   "scripts": {
     "build": "cross-env-shell NODE_ENV=production webpack ${npm_package_config_prod} --stats-children",
     "start": "cross-env-shell NODE_ENV=development webpack serve ${npm_package_config_dev}",
-    "test": "cross-env-shell jest --config __jest__/jest.config.js --maxWorkers 2 --watchAll=false --ci",
+    "test": "cross-env-shell jest --config __jest__/jest.config.js --watchAll=false --ci",
     "test:coverage": "jest --coverage --config __jest__/jest.config.js",
     "test:watch": "jest --watch --config __jest__/jest.config.js",
     "lint": "eslint src/**",

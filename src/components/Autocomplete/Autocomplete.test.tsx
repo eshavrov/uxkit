@@ -6,8 +6,7 @@ import { Autocomplete } from './Autocomplete';
 
 jest.mock('@hooks/useSize', () => ({
     __esModule: true,
-    default: () => ({ width: 600, height: 300 }),
-    useElementSize: () => ({
+    useSize: () => ({
     width: 1000,
     height: 1000,
     }),
@@ -69,10 +68,10 @@ describe('autocomplete[aria-autocomplete="list"] textbox trigger', () => {
 
         fireEvent.click(textbox);
         progress();
-
+        
         // check opens listbox
         expect(textbox.getAttribute('aria-expanded')).toEqual('true');
-
+        
         // navigate to the first item in the autocomplete box
         fireEvent.keyDown(textbox, { key: 'ArrowDown' });
         progress();
@@ -173,9 +172,9 @@ describe('autocomplete[aria-autocomplete="list"] textbox trigger', () => {
 
       test('If the textbox is empty, first opens the listbox if it is not already displayed and then moves visual focus to the last option. DOM focus remains on the textbox.', () => {
         const { getByLabelText, debug } = render(<AutocompleteComponent />);
-
+        
         const textbox = getByLabelText('AutocompleteFruits');
-
+        
         fireEvent.click(textbox);
         progress();
 

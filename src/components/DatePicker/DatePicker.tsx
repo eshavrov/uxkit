@@ -880,10 +880,10 @@ export const DatePicker = React.memo(
         }
       };
 
-      document.body.addEventListener('pointerup', onBackgroundPointerUp, true);
+      globalThis?.document?.body.addEventListener('pointerup', onBackgroundPointerUp, true);
 
       return () => {
-        document.body.removeEventListener(
+        globalThis?.document?.body.removeEventListener(
           'pointerup',
           onBackgroundPointerUp,
           true,

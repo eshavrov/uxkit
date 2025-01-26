@@ -45,15 +45,7 @@ module.exports = {
   // modulePaths: [compilerOptions.baseUrl],
   // preset: 'ts-jest',
 
-  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths, {
-    prefix: '<rootDir>/../src/',
-    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
-      '<rootDir>/mocks/filesMock.js',
-    'locale-provider': 'identity-obj-proxy',
-    '\\.(css|less)$': 'identity-obj-proxy',
-    'react-markdown':
-      '<rootDir>/node_modules/react-markdown/react-markdown.min.js',
-  }),
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths),
   // reporters: [
   //   'default',
   //   ['jest-ctrf-json-reporter', {}],

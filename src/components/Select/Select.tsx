@@ -1,7 +1,7 @@
 import cn from 'classnames';
 import React from 'react';
 
-import { useElementSize } from '@hooks/useSize';
+import { useSize } from "@hooks/useSize";
 import { Portal } from '@components/Portal';
 
 import { getPosition } from './helpers';
@@ -513,8 +513,8 @@ export const Select = React.memo((props: Props) => {
     React.CSSProperties | undefined
   >(undefined);
 
-  const containerSize = useElementSize(document.body);
-  const comboboxSize = useElementSize(comboboxContainerNode.current);
+  const containerSize = useSize(globalThis?.document?.body);
+  const comboboxSize = useSize(comboboxContainerNode.current);
 
   React.useEffect(() => {
     if (
