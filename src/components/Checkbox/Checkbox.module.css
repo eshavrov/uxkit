@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.88);
+  color: var(--base-font-color);
   font-size: 1rem;
   line-height: unset;
   list-style: none;
@@ -27,7 +27,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.88);
+  color: var(--base-font-color);
   font-size: 1rem;
   line-height: 1;
   list-style: none;
@@ -57,7 +57,7 @@
   width: 16px;
   height: 16px;
   direction: ltr;
-  background-color: #fff;
+  background-color: var(--gray-1);
   border: 1px solid var(--border-color-base);
   border-radius: 4px;
   border-collapse: separate;
@@ -65,8 +65,8 @@
 }
 
 .checked .inner {
-  background-color: #1677ff;
-  border-color: #1677ff;
+  background-color: var(--checkbox-color);
+  border-color: var(--checkbox-color);
 }
 
 .checked::after {
@@ -77,7 +77,7 @@
   height: 100%;
   border-radius: 4px;
   visibility: hidden;
-  border: 2px solid #1677ff;
+  border: 2px solid var(--checkbox-color);
   content: "";
   transition: all 0.3s;
 }
@@ -90,7 +90,7 @@
   display: table;
   width: 5.7142857142857135px;
   height: 9.142857142857142px;
-  border: 2px solid #fff;
+  border: 2px solid var(--gray-1);
   border-top: 0;
   border-inline-start: 0;
   transform: rotate(45deg) scale(0) translate(-50%, -50%);
@@ -100,7 +100,7 @@
 }
 
 .disabled .inner {
-  background: rgba(0, 0, 0, 0.04);
+  background: var(--gray-a2);
   border-color: var(--border-color-base);
 }
 
@@ -121,7 +121,7 @@
   inset-inline-start: 50%;
   width: 8px;
   height: 8px;
-  background-color: #1677ff;
+  background-color: var(--checkbox-color);
   border: 0;
   transform: translate(-50%, -50%) scale(1);
   opacity: 1;
@@ -134,22 +134,22 @@
 
 .wrapper:not(.wrapperDisabled):hover .inner,
 .root:not(.disabled):hover .inner {
-  border-color: #1677ff;
+  border-color: var(--checkbox-color);
 }
 
 .wrapperChecked:not(.wrapperDisabled):hover .inner,
 .checked:not(.disabled):hover .inner {
-  background-color: #4096ff;
+  background-color: var(--checkbox-hover-color);
   border-color: transparent;
 }
 
 .wrapper:not(.wrapperDisabled):hover .checked:not(.disabled) .inner {
-  background-color: #4096ff;
+  background-color: var(--checkbox-hover-color);
   border-color: transparent;
 }
 
 .wrapper:not(.wrapperDisabled):hover .checked:not(.disabled)::after {
-  border-color: #4096ff;
+  border-color: var(--checkbox-hover-color);
 }
 
 .inside {
@@ -165,7 +165,7 @@
 
 .wrapperChecked:not(.wrapperDisabled):hover .root::after,
 .checked:not(.disabled):hover .root::after {
-  border-color: #4096ff;
+  border-color: var(--checkbox-hover-color);
 }
 
 .wrapperDisabled {
@@ -179,7 +179,7 @@
 }
 
 .disabled .inner::after {
-  border-color: rgba(0, 0, 0, 0.25);
+  border-color: var(--gray-a7);
 }
 
 .disabled::after {
@@ -187,5 +187,5 @@
 }
 
 .disabled + .span {
-  color: rgba(0, 0, 0, 0.25);
+  color: var(--base-font-disabled-color);
 }

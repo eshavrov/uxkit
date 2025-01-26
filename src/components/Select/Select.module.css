@@ -16,7 +16,7 @@
 }
 
 .combo::after {
-  color: rgb(0 90 156);
+  color: var(--select-arrow-color);
   opacity: 0.75;
 
   /* only chrome */
@@ -103,7 +103,7 @@
 }
 
 .comboOption:hover {
-  background-color: rgb(0 0 0 / 10%);
+  background-color: var(--select-option-hover-fill);
 }
 
 .comboOption[aria-selected="true"] {
@@ -115,8 +115,8 @@
 .comboInput:focus + .comboMenu > .comboOption.optionCurrent { */
 .comboMenu > .comboOption.optionCurrent,
 .comboMenu > .comboOption.optionCurrent:hover {
-  background-color: #025cca; /* var(--autocomplete-option-fill); */
-  color: white;
+  background-color: var(--select-option-selected-fill); /* var(--autocomplete-option-fill); */
+  color: var(--select-option-selected-font-color);
   /* border: 2px solid currentColor; */
   /* padding: 3px 24px 3px 10px; */
 }

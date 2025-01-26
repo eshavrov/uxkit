@@ -34,7 +34,7 @@
 }
 
 .breadcrumb a:hover .item {
-  color: rgba(0, 0, 0, 0.75);
+  color: var(--breadcrumb-item-hover-color);
 }
 
 .breadcrumb .li:last-child .item {

@@ -1,23 +1,27 @@
 import React from "react";
 import cn from "classnames";
 
-import { Breadcrumb } from "./components/Breadcrumb";
-import { Button } from "./components/Button";
-import { Autocomplete } from "./components/Autocomplete";
-import { Select } from "./components/Select";
-import { Fieldset } from "./components/Fieldset";
-import { Field } from "./components/Field";
-import { Checkbox } from "./components/Checkbox";
-import { Checkboxes } from "./components/Checkboxes";
-import { DatePicker } from "./components/DatePicker";
-import { Group } from "./components/Group";
-import { Tabs } from "./components/Tabs";
-import { Tag } from "./components/Tag";
-import { Radio } from "./components/Radio/Radio";
-import { RadioGroup } from "./components/Radio/RadioGroup";
-import { Table } from "./components/Table";
+import { Breadcrumb } from "@components/Breadcrumb";
+import { Button } from "@components/Button";
+import { Autocomplete } from "@components/Autocomplete";
+import { Select } from "@components/Select";
+import { Fieldset } from "@components/Fieldset";
+import { Field } from "@components/Field";
+import { Checkbox } from "@components/Checkbox";
+import { Checkboxes } from "@components/Checkboxes";
+import { DatePicker } from "@components/DatePicker";
+import { Group } from "@components/Group";
+import { Tabs } from "@components/Tabs";
+import { Tag } from "@components/Tag";
+import { Radio } from "@components/Radio/Radio";
+import { RadioGroup } from "@components/Radio/RadioGroup";
+import { Table } from "@components/Table";
+import { Kbd } from "@components/Kbd";
+import { Info } from "./Examples/Autocomplete/Info";
 
 import s from "App.module.css";
+import { VoiceOver } from "./Examples/Autocomplete/VoiceOver";
+import { Colors } from "./Examples/Color/Color";
 
 const _options: any[] = [
   { label: "Apple", value: "apple" },
@@ -161,11 +165,13 @@ const RadioComponent = () => {
   );
 };
 
-const Component = ({ title, children }: { title: string; children?: any }) => {
+const Component = ({ title, children, flex }: { title: string; children?: any; flex?: boolean }) => {
   return (
     <div className={cn(s.block, { [s.hide]: !children })}>
       <h2>{title}</h2>
-      {children ?? "in progress"}
+      <div className={cn({[s.wrapper]: flex })}>
+        {children ?? "in progress"}
+      </div>
     </div>
   );
 };
@@ -174,11 +180,15 @@ export const App = () => {
   return (
     <div className={s.root}>
       <h1>Components:</h1>
+      <Component title="Color Tokens">
+        <Colors />
+      </Component>
 
       <Component title="Autocomplete">
         <AutocompleteComponent type="list" />
         <AutocompleteComponent type="both" />
         <AutocompleteComponent type="none" />
+        <Info />
       </Component>
 
       <Component title="Breadcrumb">
@@ -189,8 +199,13 @@ export const App = () => {
         />
       </Component>
 
-      <Component title="Button">
+      <Component title="Button" flex>
         <Button>Ok</Button>
+        <Button type="primary">Primary</Button>
+        <Button type="dashed">Dashed</Button>
+        <Button type="default">Default</Button>
+        <Button type="link">Link</Button>
+        <Button type="text">Text button</Button>
       </Component>
 
       <Component title="Radio">
@@ -244,6 +259,11 @@ export const App = () => {
             />
           </Field>
         </Group>
+      </Component>
+
+      <Component title="Kbd">
+        <Kbd>Shift + Tab</Kbd> <Kbd>Ctrl + Alt + Delete</Kbd>
+        <VoiceOver />
       </Component>
 
       <Component title="Tabs">

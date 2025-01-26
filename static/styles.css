@@ -1,41 +1,178 @@
 :root {
-  --app-background: #fff;
-  --app-background-color: #fff;
-  --card-head-background-color: rgba(0, 0, 0, 0.08);
-  --card-background-color: #eeeded;
-  --border-color-base: #d0d0d0;
-  --card-border: 1px solid rgba(0, 0, 0, 0.06);
-  --card-border-bottom: 1px solid rgba(0, 0, 0, 0.06);
-  --element-border: 1px solid #e0e0e0;
-  --input-disabled-background-color: #f5f5f5;
-  --link-color: #0053c0;
-  --tab-color: rgba(0, 0, 0, 0.65);
-  --table-background: #fff;
+  --default-font-family-0:
+    system-ui,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+
+  --default-font-family-1: 
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    "Open Sans",
+    system-ui,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji";
+
+  --font-family: var(--default-font-family-1);
+
+  /* Color tokens */
+
+  --white-1: rgb(255, 255, 255);
+
+  --white-a1: rgba(255,255,255, 0.012);
+  --white-a2:  rgba(255,255,255, 0.043);
+  --white-a3:  rgba(255,255,255, 0.07);
+  --white-a4:  rgba(255, 255, 255, 0.1);
+  --white-a5:  rgba(255,255,255, 0.125);
+  --white-a6:  rgba(255,255,255, 0.152);
+  --white-a7:  rgba(255,255,255, 0.3);
+  --white-a8:  rgba(255,255,255, 0.436);
+  --white-a9:  rgba(255,255,255, 0.578);
+  --white-a10:  rgba(255,255,255, 0.719);
+  --white-a11:  rgba(255,255,255, 0.797);
+  --white-a12: rgba(255,255,255, 0.875);
+
+  --gray-1: rgb(252, 252, 252);
+  --gray-2: rgb(245, 245, 245);
+  --gray-3: rgb(238, 238, 238);
+  --gray-4: rgb(231, 231, 231);
+  --gray-5: rgb(224, 224, 224);
+  --gray-6: rgb(217, 217, 217);
+  --gray-7: rgb(180, 180, 180);
+  --gray-8: rgb(144, 144, 144);
+  --gray-9: rgb(108, 108, 108);
+  --gray-10: rgb(72, 72, 72);
+  --gray-11: rgb(52, 52, 52);
+  --gray-12: rgb(32, 32, 32);
+  --gray-a1: rgba(0, 0, 0, 0.012);
+  --gray-a2:  rgba(0, 0, 0, 0.043);
+  --gray-a3:  rgba(0, 0, 0, 0.07);
+  --gray-a4:  rgba(0, 0, 0, 0.1);
+  --gray-a5:  rgba(0, 0, 0, 0.125);
+  --gray-a6:  rgba(0, 0, 0, 0.152);
+  --gray-a7:  rgba(0, 0, 0, 0.3);
+  --gray-a8:  rgba(0, 0, 0, 0.436);
+  --gray-a9:  rgba(0, 0, 0, 0.578);
+  --gray-a10:  rgba(0, 0, 0, 0.719);
+  --gray-a11:  rgba(0, 0, 0, 0.797);
+  --gray-a12: rgba(0, 0, 0, 0.875);
+
+  /* Base accent color rgb(38, 131, 254) */
+
+  --accent-1: rgb(248, 250, 252);
+  --accent-2: rgb(241, 246, 253);
+  --accent-3: rgb(229, 239, 253);
+  --accent-4: rgb(214, 232, 255);
+  --accent-5: rgb(196, 222, 255);
+  --accent-6: rgb(175, 208, 255);
+  --accent-7: rgb(149, 190, 250);
+  --accent-8: rgb(110, 166, 246);
+  --accent-9: rgb(38, 131, 254);
+  --accent-10: rgb(19, 118, 239);
+  --accent-11: rgb(0, 104, 225);
+  --accent-12: rgb(8, 50, 104);
+  --accent-a1: rgba(48, 150, 252, 0.02);
+  --accent-a2: rgba(219, 234, 255, 0.333);
+  --accent-a3: rgba(183, 213, 255, 0.333);
+  --accent-a4: rgb(214, 232, 255);
+  --accent-a5: rgb(196, 222, 255);
+  --accent-a6: rgb(175, 208, 255);
+  --accent-a7: rgba(2, 102, 248, 0.412);
+  --accent-a8: rgba(0, 100, 241, 0.565);
+  --accent-a9: rgba(0, 71, 255, 0.667);
+  --accent-a10: rgba(0, 107, 238, 0.925);
+  --accent-a11: rgb(0, 104, 225);
+  --accent-a12: rgba(0, 43, 99, 0.969);
+
+
+  /*  Base accent color  rgb(183, 52, 148) */
+
+  --accent-1: #fcf9fb;
+  --accent-2: #fbf4f8;
+  --accent-3: #fae6f2;
+  --accent-4: #f7d9eb;
+  --accent-5: #f2cbe3;
+  --accent-6: #eabbd9;
+  --accent-7: #e1a8cc;
+  --accent-8: #d78ebe;
+  --accent-9: #b73494;
+  --accent-10: #a72286;
+  --accent-11: #b12d8e;
+  --accent-12: #61154d;
+  --accent-a1: #fc3dbd04;
+  --accent-a2: #e01a8b09;
+  --accent-a3: #e6098e17;
+  --accent-a4: #d9058424;
+  --accent-a5: #c9027c32;
+  --accent-a6: #b7017542;
+  --accent-a7: #ab006c55;
+  --accent-a8: #a8026f70;
+  --accent-a9: #a6017acb;
+  --accent-a10: #9a0073dd;
+  --accent-a11: #a10177d2;
+  --accent-a12: #53003dea;
+
+  --accent-invert: var(--white-1);
+  
+  --kbd-border-radius: 0.35em;
+  --kbd-background-color: var(--gray-1);
+  --kbd-color: var(--gray-12);
+  --kbd-box-shadow: 
+    inset 0 -0.05em 0.5em var(--gray-a2),
+    inset 0 0.05em var(--white-a12),
+    inset 0 0.25em 0.5em var(--gray-a2),
+    inset 0 -0.05em var(--gray-a6),
+    0 0 0 0.05em var(--gray-a5),
+    0 0.08em 0.17em var(--gray-a7);
+  
+  --app-background: var(--white-1);
+  --app-background-color: var(--white-1);
+  --card-head-background-color: var(--gray-a3);
+  --card-background-color: var(--gray-3);
+  --border-color-base: var(--gray-6);
+  --card-border: 1px solid var(--gray-a3);
+  --card-border-bottom: 1px solid var(--gray-a3);
+  --element-border: 1px solid var(--gray-5);
+  --input-disabled-background-color: var(--gray-2);
+  --link-color: var(--accent-11); /* rgb(0, 83, 192); */
+  --tab-color: var(--gray-a3);
+  --table-background: var(--white-a12);
   --table-bottom-radius: 3px;
-  --table-header-background: rgba(226, 225, 225);
+  --table-header-background: var(--gray-5);
   --table-footer-background: var(--table-header-background);
-  --table-footer-format-color: rgb(0, 181, 253);
+  --table-footer-format-color: var(--accent-9); /* rgb(0, 181, 253); */
   --table-header-border-color: transparent;
   --table-border-color: var(--table-header-border-color);
-  --table-header-color: #252525;
+  --table-header-color: var(--gray-12);
   --table-header-radius: 3px;
   --table-header-font-size: 1rem; /* 0.875rem;*/
-  --table-row-background: rgba(0, 0, 0, 0.01);
-  --table-row-selected-background: #b7e4ff99;
+  --table-row-background: var(--gray-a1);
+  --table-row-selected-background: var(--accent-a4);
   --table-row-height: 32px;
-  --table-row-separate-color: #aaa;
-  --table-row-border-color: rgb(224 224 224);
-  --table-cell-color: rgba(0, 0, 0, 0.95);
-  --table-cell-selected-background: #fff5;
-  --table-cell-outline: #005a9c;
+  --table-row-separate-color: var(--gray-7);
+  --table-row-border-color: var(--gray-5);
+  --table-cell-color: var(--gray-a12);
+  --table-cell-selected-background: var(--white-a7);
+  --table-cell-outline: var(--accent-11); /* rgb(0, 90, 156); */
   --table-cell-group-border-color: var(--table-header-background);
 
   /* base */
+  --base-font-color: var(--gray-12);
+  --base-font-disabled-color: var(--gray-a7);
   --base-size-48: 3.7rem;
   --border-radius-small: 3px;
   --border-radius-medium: 6px;
   --border-radius-large: 12px;
-  --color-border-muted: rgb(216, 222, 228);
+  --color-border-muted: var(--accent-3); /* rgb(216, 222, 228); */
 
   /* Layout */
   --color-footer-bg: var(--app-background);
@@ -49,54 +186,77 @@
   --layout-gap: 8px;
   --layout-fieldset-gap: 6px;
   --line-height: 1.5714285714285714;
-  --primary-focus-group-border: rgb(64, 150, 255);
+  --primary-focus-group-border: var(--accent-9); /*  rgb(64, 150, 255); */
   --primary-focus-shadow: 0 0 0 4px rgba(5, 145, 255, 0.1);
-  --primary-focus: rgb(42, 130, 239);
-  --primary-hover: rgba(42, 130, 239, 0.52);
-  --shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
-  --breadcrumb-current-item-color: rgba(0, 0, 0, 0.65);
-  --breadcrumb-item-color: rgba(0, 0, 0, 1);
-  --breadcrumb-separator-color: rgba(0, 0, 0, 0.45);
-  --breadcrumb-separator-spacing: 8px;
+  --primary-focus: var(--accent-10); /* rgb(42, 130, 239); */
+  --primary-hover: var(--accent-a8); /* rgba(42, 130, 239, 0.52); */
+  --shadow: 
+    0 6px 16px 0 var(--gray-a3),
+    0 3px 6px -4px var(--gray-a5),
+    0 9px 28px 8px var(--gray-a2);
+  --autocomplete-arrow-color: var(--accent-9);
   --autocomplete-border-radius: 4px;
-  --autocomplete-color: rgba(0, 0, 0, 0.88);
-  --autocomplete-status-color: rgba(50, 55, 60, 0.9);
-  --autocomplete-fill: rgb(255, 255, 255);
+  --autocomplete-color: var(--gray-a12);
   --autocomplete-disabled-fill: var(--input-disabled-background-color);
-  --autocomplete-option-fill: rgba(0, 0, 0, 0.04);
-  --tablist-border-color: var(--color-border-muted);
+  --autocomplete-fill: var(--gray-1);
+  --autocomplete-option-fill: var(--gray-a2);
+  --autocomplete-status-color: var(--gray-11); /* rgba(50, 55, 60, 0.9); */
+  --breadcrumb-current-item-color: var(--gray-a3);
+  --breadcrumb-item-color: var(--gray-a12);
+  --breadcrumb-item-hover-color: var(--gray-a10);
+  --breadcrumb-separator-color: var(--gray-a8);
+  --breadcrumb-separator-spacing: 8px;
+  --button-disabled-background-color: var(--gray-a2);
+  --button-default-fill: var(--white-a10);
+  --button-primary-color-active: var(--accent-11); /* rgb(0, 68, 163); */
+  --button-primary-color-focus: var(--accent-11); /* rgb(2, 112, 247);*/
+  --button-primary-color-hover: var(--accent-9); /* rgb(36, 122, 214);*/
+  --button-primary-color: var(--accent-10); /* rgb(2, 92, 202); */
+  --button-primary-font-color: var(--accent-invert); 
+  --button-text-hover-fill: var(--gray-a3); /* rgba(0, 0, 0, 0.06) */
+  --button-text-active-fill: var(--gray-a6); /* rgba(0, 0, 0, 0.15) */
+
+  --checkbox-color: var(--accent-9);
+  --checkbox-hover-color: var(--accent-8);
   --editor-body-padding: 0;
+  --radio-color: var(--accent-9);
+  --radio-hover-color: var(--accent-8);
+  --select-arrow-color: var(--accent-9);
   --select-border-radius: 4px;
-  --table-value-zero: #949494; /* #858585; // #767676 AA; */
-  --table-value-green: #d9f5db;
-  --table-value-red: #ffe1e1;
-  --table-value-ok-green: #008900;
-  --table-value-ok-red: #e00000;
+  --select-option-hover-fill: var(--gray-a4);
+  --select-option-selected-fill: var(--accent-9);
+  --select-option-selected-font-color: var(--accent-invert);
   --table-value-bold: 650;
   --table-value-color-bold: 550;
+  --table-value-green: rgb(217, 245, 219);
+  --table-value-ok-green: rgb(0, 137, 0);
+  --table-value-ok-red: rgb(224, 0, 0);
+  --table-value-red: rgb(255, 225, 225);
+  --table-value-zero: var(--gray-8);
+  --tablist-border-color: var(--color-border-muted);
 }
 
 /* Desktop theme colors */
 [data-thm="SIMPLE"] {
-  --app-background: #ece9d8;
-  --app-background-color: #ece9d8;
-  --card-head-background-color: #d4d2c2;
-  --card-background-color: #ece9d8;
+  --app-background: rgb(236, 233, 216);
+  --app-background-color: rgb(236, 233, 216);
+  --card-head-background-color: rgb(212, 210, 194);
+  --card-background-color: rgb(236, 233, 216);
   --border-color-base: rgba(0, 0, 0, 0.81);
-  --card-border: 1px solid #94918c;
-  --card-border-bottom: 1px solid #94918c;
-  --element-border: 1px solid #94918c;
-  --input-disabled-background-color: #f0eee4;
-  --link-color: #004faf;
+  --card-border: 1px solid rgb(148, 145, 140);
+  --card-border-bottom: 1px solid rgb(148, 145, 140);
+  --element-border: 1px solid rgb(148, 145, 140);
+  --input-disabled-background-color: rgb(240, 238, 228);
+  --link-color: rgb(0, 79, 175);
   --tab-color: rgba(0, 0, 0, 1);
-  --table-background: #fff;
+  --table-background: rgb(255, 255, 255);
   --table-bottom-radius: 3px;
   --table-cell-color: rgba(0, 0, 0, 0.87);
-  --table-header-background: #ece9d8;
+  --table-header-background: rgb(236, 233, 216);
   --table-footer-background: var(--table-header-background);
-  --table-header-border-color: #94918c;
+  --table-header-border-color: rgb(148, 145, 140);
   --table-border-color: var(--table-header-border-color);
-  --table-header-color: #252525;
+  --table-header-color: rgb(37, 37, 37);
   --table-header-radius: 3px;
   --table-row-background: rgba(0, 0, 0, 0.01);
   --table-row-selected-background: rgba(2, 101, 220, 0.2);

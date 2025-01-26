@@ -2,7 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  color: rgba(0, 0, 0, 0.88);
+  color: var(--base-font-color);
   font-size: 0;
   line-height: 1.5714285714285714;
   list-style: none;

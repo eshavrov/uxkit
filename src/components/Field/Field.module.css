@@ -1,7 +1,7 @@
 .root {
-  --field-label-color: rgba(0, 0, 0, 0.65);
-  --field-label-required-color: rgba(0, 0, 0, 0.65);
-  --field-label-readonly-color: #575757;
+  --field-label-color: var(--gray-a9);
+  --field-label-required-color: var(--gray-a9);
+  --field-label-readonly-color: var(--gray-a8);
   --field-label-weight: 600;
 
   padding: 0;

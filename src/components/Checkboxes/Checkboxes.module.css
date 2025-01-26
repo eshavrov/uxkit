@@ -26,7 +26,7 @@
 }
 
 .disabled {
-  color: #333;
+  color: var(--gray-11);
   opacity: 0.9;
 }
 
@@ -74,7 +74,6 @@
   letter-spacing: 0.01em;
   display: table-cell;
   vertical-align: baseline;
-  border-bottom: 1px solid rgb(224 224 224);
   text-align: center;
   color: var(--table-cell-color);
   overflow: hidden;

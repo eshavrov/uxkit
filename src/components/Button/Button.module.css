@@ -1,15 +1,11 @@
 .button {
-  --button-primary-color: #025cca;
-  --button-primary-color-focus: #0270F7;
-  --button-primary-color-hover: #247ad6;
-  --button-primary-color-active: #0044a3;
   appearance: none;
   background-color: transparent;
   background-image: none;
   border-radius: 4px;
   border: 1px solid transparent;
   box-sizing: border-box;
-  color: rgba(0, 0, 0, 0.88);
+  color: var(--base-font-color);
   cursor: pointer;
   display: inline-block;
   font-family: var(--font-family);
@@ -33,17 +29,16 @@
 /* Button Dashed */
 
 .button.dashed {
-  background-color: #fff;
+  background-color: var(--button-default-fill);
   border-color: var(--border-color-base);
-  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
   border-style: dashed;
 }
 
 .button.dashed:disabled {
   cursor: not-allowed;
   border-color: var(--border-color-base);
-  color: rgba(0, 0, 0, 0.25);
-  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--base-font-disabled-color);
+  background-color: var(--base-font-disabled-color);
   box-shadow: none;
 }
 
@@ -65,16 +60,15 @@
 /* Button Default */
 
 .button.default {
-  background-color: #fff;
+  background-color: var(--button-default-fill);
   border-color: var(--border-color-base);
-  box-shadow: 0 2px 0 rgb(0 0 0 / 2%);
 }
 
 .button.default:disabled {
   cursor: not-allowed;
   border-color: var(--border-color-base);
-  color: rgba(0, 0, 0, 0.25);
-  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--base-font-disabled-color);
+  background-color: var(--base-font-disabled-color);
   box-shadow: none;
 }
 
@@ -101,7 +95,7 @@
 
 .button.link:disabled {
   cursor: not-allowed;
-  color: rgba(0, 0, 0, 0.25);
+  color: var(--base-font-disabled-color);
 }
 
 .button.link:focus-visible {
@@ -110,7 +104,7 @@
 }
 
 .button.link:not(:disabled):hover {
-  color: #69b1ff;
+  color: var(--button-primary-color-hover);
 }
 
 .button.link:not(:disabled):active {
@@ -120,16 +114,15 @@
 /* Button Primary */
 
 .button.primary {
-  color: #fff;
+  color: var(--button-primary-font-color);
   background-color: var(--button-primary-color);
-  box-shadow: 0 2px 0 rgba(5, 145, 255, 0.1);
 }
 
 .button.primary:disabled {
   cursor: not-allowed;
   border-color: var(--border-color-base);
-  color: rgba(0, 0, 0, 0.25);
-  background-color: rgba(0, 0, 0, 0.04);
+  color: var(--base-font-disabled-color);
+  background-color: var(--base-font-disabled-color);
   box-shadow: none;
 }
 
@@ -144,20 +137,24 @@
 }
 
 .button.primary:not(:disabled):hover {
-  color: #fff;
+  color: var(--button-primary-font-color);
   background-color: var(--button-primary-color-hover);
 }
 
 .button.primary:not(:disabled):active {
-  color: #fff;
+  color: var(--button-primary-font-color);
   background-color: var(--button-primary-color-active);
 }
 
 /* Button Text */
 
+.button.text {
+  background-color: transparent;
+}
+
 .button.text:disabled {
   cursor: not-allowed;
-  color: rgba(0, 0, 0, 0.25);
+  color: var(--base-font-disabled-color);
 }
 
 .button.text:focus-visible {
@@ -166,13 +163,13 @@
 }
 
 .button.text:not(:disabled):hover {
-  color: rgba(0, 0, 0, 0.88);
-  background-color: rgba(0, 0, 0, 0.06);
+  color: var(--base-font-color);
+  background-color: var(--button-text-hover-fill);
 }
 
 .button.text:not(:disabled):active {
-  color: rgba(0, 0, 0, 0.88);
-  background-color: rgba(0, 0, 0, 0.15);
+  color: var(--base-font-color);
+  background-color: var(--button-text-active-fill);
 }
 
 /* LOADING */

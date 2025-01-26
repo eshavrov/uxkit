@@ -121,7 +121,7 @@
 .button {
   border-left: none;
   border-radius: 0 var(--autocomplete-border-radius) var(--autocomplete-border-radius) 0;
-  color: rgb(0 90 156);
+  color: var(--autocomplete-arrow-color);
   cursor: inherit;
   outline: none;
   padding-right: 6px;

@@ -1,0 +1,26 @@
+.kbd {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-family);
+  font-weight: 500;
+  white-space: nowrap;
+  user-select: none;
+  top: -.03em;
+  font-size: .75em;
+  min-width: 1.75em;
+  line-height: 1.7em;
+  box-sizing: border-box;
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-bottom: .05em;
+  word-spacing: -.1em;
+  border-radius: var(--kbd-border-radius);
+  height: fit-content;
+  background-color: var(--kbd-background-color);
+  color: var(--kbd-color);
+  box-shadow: var(--kbd-box-shadow);
+  transition: box-shadow .12s, background-color .12s;
+}

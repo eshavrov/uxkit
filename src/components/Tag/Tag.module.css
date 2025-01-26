@@ -8,7 +8,7 @@
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
-  box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 0 2px var(--gray-a2);
   box-sizing: border-box;
   cursor: default;
   display: inline-flex;
