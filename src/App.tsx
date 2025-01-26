@@ -39,15 +39,15 @@ const prefix = "opt-";
 const breadcrumbItems = [
   {
     label: "App",
-    path: "path",
+    path: "path1",
   },
   {
     label: "level1",
-    path: "path",
+    path: "path2",
   },
   {
     label: "level2",
-    path: "path",
+    path: "path3",
   },
 ];
 

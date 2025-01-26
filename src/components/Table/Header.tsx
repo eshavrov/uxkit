@@ -133,7 +133,7 @@ export interface HeaderProps<RecordType> {
   stretchWidthPercent?: number;
 }
 
-const Header = React.forwardRef(
+export const Header = React.memo(React.forwardRef(
   <T,>(
     props: React.PropsWithChildren<HeaderProps<T>>,
     ref: ForwardedRef<HTMLTableSectionElement>,
@@ -224,6 +224,6 @@ const Header = React.forwardRef(
       </thead>
     );
   },
-);
+));
 
-export default React.memo(Header);
+Header.displayName = 'Header';

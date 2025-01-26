@@ -57,3 +57,5 @@ export const Fieldset = React.memo(
     );
   }),
 );
+
+Fieldset.displayName = 'Fieldset';

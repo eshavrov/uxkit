@@ -79,3 +79,5 @@ export const Breadcrumb = (props: BreadcrumbProps) => {
     </nav>
   );
 };
+
+Breadcrumb.displayName = 'Breadcrumb';

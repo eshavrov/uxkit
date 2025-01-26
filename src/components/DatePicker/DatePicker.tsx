@@ -906,6 +906,8 @@ export const DatePicker = React.memo(
               onKeyDown={onInputKeyDown}
               onBlur={setDateForButtonLabel}
               value={textValue}
+              // required props
+              onChange={()=>{}}
             />
             {/* <span className={s.desc} id="id-description-1">
               (<span className={s.srOnly}>date format: </span>mm/dd/yyyy)
@@ -1070,3 +1072,5 @@ export const DatePicker = React.memo(
     );
   }),
 );
+
+DatePicker.displayName = 'DatePicker';

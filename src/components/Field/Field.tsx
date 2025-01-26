@@ -116,3 +116,5 @@ export const Field = React.memo(
     );
   }),
 );
+
+Field.displayName = 'Field';

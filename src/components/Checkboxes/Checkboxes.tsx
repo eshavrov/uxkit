@@ -115,3 +115,5 @@ export const Checkboxes = React.memo(
     );
   }),
 );
+
+Checkboxes.displayName = 'Checkboxes';

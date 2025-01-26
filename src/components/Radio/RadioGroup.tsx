@@ -129,3 +129,5 @@ export const RadioGroup = React.memo(
     );
   }),
 );
+
+RadioGroup.displayName = 'RadioGroup';

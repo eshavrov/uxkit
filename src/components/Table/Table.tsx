@@ -7,11 +7,12 @@ import { findParentGroup } from '@utils/columnGroupUtil';
 import { isSubColumn } from '@utils/typesUtil';
 // import { Spin } from '@uikit';
 
-import Header from './Header';
-import s from './Table.module.css';
+import { Header } from './Header';
 import { TableContext } from './TableContext';
 import { useColumns } from './utils/useColumns';
 import { useVirtual } from './virtualized';
+
+import s from './Table.module.css';
 
 import type {
   MouseEventHandler,
@@ -1627,3 +1628,5 @@ export const Table = React.memo(
     );
   }),
 );
+
+Table.displayName = 'Table';

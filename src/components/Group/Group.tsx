@@ -25,3 +25,5 @@ export const Group = React.memo(
     );
   }),
 );
+
+Group.displayName = 'Group';

@@ -210,3 +210,5 @@ export const Tabs = React.forwardRef<TabsRef, TabsProps>((props, ref) => {
     </div>
   );
 });
+
+Tabs.displayName = 'Tabs';

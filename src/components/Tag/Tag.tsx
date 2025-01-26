@@ -29,3 +29,5 @@ export const Tag = React.memo(
     );
   }),
 );
+
+Tag.displayName = 'Tag';

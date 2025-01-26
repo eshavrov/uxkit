@@ -109,3 +109,5 @@ export const Radio = React.memo(
     },
   ),
 );
+
+Radio.displayName = 'Radio';
