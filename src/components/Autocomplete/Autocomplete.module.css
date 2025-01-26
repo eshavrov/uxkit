@@ -10,7 +10,7 @@
   outline: none;
   overflow: hidden;
   position: absolute;
-  cursor: pointer;
+  cursor: var(--cursor-combobox);
   font-size: 1rem;
   font-variant: initial;
   z-index: 1050;
@@ -35,7 +35,7 @@
 .li {
   border-radius: 4px;
   box-sizing: border-box;
-  cursor: pointer;
+  cursor: var(--cursor-combobox);
   display: block;
   font-size: 1rem;
   font-weight: 400;
@@ -49,20 +49,20 @@
 }
 
 .group {
-  cursor: pointer;
+  cursor: var(--cursor-combobox);
   display: inline-flex;
   padding: 0;
   width: 100%;
 }
 
 .disabled {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
 }
 
 .status {
   border-radius: 4px;
   box-sizing: border-box;
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
   display: block;
   font-size: 0.95rem;
   font-weight: 400;
@@ -132,7 +132,7 @@
 input[disabled],
 button[disabled] {
   background-color: var(--autocomplete-disabled-fill);
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
 }
 
 .button[aria-expanded="true"] svg {

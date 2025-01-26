@@ -6,7 +6,7 @@
   border: 1px solid transparent;
   box-sizing: border-box;
   color: var(--base-font-color);
-  cursor: pointer;
+  cursor:  var(--cursor-button);
   display: inline-block;
   font-family: var(--font-family);
   font-size: 1rem;
@@ -35,7 +35,7 @@
 }
 
 .button.dashed:disabled {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
   border-color: var(--border-color-base);
   color: var(--base-font-disabled-color);
   background-color: var(--base-font-disabled-color);
@@ -65,7 +65,7 @@
 }
 
 .button.default:disabled {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
   border-color: var(--border-color-base);
   color: var(--base-font-disabled-color);
   background-color: var(--base-font-disabled-color);
@@ -90,11 +90,12 @@
 /* Button Link */
 
 .button.link {
+  cursor: var(--cursor-link);
   color: var(--button-primary-color);
 }
 
 .button.link:disabled {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
   color: var(--base-font-disabled-color);
 }
 
@@ -119,7 +120,7 @@
 }
 
 .button.primary:disabled {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
   border-color: var(--border-color-base);
   color: var(--base-font-disabled-color);
   background-color: var(--base-font-disabled-color);
@@ -153,7 +154,7 @@
 }
 
 .button.text:disabled {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
   color: var(--base-font-disabled-color);
 }
 
@@ -176,7 +177,7 @@
 
 .loading {
   opacity: 0.65;
-  cursor: default;
+  cursor: var(--cursor-button);
 }
 
 .loader {
@@ -198,7 +199,7 @@
 
 .large.loading {
   opacity: 0.65;
-  cursor: default;
+  cursor: var(--cursor-button);
 }
 
 /* Small */
@@ -212,7 +213,7 @@
 
 .small.loading {
   opacity: 0.65;
-  cursor: default;
+  cursor: var(--cursor-button);
 }
 
 /* BLOCK */

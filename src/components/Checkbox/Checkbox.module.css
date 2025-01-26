@@ -9,7 +9,7 @@
   font-family: var(--font-family);
   display: inline-flex;
   align-items: baseline;
-  cursor: pointer;
+  cursor: var(--cursor-checkbox);
 }
 
 .wrapper::after {
@@ -35,7 +35,7 @@
   top: 0.2em;
   position: relative;
   white-space: nowrap;
-  cursor: pointer;
+  cursor: var(--cursor-checkbox);
 }
 
 .input {
@@ -44,7 +44,7 @@
   z-index: 1;
   width: 100%;
   height: 100%;
-  cursor: pointer;
+  cursor: var(--cursor-checkbox);
   opacity: 0;
 }
 
@@ -169,12 +169,12 @@
 }
 
 .wrapperDisabled {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
 }
 
 .disabled,
 .disabled .input {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
   pointer-events: none;
 }
 

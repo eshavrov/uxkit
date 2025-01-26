@@ -12,7 +12,7 @@
   align-items: baseline;
   margin-inline-start: 0;
   margin-inline-end: 8px;
-  cursor: pointer;
+  cursor: var(--cursor-radio);
 }
 
 .wrapper.wrapper-rtl {
@@ -20,7 +20,7 @@
 }
 
 .wrapperDisabled {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
 }
 
 .wrapper::after {
@@ -54,7 +54,7 @@
   position: relative;
   display: inline-block;
   outline: none;
-  cursor: pointer;
+  cursor: var(--cursor-radio);
   align-self: center;
 }
 
@@ -87,7 +87,7 @@
 .wrapper .disabled .inner {
   background-color: var(--base-font-disabled-color);
   border-color: var(--border-color-base);
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
 }
 
 .wrapper .input:focus-visible + .inner {
@@ -128,7 +128,7 @@
   inset-block-end: 0;
   inset-inline-start: 0;
   z-index: 1;
-  cursor: pointer;
+  cursor: var(--cursor-radio);
   opacity: 0;
 }
 
@@ -139,7 +139,7 @@
 }
 
 .wrapper .disabled {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
 }
 
 .wrapper .disabled .inner::after {
@@ -147,12 +147,12 @@
 }
 
 .wrapper .disabled-input {
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
 }
 
 .wrapper .disabled .disabled + span {
   color: var(--base-font-disabled-color);
-  cursor: not-allowed;
+  cursor: var(--cursor-disabled);
 }
 
 .wrapper .disabled.checked .inner::after {

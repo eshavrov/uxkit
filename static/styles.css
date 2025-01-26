@@ -1,45 +1,38 @@
 :root {
-  --default-font-family-0:
-    system-ui,
-    "Segoe UI",
-    Roboto,
-    Helvetica,
-    Arial,
-    sans-serif,
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    "Segoe UI Symbol";
+  --default-font-family-0: system-ui, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 
-  --default-font-family-1: 
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    Roboto,
-    "Helvetica Neue",
-    "Open Sans",
-    system-ui,
-    sans-serif,
-    "Apple Color Emoji",
+  --default-font-family-1: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", "Open Sans", system-ui, sans-serif, "Apple Color Emoji",
     "Segoe UI Emoji";
 
   --font-family: var(--default-font-family-1);
+
+  --cursor-link: pointer;
+
+  --cursor-combobox: default;
+  --cursor-button: default;
+  --cursor-checkbox: default;
+  --cursor-radio: default;
+
+  --cursor-disabled: not-allowed;
 
   /* Color tokens */
 
   --white-1: rgb(255, 255, 255);
 
-  --white-a1: rgba(255,255,255, 0.012);
-  --white-a2:  rgba(255,255,255, 0.043);
-  --white-a3:  rgba(255,255,255, 0.07);
-  --white-a4:  rgba(255, 255, 255, 0.1);
-  --white-a5:  rgba(255,255,255, 0.125);
-  --white-a6:  rgba(255,255,255, 0.152);
-  --white-a7:  rgba(255,255,255, 0.3);
-  --white-a8:  rgba(255,255,255, 0.436);
-  --white-a9:  rgba(255,255,255, 0.578);
-  --white-a10:  rgba(255,255,255, 0.719);
-  --white-a11:  rgba(255,255,255, 0.797);
-  --white-a12: rgba(255,255,255, 0.875);
+  --white-a1: rgba(255, 255, 255, 0.012);
+  --white-a2: rgba(255, 255, 255, 0.043);
+  --white-a3: rgba(255, 255, 255, 0.07);
+  --white-a4: rgba(255, 255, 255, 0.1);
+  --white-a5: rgba(255, 255, 255, 0.125);
+  --white-a6: rgba(255, 255, 255, 0.152);
+  --white-a7: rgba(255, 255, 255, 0.3);
+  --white-a8: rgba(255, 255, 255, 0.436);
+  --white-a9: rgba(255, 255, 255, 0.578);
+  --white-a10: rgba(255, 255, 255, 0.719);
+  --white-a11: rgba(255, 255, 255, 0.797);
+  --white-a12: rgba(255, 255, 255, 0.875);
 
   --gray-1: rgb(252, 252, 252);
   --gray-2: rgb(245, 245, 245);
@@ -54,16 +47,16 @@
   --gray-11: rgb(52, 52, 52);
   --gray-12: rgb(32, 32, 32);
   --gray-a1: rgba(0, 0, 0, 0.012);
-  --gray-a2:  rgba(0, 0, 0, 0.043);
-  --gray-a3:  rgba(0, 0, 0, 0.07);
-  --gray-a4:  rgba(0, 0, 0, 0.1);
-  --gray-a5:  rgba(0, 0, 0, 0.125);
-  --gray-a6:  rgba(0, 0, 0, 0.152);
-  --gray-a7:  rgba(0, 0, 0, 0.3);
-  --gray-a8:  rgba(0, 0, 0, 0.436);
-  --gray-a9:  rgba(0, 0, 0, 0.578);
-  --gray-a10:  rgba(0, 0, 0, 0.719);
-  --gray-a11:  rgba(0, 0, 0, 0.797);
+  --gray-a2: rgba(0, 0, 0, 0.043);
+  --gray-a3: rgba(0, 0, 0, 0.07);
+  --gray-a4: rgba(0, 0, 0, 0.1);
+  --gray-a5: rgba(0, 0, 0, 0.125);
+  --gray-a6: rgba(0, 0, 0, 0.152);
+  --gray-a7: rgba(0, 0, 0, 0.3);
+  --gray-a8: rgba(0, 0, 0, 0.436);
+  --gray-a9: rgba(0, 0, 0, 0.578);
+  --gray-a10: rgba(0, 0, 0, 0.719);
+  --gray-a11: rgba(0, 0, 0, 0.797);
   --gray-a12: rgba(0, 0, 0, 0.875);
 
   /* Base accent color rgb(38, 131, 254) */
@@ -93,7 +86,6 @@
   --accent-a11: rgb(0, 104, 225);
   --accent-a12: rgba(0, 43, 99, 0.969);
 
-
   /*  Base accent color  rgb(183, 52, 148) */
 
   --accent-1: #fcf9fb;
@@ -122,18 +114,15 @@
   --accent-a12: #53003dea;
 
   --accent-invert: var(--white-1);
-  
+
   --kbd-border-radius: 0.35em;
   --kbd-background-color: var(--gray-1);
   --kbd-color: var(--gray-12);
-  --kbd-box-shadow: 
-    inset 0 -0.05em 0.5em var(--gray-a2),
-    inset 0 0.05em var(--white-a12),
-    inset 0 0.25em 0.5em var(--gray-a2),
-    inset 0 -0.05em var(--gray-a6),
-    0 0 0 0.05em var(--gray-a5),
+  --kbd-box-shadow: inset 0 -0.05em 0.5em var(--gray-a2),
+    inset 0 0.05em var(--white-a12), inset 0 0.25em 0.5em var(--gray-a2),
+    inset 0 -0.05em var(--gray-a6), 0 0 0 0.05em var(--gray-a5),
     0 0.08em 0.17em var(--gray-a7);
-  
+
   --app-background: var(--white-1);
   --app-background-color: var(--white-1);
   --card-head-background-color: var(--gray-a3);
@@ -165,7 +154,7 @@
   --table-cell-outline: var(--accent-11); /* rgb(0, 90, 156); */
   --table-cell-group-border-color: var(--table-header-background);
 
-  /* base */
+  /* Base */
   --base-font-color: var(--gray-12);
   --base-font-disabled-color: var(--gray-a7);
   --base-size-48: 3.7rem;
@@ -182,7 +171,8 @@
   --dashboard-color: black;
 
   /* Components */
-  --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --layout-gap: 8px;
   --layout-fieldset-gap: 6px;
   --line-height: 1.5714285714285714;
@@ -190,9 +180,7 @@
   --primary-focus-shadow: 0 0 0 4px rgba(5, 145, 255, 0.1);
   --primary-focus: var(--accent-10); /* rgb(42, 130, 239); */
   --primary-hover: var(--accent-a8); /* rgba(42, 130, 239, 0.52); */
-  --shadow: 
-    0 6px 16px 0 var(--gray-a3),
-    0 3px 6px -4px var(--gray-a5),
+  --shadow: 0 6px 16px 0 var(--gray-a3), 0 3px 6px -4px var(--gray-a5),
     0 9px 28px 8px var(--gray-a2);
   --autocomplete-arrow-color: var(--accent-9);
   --autocomplete-border-radius: 4px;
@@ -212,7 +200,7 @@
   --button-primary-color-focus: var(--accent-11); /* rgb(2, 112, 247);*/
   --button-primary-color-hover: var(--accent-9); /* rgb(36, 122, 214);*/
   --button-primary-color: var(--accent-10); /* rgb(2, 92, 202); */
-  --button-primary-font-color: var(--accent-invert); 
+  --button-primary-font-color: var(--accent-invert);
   --button-text-hover-fill: var(--gray-a3); /* rgba(0, 0, 0, 0.06) */
   --button-text-active-fill: var(--gray-a6); /* rgba(0, 0, 0, 0.15) */
 
@@ -260,4 +248,252 @@
   --table-header-radius: 3px;
   --table-row-background: rgba(0, 0, 0, 0.01);
   --table-row-selected-background: rgba(2, 101, 220, 0.2);
+}
+
+/* * * * *  * * *  * * * * * * * * * * * * * * * * * */
+/*                    Reset CSS                      */
+/* * * * * * * *  * * *  * * * * * * * * * * * * * * */
+
+/* Margins */
+
+:where(body, blockquote, dl, dd, figure, p) {
+  margin: 0;
+}
+
+/* Typography */
+
+:where(address, b, cite, code, dfn, em, i, kbd, q, samp, small, strong, var) {
+  font: unset;
+}
+
+:where(h1, h2, h3, h4, h5, h6) {
+  font: unset;
+  margin: 0;
+}
+
+/* Interactive elements */
+
+:where(a) {
+  all: unset;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(
+  button,
+  select,
+
+  /* Buttons */
+  [type='button'],
+  [type='image'],
+  [type='reset'],
+  [type='submit'],
+
+  /* Non-textual inputs */
+  [type='checkbox'],
+  [type='color'],
+  [type='radio'],
+  [type='range']
+) {
+  all: unset;
+  display: inline-block;
+  font-weight: normal;
+  font-style: normal;
+  text-indent: initial;
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(label) {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:where(select) {
+  font-weight: normal;
+  font-style: normal;
+  text-align: start;
+}
+
+:where(
+  textarea,
+  input:not(
+      /* Buttons */
+      [type='button'],
+      [type='image'],
+      [type='reset'],
+      [type='submit'],
+
+      /* Non-textual inputs */
+      [type='checkbox'],
+      [type='color'],
+      [type='radio'],
+      [type='range']
+    )
+) {
+  all: unset;
+  display: block;
+  width: stretch;
+  font-weight: normal;
+  font-style: normal;
+  text-align: start;
+  text-indent: initial;
+  -webkit-tap-highlight-color: transparent;
+
+  /* Make sure parent <label> doesn't change the text cursor */
+  cursor: text;
+
+  /* Recover textarea pre-wrap in Firefox */
+  white-space: pre-wrap;
+}
+
+:where(:focus) {
+  outline: none;
+}
+
+::placeholder {
+  color: unset;
+  opacity: unset;
+  /* Weird, but placeholders are selectable in Chrome and Safari */
+  user-select: none;
+}
+
+/* Tables */
+
+:where(table) {
+  all: unset;
+  display: table;
+  text-indent: initial;
+}
+
+:where(caption) {
+  text-align: inherit;
+}
+
+:where(td) {
+  padding: 0;
+}
+
+:where(th) {
+  font-weight: unset;
+  text-align: inherit;
+  padding: 0;
+}
+
+/* Individual style tweaks */
+
+:where(abbr, acronym) {
+  text-decoration: none;
+}
+
+:where(canvas, object, picture, summary) {
+  display: block;
+}
+
+:where(del, s) {
+  text-decoration: unset;
+}
+
+:where(fieldset, hr) {
+  all: unset;
+  display: block;
+}
+
+:where(legend) {
+  padding: 0;
+  border: none;
+  /* Normalize with label */
+  cursor: default;
+}
+
+:where(li) {
+  display: block;
+  text-align: unset;
+}
+
+:where(ol, ul) {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+:where(iframe) {
+  display: block;
+  border: none;
+}
+
+:where(iframe) {
+  width: stretch;
+}
+
+:where(ins, u) {
+  text-decoration: none;
+}
+
+:where(img) {
+  display: block;
+  max-width: 100%;
+}
+
+:where(svg) {
+  display: block;
+  max-width: 100%;
+  flex-shrink: 0;
+}
+
+:where(mark) {
+  all: unset;
+}
+
+:where(pre) {
+  font: unset;
+  margin: unset;
+}
+
+:where(q)::before,
+:where(q)::after {
+  content: "";
+}
+
+:where(sub, sup) {
+  font: unset;
+  vertical-align: unset;
+}
+
+:where(details) ::marker,
+:where(summary)::marker {
+  content: none;
+}
+
+:where(video) {
+  display: block;
+  width: stretch;
+}
+
+/* Cursors */
+
+:where(:any-link) {
+  cursor: var(--cursor-link);
+}
+
+:where(button) {
+  cursor: var(--cursor-button);
+}
+
+:where(:disabled, [data-disabled]) {
+  cursor: var(--cursor-disabled);
+}
+
+:where(input[type="checkbox"]) {
+  cursor: var(--cursor-checkbox);
+}
+
+:where(input[type="radio"]) {
+  cursor: var(--cursor-radio);
+}
+
+/* Box sizing */
+
+&,
+&::before,
+&::after {
+  /* Don't reorder this rule or remove "&" */
+  box-sizing: border-box;
 }
