@@ -1,0 +1,2917 @@
+<body>
+    <div
+      class="ant-modal-root"
+      data-pod-instance-id="0"
+      data-id="editor-container"
+    >
+      <div class="ant-modal-mask"></div>
+      <div tabindex="-1" class="ant-modal-wrap">
+        <div
+          role="dialog"
+          aria-labelledby=":r3:"
+          aria-modal="true"
+          class="ant-modal"
+          style="width: 95vw; transform-origin: 21.7969px 768px"
+        >
+          <div
+            tabindex="0"
+            style="width: 0px; height: 0px; overflow: hidden; outline: none"
+          ></div>
+          <div class="ant-modal-content">
+            <button type="button" aria-label="Close" class="ant-modal-close">
+              <span class="ant-modal-close-x"
+                ><span
+                  role="img"
+                  aria-label="close"
+                  id="entity-modal-close-button"
+                  class="anticon anticon-close"
+                  ><svg
+                    fill-rule="evenodd"
+                    viewBox="64 64 896 896"
+                    focusable="false"
+                    data-icon="close"
+                    width="1em"
+                    height="1em"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M799.86 166.31c.02 0 .04.02.08.06l57.69 57.7c.04.03.05.05.06.08a.12.12 0 010 .06c0 .03-.02.05-.06.09L569.93 512l287.7 287.7c.04.04.05.06.06.09a.12.12 0 010 .07c0 .02-.02.04-.06.08l-57.7 57.69c-.03.04-.05.05-.07.06a.12.12 0 01-.07 0c-.03 0-.05-.02-.09-.06L512 569.93l-287.7 287.7c-.04.04-.06.05-.09.06a.12.12 0 01-.07 0c-.02 0-.04-.02-.08-.06l-57.69-57.7c-.04-.03-.05-.05-.06-.07a.12.12 0 010-.07c0-.03.02-.05.06-.09L454.07 512l-287.7-287.7c-.04-.04-.05-.06-.06-.09a.12.12 0 010-.07c0-.02.02-.04.06-.08l57.7-57.69c.03-.04.05-.05.07-.06a.12.12 0 01.07 0c.03 0 .05.02.09.06L512 454.07l287.7-287.7c.04-.04.06-.05.09-.06a.12.12 0 01.07 0z"
+                    ></path></svg></span
+              ></span>
+            </button>
+            <div class="ant-modal-header">
+              <div class="ant-modal-title" id=":r3:">
+                <div class="entities-editor-modal-header">
+                  Trip STO: Create a new
+                  <div
+                    style="
+                      margin-right: 15px;
+                      display: flex;
+                      align-items: center;
+                    "
+                  >
+                    <div
+                      class="information-container button-switch-edit-container-modal"
+                      style="display: flex"
+                    ></div>
+                    <span
+                      role="img"
+                      aria-label="fullscreen"
+                      title="Switch to the full screen mode (⌃ + ⌥ + W)"
+                      tabindex="-1"
+                      class="anticon anticon-fullscreen button-switch-edit-container-modal"
+                      ><svg
+                        viewBox="64 64 896 896"
+                        focusable="false"
+                        data-icon="fullscreen"
+                        width="1em"
+                        height="1em"
+                        fill="currentColor"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M290 236.4l43.9-43.9a8.01 8.01 0 00-4.7-13.6L169 160c-5.1-.6-9.5 3.7-8.9 8.9L179 329.1c.8 6.6 8.9 9.4 13.6 4.7l43.7-43.7L370 423.7c3.1 3.1 8.2 3.1 11.3 0l42.4-42.3c3.1-3.1 3.1-8.2 0-11.3L290 236.4zm352.7 187.3c3.1 3.1 8.2 3.1 11.3 0l133.7-133.6 43.7 43.7a8.01 8.01 0 0013.6-4.7L863.9 169c.6-5.1-3.7-9.5-8.9-8.9L694.8 179c-6.6.8-9.4 8.9-4.7 13.6l43.9 43.9L600.3 370a8.03 8.03 0 000 11.3l42.4 42.4zM845 694.9c-.8-6.6-8.9-9.4-13.6-4.7l-43.7 43.7L654 600.3a8.03 8.03 0 00-11.3 0l-42.4 42.3a8.03 8.03 0 000 11.3L734 787.6l-43.9 43.9a8.01 8.01 0 004.7 13.6L855 864c5.1.6 9.5-3.7 8.9-8.9L845 694.9zm-463.7-94.6a8.03 8.03 0 00-11.3 0L236.3 733.9l-43.7-43.7a8.01 8.01 0 00-13.6 4.7L160.1 855c-.6 5.1 3.7 9.5 8.9 8.9L329.2 845c6.6-.8 9.4-8.9 4.7-13.6L290 787.6 423.7 654c3.1-3.1 3.1-8.2 0-11.3l-42.4-42.4z"
+                        ></path></svg></span
+                    ><span
+                      role="img"
+                      aria-label="pic-center"
+                      title="Show details side-by-side with the list (⌥ + W)"
+                      tabindex="-1"
+                      class="anticon anticon-pic-center button-switch-edit-container-modal"
+                    ></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ant-modal-body" style="height: calc(-200px + 100vh)">
+              <div id="entities-editor-screen" data-id="entities-editor-screen">
+                <div id="no-progress"></div>
+                <div id="editor-form-container" data-id="editor-form-container">
+                  <form class="rjsf" novalidate="">
+                    <div class="form-group field field-object">
+                      <div>
+                        <div
+                          class="web-src-uikit2-Tabs-Tabs-module__tabs web-src-pods-tripSto-EditorTemplate-module__wrapper"
+                        >
+                          <div
+                            class="web-src-uikit2-Tabs-Tabs-module__tablist"
+                            role="tablist"
+                          >
+                            <button
+                              class="web-src-uikit2-Tabs-Tabs-module__tab"
+                              id="reservation"
+                              type="button"
+                              role="tab"
+                              aria-selected="true"
+                              aria-controls="tabpanel-reservation"
+                            >
+                              <span
+                                class="web-src-uikit2-Tabs-Tabs-module__focus"
+                                >Reservation</span
+                              ></button
+                            ><button
+                              class="web-src-uikit2-Tabs-Tabs-module__tab"
+                              id="subscriptionHold"
+                              type="button"
+                              role="tab"
+                              aria-selected="false"
+                              aria-controls="tabpanel-subscriptionHold"
+                              tabindex="-1"
+                            >
+                              <span
+                                class="web-src-uikit2-Tabs-Tabs-module__focus"
+                                >Subscription Hold</span
+                              >
+                            </button>
+                          </div>
+                          <section
+                            class="web-src-uikit2-Tabs-Tabs-module__tabpanel web-src-pods-tripSto-EditorTemplate-module__reservationTab"
+                            id="tabpanel-reservation"
+                            role="tabpanel"
+                            aria-labelledby="tab-reservation"
+                            tabindex="-1"
+                          >
+                            <div
+                              class="web-src-uikit2-Group-Group-module__root"
+                              style="grid-area: clientGroup"
+                            >
+                              <div
+                                class="web-src-uikit2-Group-Group-module__body web-src-pods-tripSto-EditorTemplate-module__clientGroup"
+                              >
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                                  style="grid-area: service"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    Service
+                                  </legend>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripTemplate-custom-groups-Service-ServiceGroup-module__root"
+                                  >
+                                    <div class="ant-col ant-col-24">
+                                      <div
+                                        class="form-group field field-object"
+                                      >
+                                        <label for="Service-service"
+                                          >Service*</label
+                                        >
+                                        <div
+                                          class="ant-form-item"
+                                          style="flex: 1 1 0%; width: 100%"
+                                        >
+                                          <div
+                                            class="ant-row ant-form-item-row"
+                                          >
+                                            <div
+                                              class="ant-col ant-form-item-control"
+                                            >
+                                              <div
+                                                class="ant-form-item-control-input"
+                                              >
+                                                <div
+                                                  class="ant-form-item-control-input-content"
+                                                >
+                                                  <div
+                                                    class="ant-select ant-select-in-form-item ant-select-single ant-select-show-arrow ant-select-disabled"
+                                                  >
+                                                    <div
+                                                      class="ant-select-selector"
+                                                    >
+                                                      <span
+                                                        class="ant-select-selection-search"
+                                                        ><input
+                                                          type="search"
+                                                          id="Service-service"
+                                                          disabled=""
+                                                          autocomplete="off"
+                                                          class="ant-select-selection-search-input"
+                                                          role="combobox"
+                                                          aria-expanded="false"
+                                                          aria-haspopup="listbox"
+                                                          aria-owns="Service-service_list"
+                                                          aria-autocomplete="list"
+                                                          aria-controls="Service-service_list"
+                                                          aria-activedescendant="Service-service_list_0"
+                                                          readonly=""
+                                                          unselectable="on"
+                                                          value=""
+                                                          style="
+                                                            opacity: 0;
+                                                          " /></span
+                                                      ><span
+                                                        class="ant-select-selection-item"
+                                                        title="REGULAR"
+                                                        >REGULAR</span
+                                                      >
+                                                    </div>
+                                                    <span
+                                                      class="ant-select-arrow"
+                                                      unselectable="on"
+                                                      aria-hidden="true"
+                                                      style="user-select: none"
+                                                      ><span
+                                                        role="img"
+                                                        aria-label="down"
+                                                        class="anticon anticon-down ant-select-suffix"
+                                                        ><svg
+                                                          viewBox="64 64 896 896"
+                                                          focusable="false"
+                                                          data-icon="down"
+                                                          width="1em"
+                                                          height="1em"
+                                                          fill="currentColor"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <path
+                                                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                                          ></path></svg></span
+                                                    ></span>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                                  style="grid-area: client"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    Client
+                                  </legend>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripTemplate-custom-groups-Client-ClientGroup-module__root"
+                                  >
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-pods-tripTemplate-custom-groups-Client-ClientGroup-module__clientId"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label web-src-uikit2-Field-Field-module__labelRequired"
+                                        for="client.clientId"
+                                        >Client ID<span
+                                          class="web-src-uikit2-Field-Field-module__required"
+                                          aria-hidden="true"
+                                          >*</span
+                                        ></label
+                                      >
+                                      <div
+                                        class="web-src-uikit2-Autocomplete-Autocomplete-module__comboboxList"
+                                      >
+                                        <div
+                                          class="web-src-uikit2-Autocomplete-Autocomplete-module__group"
+                                        >
+                                          <input
+                                            class="web-src-uikit2-Autocomplete-Autocomplete-module__input"
+                                            id="client.clientId"
+                                            type="search"
+                                            role="combobox"
+                                            autocomplete="off"
+                                            aria-autocomplete="list"
+                                            aria-expanded="false"
+                                            aria-controls="client.clientId-listbox"
+                                            aria-activedescendant=""
+                                            value=""
+                                          /><button
+                                            class="web-src-uikit2-Autocomplete-Autocomplete-module__button"
+                                            type="button"
+                                            id="client.clientId-btn"
+                                            tabindex="-1"
+                                            aria-label="Client Id"
+                                            aria-expanded="false"
+                                            aria-controls="client.clientId-listbox"
+                                          >
+                                            <svg
+                                              width="18"
+                                              height="16"
+                                              aria-hidden="true"
+                                              focusable="false"
+                                            >
+                                              <polyline
+                                                stroke-width="1.75"
+                                                stroke-opacity="0.75"
+                                                fill="none"
+                                                stroke="currentcolor"
+                                                points="3,7 9,13 15,7"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                              ></polyline>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-pods-tripTemplate-custom-groups-Client-ClientGroup-module__clientName"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="client.clientName"
+                                        >Name</label
+                                      >
+                                      <div
+                                        class="web-src-uikit2-Autocomplete-Autocomplete-module__comboboxList"
+                                      >
+                                        <div
+                                          class="web-src-uikit2-Autocomplete-Autocomplete-module__group"
+                                        >
+                                          <input
+                                            class="web-src-uikit2-Autocomplete-Autocomplete-module__input"
+                                            id="client.clientName"
+                                            type="search"
+                                            role="combobox"
+                                            autocomplete="off"
+                                            aria-autocomplete="list"
+                                            aria-expanded="false"
+                                            aria-controls="client.clientName-listbox"
+                                            aria-activedescendant=""
+                                            value=""
+                                          /><button
+                                            class="web-src-uikit2-Autocomplete-Autocomplete-module__button"
+                                            type="button"
+                                            id="client.clientName-btn"
+                                            tabindex="-1"
+                                            aria-label="Client name"
+                                            aria-expanded="false"
+                                            aria-controls="client.clientName-listbox"
+                                          >
+                                            <svg
+                                              width="18"
+                                              height="16"
+                                              aria-hidden="true"
+                                              focusable="false"
+                                            >
+                                              <polyline
+                                                stroke-width="1.75"
+                                                stroke-opacity="0.75"
+                                                fill="none"
+                                                stroke="currentcolor"
+                                                points="3,7 9,13 15,7"
+                                                stroke-linecap="round"
+                                                stroke-linejoin="round"
+                                              ></polyline>
+                                            </svg>
+                                          </button>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-pods-tripTemplate-custom-groups-Client-ClientGroup-module__clientPhone"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label web-src-uikit2-Field-Field-module__labelReadonly"
+                                        for="client.phone"
+                                        >Phone</label
+                                      ><input
+                                        id="client.phone"
+                                        aria-describedby="client.phone-errors"
+                                        disabled=""
+                                        class="ant-input ant-input-disabled"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-pods-tripTemplate-custom-groups-Client-ClientGroup-module__clientNotes"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label web-src-uikit2-Field-Field-module__labelReadonly"
+                                        for="client.notes"
+                                        >Notes</label
+                                      ><input
+                                        id="client.notes"
+                                        aria-describedby="client.notes-errors"
+                                        disabled=""
+                                        class="ant-input ant-input-disabled"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                                  style="grid-area: trips"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    Trips
+                                  </legend>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripSto-custom-groups-Trips-TripsGroup-module__root"
+                                  >
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label web-src-uikit2-Field-Field-module__labelReadonly"
+                                        for="trips"
+                                        >Trips</label
+                                      ><input
+                                        id="trips"
+                                        aria-describedby="trips-errors"
+                                        disabled=""
+                                        class="ant-input ant-input-disabled"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                                  disabled=""
+                                  style="grid-area: subscription"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    Subscription
+                                  </legend>
+                                  <header
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__header"
+                                  >
+                                    <span>Subscription</span>
+                                  </header>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__root"
+                                  >
+                                    <div
+                                      class="web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__effectiveFrom web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__antFormItemBottomDisabler"
+                                    >
+                                      <div
+                                        class="form-group field field-string"
+                                      >
+                                        <label
+                                          class="control-label"
+                                          for="root_effectiveFrom"
+                                          >Effective From</label
+                                        >
+                                        <div
+                                          class="ant-form-item web-src-framework-widgets-dateTimeWidgets-DateTimeSplitWidget-DateTimeSplitWidget-module__date"
+                                        >
+                                          <div
+                                            class="ant-row ant-form-item-row"
+                                          >
+                                            <div
+                                              class="ant-col ant-form-item-control"
+                                            >
+                                              <div
+                                                class="ant-form-item-control-input"
+                                              >
+                                                <div
+                                                  class="ant-form-item-control-input-content"
+                                                >
+                                                  <div style="display: flex">
+                                                    <div
+                                                      class="ant-picker ant-picker-disabled"
+                                                      style="width: 100%"
+                                                    >
+                                                      <div
+                                                        class="ant-picker-input"
+                                                      >
+                                                        <input
+                                                          id="root_effectiveFrom"
+                                                          disabled=""
+                                                          readonly=""
+                                                          placeholder="MM/DD/YY"
+                                                          title=""
+                                                          size="12"
+                                                          autocomplete="off"
+                                                          value=""
+                                                        /><span
+                                                          class="ant-picker-suffix"
+                                                          ><span
+                                                            role="img"
+                                                            aria-label="calendar"
+                                                            tabindex="-1"
+                                                            class="anticon anticon-calendar"
+                                                            ><svg
+                                                              viewBox="64 64 896 896"
+                                                              focusable="false"
+                                                              data-icon="calendar"
+                                                              width="1em"
+                                                              height="1em"
+                                                              fill="currentColor"
+                                                              aria-hidden="true"
+                                                            >
+                                                              <path
+                                                                d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z"
+                                                              ></path></svg></span
+                                                        ></span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__effectiveTo web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__antFormItemBottomDisabler"
+                                    >
+                                      <div
+                                        class="form-group field field-string"
+                                      >
+                                        <label
+                                          class="control-label"
+                                          for="root_effectiveTo"
+                                          >Effective To</label
+                                        >
+                                        <div
+                                          class="ant-form-item web-src-framework-widgets-dateTimeWidgets-DateTimeSplitWidget-DateTimeSplitWidget-module__date"
+                                        >
+                                          <div
+                                            class="ant-row ant-form-item-row"
+                                          >
+                                            <div
+                                              class="ant-col ant-form-item-control"
+                                            >
+                                              <div
+                                                class="ant-form-item-control-input"
+                                              >
+                                                <div
+                                                  class="ant-form-item-control-input-content"
+                                                >
+                                                  <div style="display: flex">
+                                                    <div
+                                                      class="ant-picker ant-picker-disabled"
+                                                      style="width: 100%"
+                                                    >
+                                                      <div
+                                                        class="ant-picker-input"
+                                                      >
+                                                        <input
+                                                          id="root_effectiveTo"
+                                                          disabled=""
+                                                          readonly=""
+                                                          placeholder="MM/DD/YY"
+                                                          title=""
+                                                          size="12"
+                                                          autocomplete="off"
+                                                          value=""
+                                                        /><span
+                                                          class="ant-picker-suffix"
+                                                          ><span
+                                                            role="img"
+                                                            aria-label="calendar"
+                                                            tabindex="-1"
+                                                            class="anticon anticon-calendar"
+                                                            ><svg
+                                                              viewBox="64 64 896 896"
+                                                              focusable="false"
+                                                              data-icon="calendar"
+                                                              width="1em"
+                                                              height="1em"
+                                                              fill="currentColor"
+                                                              aria-hidden="true"
+                                                            >
+                                                              <path
+                                                                d="M880 184H712v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H384v-64c0-4.4-3.6-8-8-8h-56c-4.4 0-8 3.6-8 8v64H144c-17.7 0-32 14.3-32 32v664c0 17.7 14.3 32 32 32h736c17.7 0 32-14.3 32-32V216c0-17.7-14.3-32-32-32zm-40 656H184V460h656v380zM184 392V256h128v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h256v48c0 4.4 3.6 8 8 8h56c4.4 0 8-3.6 8-8v-48h128v136H184z"
+                                                              ></path></svg></span
+                                                        ></span>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__dayOfTheWeek"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label web-src-uikit2-Field-Field-module__labelHidden"
+                                        for="dayOfTheWeek"
+                                        >Day Of The Week</label
+                                      >
+                                      <table
+                                        class="web-src-uikit2-Checkboxes-Checkboxes-module__table web-src-uikit2-Checkboxes-Checkboxes-module__disabled"
+                                        role="presentation"
+                                      >
+                                        <thead
+                                          class="web-src-uikit2-Checkboxes-Checkboxes-module__thead"
+                                        >
+                                          <tr
+                                            class="web-src-uikit2-Checkboxes-Checkboxes-module__headers web-src-uikit2-Checkboxes-Checkboxes-module__disabled"
+                                          >
+                                            <th
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__th"
+                                            >
+                                              Sun
+                                            </th>
+                                            <th
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__th"
+                                            >
+                                              Mon
+                                            </th>
+                                            <th
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__th"
+                                            >
+                                              Tue
+                                            </th>
+                                            <th
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__th"
+                                            >
+                                              Wed
+                                            </th>
+                                            <th
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__th"
+                                            >
+                                              Thu
+                                            </th>
+                                            <th
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__th"
+                                            >
+                                              Fri
+                                            </th>
+                                            <th
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__th"
+                                            >
+                                              Sat
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody
+                                          class="web-src-uikit2-Checkboxes-Checkboxes-module__tbody"
+                                        >
+                                          <tr
+                                            class="web-src-uikit2-Checkboxes-Checkboxes-module__tr"
+                                          >
+                                            <td
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__td"
+                                            >
+                                              <span
+                                                class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkboxes-Checkboxes-module__checkbox web-src-uikit2-Checkbox-Checkbox-module__disabled"
+                                                ><input
+                                                  aria-label="Sunday"
+                                                  aria-describedby="dayOfTheWeek"
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                                  disabled=""
+                                                  type="checkbox"
+                                                  value="" /><span
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                                ></span
+                                              ></span>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__td"
+                                            >
+                                              <span
+                                                class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkboxes-Checkboxes-module__checkbox web-src-uikit2-Checkbox-Checkbox-module__disabled"
+                                                ><input
+                                                  aria-label="Monday"
+                                                  aria-describedby="dayOfTheWeek"
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                                  disabled=""
+                                                  type="checkbox"
+                                                  value="" /><span
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                                ></span
+                                              ></span>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__td"
+                                            >
+                                              <span
+                                                class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkboxes-Checkboxes-module__checkbox web-src-uikit2-Checkbox-Checkbox-module__disabled"
+                                                ><input
+                                                  aria-label="Tuesday"
+                                                  aria-describedby="dayOfTheWeek"
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                                  disabled=""
+                                                  type="checkbox"
+                                                  value="" /><span
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                                ></span
+                                              ></span>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__td"
+                                            >
+                                              <span
+                                                class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkboxes-Checkboxes-module__checkbox web-src-uikit2-Checkbox-Checkbox-module__disabled"
+                                                ><input
+                                                  aria-label="Wednesday"
+                                                  aria-describedby="dayOfTheWeek"
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                                  disabled=""
+                                                  type="checkbox"
+                                                  value="" /><span
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                                ></span
+                                              ></span>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__td"
+                                            >
+                                              <span
+                                                class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkboxes-Checkboxes-module__checkbox web-src-uikit2-Checkbox-Checkbox-module__disabled"
+                                                ><input
+                                                  aria-label="Thursday"
+                                                  aria-describedby="dayOfTheWeek"
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                                  disabled=""
+                                                  type="checkbox"
+                                                  value="" /><span
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                                ></span
+                                              ></span>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__td"
+                                            >
+                                              <span
+                                                class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkboxes-Checkboxes-module__checkbox web-src-uikit2-Checkbox-Checkbox-module__disabled"
+                                                ><input
+                                                  aria-label="Friday"
+                                                  aria-describedby="dayOfTheWeek"
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                                  disabled=""
+                                                  type="checkbox"
+                                                  value="" /><span
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                                ></span
+                                              ></span>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Checkboxes-Checkboxes-module__td"
+                                            >
+                                              <span
+                                                class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkboxes-Checkboxes-module__checkbox web-src-uikit2-Checkbox-Checkbox-module__disabled"
+                                                ><input
+                                                  aria-label="Saturday"
+                                                  aria-describedby="dayOfTheWeek"
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                                  disabled=""
+                                                  type="checkbox"
+                                                  value="" /><span
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                                ></span
+                                              ></span>
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                    <div
+                                      class="web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__block"
+                                    >
+                                      <div
+                                        class="web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__annualHolidays web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__antFormItemBottomDisabler"
+                                      >
+                                        <div
+                                          class="form-group field field-array"
+                                        >
+                                          <label
+                                            for="AnnualHoliday-annualHolidays"
+                                            >Cancel on Holidays</label
+                                          >
+                                          <div class="ant-form-item">
+                                            <div
+                                              class="ant-row ant-form-item-row"
+                                            >
+                                              <div
+                                                class="ant-col ant-form-item-control"
+                                              >
+                                                <div
+                                                  class="ant-form-item-control-input"
+                                                >
+                                                  <div
+                                                    class="ant-form-item-control-input-content"
+                                                  >
+                                                    <div
+                                                      class="ant-select ant-select-in-form-item ant-select-multiple ant-select-allow-clear ant-select-disabled ant-select-show-search"
+                                                    >
+                                                      <div
+                                                        class="ant-select-selector"
+                                                      >
+                                                        <div
+                                                          class="ant-select-selection-overflow"
+                                                        >
+                                                          <div
+                                                            class="ant-select-selection-overflow-item ant-select-selection-overflow-item-suffix"
+                                                            style="opacity: 1"
+                                                          >
+                                                            <div
+                                                              class="ant-select-selection-search"
+                                                              style="width: 4px"
+                                                            >
+                                                              <input
+                                                                type="search"
+                                                                id="AnnualHoliday-annualHolidays"
+                                                                disabled=""
+                                                                autocomplete="off"
+                                                                class="ant-select-selection-search-input"
+                                                                role="combobox"
+                                                                aria-expanded="false"
+                                                                aria-haspopup="listbox"
+                                                                aria-owns="AnnualHoliday-annualHolidays_list"
+                                                                aria-autocomplete="list"
+                                                                aria-controls="AnnualHoliday-annualHolidays_list"
+                                                                aria-activedescendant="AnnualHoliday-annualHolidays_list_0"
+                                                                readonly=""
+                                                                unselectable="on"
+                                                                value=""
+                                                                style="
+                                                                  opacity: 0;
+                                                                "
+                                                              /><span
+                                                                class="ant-select-selection-search-mirror"
+                                                                aria-hidden="true"
+                                                                >&nbsp;</span
+                                                              >
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        <span
+                                                          class="ant-select-selection-placeholder"
+                                                          >- NONE -</span
+                                                        >
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div
+                                        class="web-src-uikit2-Field-Field-module__root web-src-pods-tripSto-custom-groups-Subscription-SubscriptionGroup-module__applyHolidayShift"
+                                      >
+                                        <label
+                                          class="web-src-uikit2-Field-Field-module__label web-src-uikit2-Field-Field-module__labelHidden"
+                                          for="applyHolidayShift"
+                                          >Apply Holiday Shift</label
+                                        ><label
+                                          class="web-src-uikit2-Checkbox-Checkbox-module__wrapper web-src-uikit2-Checkbox-Checkbox-module__wrapperDisabled"
+                                          ><span
+                                            class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkbox-Checkbox-module__disabled web-src-uikit2-Checkbox-Checkbox-module__inside"
+                                            ><input
+                                              aria-describedby="applyHolidayShift-errors"
+                                              class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                              disabled=""
+                                              id="applyHolidayShift"
+                                              type="checkbox"
+                                              value="" /><span
+                                              class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                            ></span></span
+                                          ><span
+                                            class="web-src-uikit2-Checkbox-Checkbox-module__span"
+                                            >Apply Holiday Shift</span
+                                          ></label
+                                        >
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                            <div
+                              tabindex="-1"
+                              class="web-src-podsCommon-CompoundAddress-Address-module__hotKeys"
+                              style="grid-area: pickup"
+                            >
+                              <div
+                                class="web-src-podsCommon-CompoundAddress-Address-module__observeKeys"
+                              >
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root web-src-podsCommon-CompoundAddress-Address-module__fieldset"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    From
+                                  </legend>
+                                  <header
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__header"
+                                  >
+                                    <div class="ant-row ant-row-space-between">
+                                      <div class="ant-col">
+                                        <div
+                                          class="ant-row"
+                                          style="
+                                            margin-left: -4px;
+                                            margin-right: -4px;
+                                          "
+                                        >
+                                          <div
+                                            class="ant-col"
+                                            style="
+                                              padding-left: 4px;
+                                              padding-right: 4px;
+                                            "
+                                          >
+                                            From
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="ant-col">
+                                        <button
+                                          title="Show address on the map"
+                                          tabindex="-1"
+                                          type="button"
+                                          class="ant-btn ant-btn-text ant-btn-icon-only"
+                                          style="
+                                            cursor: pointer;
+                                            padding: 0px;
+                                            height: auto;
+                                            width: auto;
+                                          "
+                                        >
+                                          <span
+                                            role="img"
+                                            aria-label="arrow-right"
+                                            class="anticon anticon-arrow-right"
+                                          ></span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </header>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripTemplate-custom-groups-Addresses-Addresses-module__address"
+                                  >
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-podsCommon-CompoundAddress-Address-module__street"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="p.x"
+                                        >Strееt Addrеss</label
+                                      >
+                                      <div
+                                        class="ant-select ant-select-auto-complete ant-select-single ant-select-allow-clear ant-select-disabled ant-select-customize-input ant-select-show-search"
+                                        inputref="[object Object]"
+                                        spellcheck="false"
+                                        aria-describedby="p.x-errors"
+                                        style="width: 100%"
+                                      >
+                                        <div class="ant-select-selector">
+                                          <span
+                                            class="ant-select-selection-search"
+                                            ><input
+                                              autocomplete="off"
+                                              spellcheck="false"
+                                              type="search"
+                                              id="p.x"
+                                              role="combobox"
+                                              aria-expanded="false"
+                                              aria-haspopup="listbox"
+                                              aria-owns="p.x_list"
+                                              aria-autocomplete="list"
+                                              aria-controls="p.x_list"
+                                              aria-activedescendant="p.x_list_0"
+                                              aria-describedby="p.x-errors"
+                                              disabled=""
+                                              class="ant-input ant-input-disabled ant-select-selection-search-input"
+                                              value="" /></span
+                                          ><span
+                                            class="ant-select-selection-placeholder"
+                                          ></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="p.xx"
+                                        >Сity</label
+                                      >
+                                      <div
+                                        class="ant-select ant-select-auto-complete web-src-podsCommon-CompoundAddress-Address-module__city ant-select-single ant-select-allow-clear ant-select-disabled ant-select-customize-input ant-select-show-search"
+                                        spellcheck="false"
+                                        aria-describedby="p.xx-errors"
+                                        style="width: 100%"
+                                      >
+                                        <div class="ant-select-selector">
+                                          <span
+                                            class="ant-select-selection-search"
+                                            ><input
+                                              autocomplete="off"
+                                              spellcheck="false"
+                                              type="search"
+                                              id="p.xx"
+                                              role="combobox"
+                                              aria-expanded="false"
+                                              aria-haspopup="listbox"
+                                              aria-owns="p.xx_list"
+                                              aria-autocomplete="list"
+                                              aria-controls="p.xx_list"
+                                              aria-activedescendant="p.xx_list_0"
+                                              aria-describedby="p.xx-errors"
+                                              disabled=""
+                                              class="ant-input ant-input-disabled ant-select-selection-search-input"
+                                              value="" /></span
+                                          ><span
+                                            class="ant-select-selection-placeholder"
+                                          ></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-podsCommon-CompoundAddress-Address-module__unit"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="p.xxx"
+                                        >Unit</label
+                                      ><span
+                                        class="ant-input-affix-wrapper ant-input-affix-wrapper-disabled"
+                                        ><input
+                                          autocomplete="off"
+                                          id="p.xxx"
+                                          aria-describedby="p.xxx-errors"
+                                          disabled=""
+                                          class="ant-input ant-input-disabled"
+                                          type="text"
+                                          value="" /><span
+                                          class="ant-input-suffix"
+                                          ><span
+                                            class="ant-input-clear-icon ant-input-clear-icon-hidden"
+                                            role="button"
+                                            tabindex="-1"
+                                            ><span
+                                              role="img"
+                                              aria-label="close-circle"
+                                              class="anticon anticon-close-circle"
+                                              ><svg
+                                                fill-rule="evenodd"
+                                                viewBox="64 64 896 896"
+                                                focusable="false"
+                                                data-icon="close-circle"
+                                                width="1em"
+                                                height="1em"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                              >
+                                                <path
+                                                  d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z"
+                                                ></path></svg></span></span></span
+                                      ></span>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-podsCommon-CompoundAddress-Address-module__cross"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="p.xxxxx"
+                                        >X Strееt</label
+                                      ><span
+                                        class="ant-input-affix-wrapper ant-input-affix-wrapper-disabled"
+                                        ><input
+                                          autocomplete="off"
+                                          id="p.xxxxx"
+                                          aria-describedby="p.xxxxx-errors"
+                                          disabled=""
+                                          class="ant-input ant-input-disabled"
+                                          type="text"
+                                          value="" /><span
+                                          class="ant-input-suffix"
+                                          ><span
+                                            class="ant-input-clear-icon ant-input-clear-icon-hidden"
+                                            role="button"
+                                            tabindex="-1"
+                                            ><span
+                                              role="img"
+                                              aria-label="close-circle"
+                                              class="anticon anticon-close-circle"
+                                              ><svg
+                                                fill-rule="evenodd"
+                                                viewBox="64 64 896 896"
+                                                focusable="false"
+                                                data-icon="close-circle"
+                                                width="1em"
+                                                height="1em"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                              >
+                                                <path
+                                                  d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z"
+                                                ></path></svg></span></span></span
+                                      ></span>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-podsCommon-CompoundAddress-Address-module__instruction"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="p.xxxxxx"
+                                        >Addrеss Instruction</label
+                                      >
+                                      <div
+                                        class="ant-select ant-select-auto-complete ant-select-single ant-select-allow-clear ant-select-disabled ant-select-customize-input ant-select-show-search"
+                                        aria-describedby="p.xxxxxx-errors"
+                                        style="width: 100%"
+                                      >
+                                        <div class="ant-select-selector">
+                                          <span
+                                            class="ant-select-selection-search"
+                                            ><input
+                                              autocomplete="off"
+                                              spellcheck="false"
+                                              type="search"
+                                              id="p.xxxxxx"
+                                              role="combobox"
+                                              aria-expanded="false"
+                                              aria-haspopup="listbox"
+                                              aria-owns="p.xxxxxx_list"
+                                              aria-autocomplete="list"
+                                              aria-controls="p.xxxxxx_list"
+                                              aria-activedescendant="p.xxxxxx_list_0"
+                                              aria-describedby="p.xxxxxx-errors"
+                                              disabled=""
+                                              class="ant-input ant-input-disabled ant-select-selection-search-input"
+                                              value="" /></span
+                                          ><span
+                                            class="ant-select-selection-placeholder"
+                                          ></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                            <div
+                              tabindex="-1"
+                              class="web-src-podsCommon-CompoundAddress-Address-module__hotKeys"
+                              style="grid-area: dropoff"
+                            >
+                              <div
+                                class="web-src-podsCommon-CompoundAddress-Address-module__observeKeys"
+                              >
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root web-src-podsCommon-CompoundAddress-Address-module__fieldset"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    To
+                                  </legend>
+                                  <header
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__header"
+                                  >
+                                    <div class="ant-row ant-row-space-between">
+                                      <div class="ant-col">
+                                        <div
+                                          class="ant-row"
+                                          style="
+                                            margin-left: -4px;
+                                            margin-right: -4px;
+                                          "
+                                        >
+                                          <div
+                                            class="ant-col"
+                                            style="
+                                              padding-left: 4px;
+                                              padding-right: 4px;
+                                            "
+                                          >
+                                            To
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="ant-col">
+                                        <button
+                                          title="Show address on the map"
+                                          tabindex="-1"
+                                          type="button"
+                                          class="ant-btn ant-btn-text ant-btn-icon-only"
+                                          style="
+                                            cursor: pointer;
+                                            padding: 0px;
+                                            height: auto;
+                                            width: auto;
+                                          "
+                                        >
+                                          <span
+                                            role="img"
+                                            aria-label="arrow-right"
+                                            class="anticon anticon-arrow-right"
+                                          ></span>
+                                        </button>
+                                      </div>
+                                    </div>
+                                  </header>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripTemplate-custom-groups-Addresses-Addresses-module__address"
+                                  >
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-podsCommon-CompoundAddress-Address-module__street"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="d.x"
+                                        >Strееt Addrеss</label
+                                      >
+                                      <div
+                                        class="ant-select ant-select-auto-complete ant-select-single ant-select-allow-clear ant-select-disabled ant-select-customize-input ant-select-show-search"
+                                        inputref="[object Object]"
+                                        spellcheck="false"
+                                        aria-describedby="d.x-errors"
+                                        style="width: 100%"
+                                      >
+                                        <div class="ant-select-selector">
+                                          <span
+                                            class="ant-select-selection-search"
+                                            ><input
+                                              autocomplete="off"
+                                              spellcheck="false"
+                                              type="search"
+                                              id="d.x"
+                                              role="combobox"
+                                              aria-expanded="false"
+                                              aria-haspopup="listbox"
+                                              aria-owns="d.x_list"
+                                              aria-autocomplete="list"
+                                              aria-controls="d.x_list"
+                                              aria-activedescendant="d.x_list_0"
+                                              aria-describedby="d.x-errors"
+                                              disabled=""
+                                              class="ant-input ant-input-disabled ant-select-selection-search-input"
+                                              value="" /></span
+                                          ><span
+                                            class="ant-select-selection-placeholder"
+                                          ></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="d.xx"
+                                        >Сity</label
+                                      >
+                                      <div
+                                        class="ant-select ant-select-auto-complete web-src-podsCommon-CompoundAddress-Address-module__city ant-select-single ant-select-allow-clear ant-select-disabled ant-select-customize-input ant-select-show-search"
+                                        spellcheck="false"
+                                        aria-describedby="d.xx-errors"
+                                        style="width: 100%"
+                                      >
+                                        <div class="ant-select-selector">
+                                          <span
+                                            class="ant-select-selection-search"
+                                            ><input
+                                              autocomplete="off"
+                                              spellcheck="false"
+                                              type="search"
+                                              id="d.xx"
+                                              role="combobox"
+                                              aria-expanded="false"
+                                              aria-haspopup="listbox"
+                                              aria-owns="d.xx_list"
+                                              aria-autocomplete="list"
+                                              aria-controls="d.xx_list"
+                                              aria-activedescendant="d.xx_list_0"
+                                              aria-describedby="d.xx-errors"
+                                              disabled=""
+                                              class="ant-input ant-input-disabled ant-select-selection-search-input"
+                                              value="" /></span
+                                          ><span
+                                            class="ant-select-selection-placeholder"
+                                          ></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-podsCommon-CompoundAddress-Address-module__unit"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="d.xxx"
+                                        >Unit</label
+                                      ><span
+                                        class="ant-input-affix-wrapper ant-input-affix-wrapper-disabled"
+                                        ><input
+                                          autocomplete="off"
+                                          id="d.xxx"
+                                          aria-describedby="d.xxx-errors"
+                                          disabled=""
+                                          class="ant-input ant-input-disabled"
+                                          type="text"
+                                          value="" /><span
+                                          class="ant-input-suffix"
+                                          ><span
+                                            class="ant-input-clear-icon ant-input-clear-icon-hidden"
+                                            role="button"
+                                            tabindex="-1"
+                                            ><span
+                                              role="img"
+                                              aria-label="close-circle"
+                                              class="anticon anticon-close-circle"
+                                              ><svg
+                                                fill-rule="evenodd"
+                                                viewBox="64 64 896 896"
+                                                focusable="false"
+                                                data-icon="close-circle"
+                                                width="1em"
+                                                height="1em"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                              >
+                                                <path
+                                                  d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z"
+                                                ></path></svg></span></span></span
+                                      ></span>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-podsCommon-CompoundAddress-Address-module__cross"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="d.xxxxx"
+                                        >X Strееt</label
+                                      ><span
+                                        class="ant-input-affix-wrapper ant-input-affix-wrapper-disabled"
+                                        ><input
+                                          autocomplete="off"
+                                          id="d.xxxxx"
+                                          aria-describedby="d.xxxxx-errors"
+                                          disabled=""
+                                          class="ant-input ant-input-disabled"
+                                          type="text"
+                                          value="" /><span
+                                          class="ant-input-suffix"
+                                          ><span
+                                            class="ant-input-clear-icon ant-input-clear-icon-hidden"
+                                            role="button"
+                                            tabindex="-1"
+                                            ><span
+                                              role="img"
+                                              aria-label="close-circle"
+                                              class="anticon anticon-close-circle"
+                                              ><svg
+                                                fill-rule="evenodd"
+                                                viewBox="64 64 896 896"
+                                                focusable="false"
+                                                data-icon="close-circle"
+                                                width="1em"
+                                                height="1em"
+                                                fill="currentColor"
+                                                aria-hidden="true"
+                                              >
+                                                <path
+                                                  d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z"
+                                                ></path></svg></span></span></span
+                                      ></span>
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root web-src-podsCommon-CompoundAddress-Address-module__instruction"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="d.xxxxxx"
+                                        >Addrеss Instruction</label
+                                      >
+                                      <div
+                                        class="ant-select ant-select-auto-complete ant-select-single ant-select-allow-clear ant-select-disabled ant-select-customize-input ant-select-show-search"
+                                        aria-describedby="d.xxxxxx-errors"
+                                        style="width: 100%"
+                                      >
+                                        <div class="ant-select-selector">
+                                          <span
+                                            class="ant-select-selection-search"
+                                            ><input
+                                              autocomplete="off"
+                                              spellcheck="false"
+                                              type="search"
+                                              id="d.xxxxxx"
+                                              role="combobox"
+                                              aria-expanded="false"
+                                              aria-haspopup="listbox"
+                                              aria-owns="d.xxxxxx_list"
+                                              aria-autocomplete="list"
+                                              aria-controls="d.xxxxxx_list"
+                                              aria-activedescendant="d.xxxxxx_list_0"
+                                              aria-describedby="d.xxxxxx-errors"
+                                              disabled=""
+                                              class="ant-input ant-input-disabled ant-select-selection-search-input"
+                                              value="" /></span
+                                          ><span
+                                            class="ant-select-selection-placeholder"
+                                          ></span>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                              </div>
+                            </div>
+                            <fieldset
+                              class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                              disabled=""
+                              style="grid-area: loadItems"
+                            >
+                              <legend
+                                class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                              >
+                                Passengers Load
+                              </legend>
+                              <div
+                                class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripTemplate-custom-groups-PassengersLoad-PassengersLoadGroup-module__root"
+                              >
+                                <div
+                                  class="web-src-uikit2-Field-Field-module__root web-src-pods-tripTemplate-custom-groups-PassengersLoad-PassengersLoadGroup-module__totalPax"
+                                >
+                                  <label
+                                    class="web-src-uikit2-Field-Field-module__label"
+                                    for="auxPassengerNumber"
+                                    >Total PAX</label
+                                  >
+                                  <div
+                                    class="ant-input-number ant-input-number-disabled"
+                                    style="width: 100%"
+                                  >
+                                    <div class="ant-input-number-handler-wrap">
+                                      <span
+                                        unselectable="on"
+                                        role="button"
+                                        aria-label="Increase Value"
+                                        aria-disabled="false"
+                                        class="ant-input-number-handler ant-input-number-handler-up"
+                                        ><span
+                                          role="img"
+                                          aria-label="up"
+                                          class="anticon anticon-up ant-input-number-handler-up-inner"
+                                          ><svg
+                                            viewBox="64 64 896 896"
+                                            focusable="false"
+                                            data-icon="up"
+                                            width="1em"
+                                            height="1em"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                          >
+                                            <path
+                                              d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                            ></path></svg></span></span
+                                      ><span
+                                        unselectable="on"
+                                        role="button"
+                                        aria-label="Decrease Value"
+                                        aria-disabled="true"
+                                        class="ant-input-number-handler ant-input-number-handler-down ant-input-number-handler-down-disabled"
+                                        ><span
+                                          role="img"
+                                          aria-label="down"
+                                          class="anticon anticon-down ant-input-number-handler-down-inner"
+                                          ><svg
+                                            viewBox="64 64 896 896"
+                                            focusable="false"
+                                            data-icon="down"
+                                            width="1em"
+                                            height="1em"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                          >
+                                            <path
+                                              d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                            ></path></svg></span
+                                      ></span>
+                                    </div>
+                                    <div class="ant-input-number-input-wrap">
+                                      <input
+                                        autocomplete="off"
+                                        role="spinbutton"
+                                        aria-valuemin="1"
+                                        aria-valuemax="3"
+                                        aria-valuenow="1"
+                                        step="1"
+                                        id="auxPassengerNumber"
+                                        aria-describedby="auxPassengerNumber-errors"
+                                        class="ant-input-number-input"
+                                        disabled=""
+                                        value="1"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="web-src-uikit2-Field-Field-module__root"
+                                >
+                                  <label
+                                    class="web-src-uikit2-Field-Field-module__label"
+                                    for="auxPassengerPca"
+                                    >PCA</label
+                                  ><span
+                                    class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkbox-Checkbox-module__disabled web-src-uikit2-Checkbox-Checkbox-module__inside"
+                                    ><input
+                                      aria-describedby="auxPassengerPca-errors"
+                                      class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                      disabled=""
+                                      id="auxPassengerPca"
+                                      type="checkbox"
+                                      value="" /><span
+                                      class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                    ></span
+                                  ></span>
+                                </div>
+                                <div
+                                  class="web-src-uikit2-Field-Field-module__root web-src-pods-tripTemplate-custom-groups-PassengersLoad-PassengersLoadGroup-module__free"
+                                >
+                                  <label
+                                    class="web-src-uikit2-Field-Field-module__label"
+                                    for="auxPassengerFree"
+                                    >Free</label
+                                  >
+                                  <div
+                                    class="ant-input-number ant-input-number-disabled"
+                                    style="width: 100%"
+                                  >
+                                    <div class="ant-input-number-handler-wrap">
+                                      <span
+                                        unselectable="on"
+                                        role="button"
+                                        aria-label="Increase Value"
+                                        aria-disabled="false"
+                                        class="ant-input-number-handler ant-input-number-handler-up"
+                                        ><span
+                                          role="img"
+                                          aria-label="up"
+                                          class="anticon anticon-up ant-input-number-handler-up-inner"
+                                          ><svg
+                                            viewBox="64 64 896 896"
+                                            focusable="false"
+                                            data-icon="up"
+                                            width="1em"
+                                            height="1em"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                          >
+                                            <path
+                                              d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                            ></path></svg></span></span
+                                      ><span
+                                        unselectable="on"
+                                        role="button"
+                                        aria-label="Decrease Value"
+                                        aria-disabled="true"
+                                        class="ant-input-number-handler ant-input-number-handler-down ant-input-number-handler-down-disabled"
+                                        ><span
+                                          role="img"
+                                          aria-label="down"
+                                          class="anticon anticon-down ant-input-number-handler-down-inner"
+                                          ><svg
+                                            viewBox="64 64 896 896"
+                                            focusable="false"
+                                            data-icon="down"
+                                            width="1em"
+                                            height="1em"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                          >
+                                            <path
+                                              d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                            ></path></svg></span
+                                      ></span>
+                                    </div>
+                                    <div class="ant-input-number-input-wrap">
+                                      <input
+                                        autocomplete="off"
+                                        role="spinbutton"
+                                        aria-valuemin="0"
+                                        aria-valuenow="0"
+                                        step="1"
+                                        id="auxPassengerFree"
+                                        aria-describedby="auxPassengerFree-errors"
+                                        class="ant-input-number-input"
+                                        disabled=""
+                                        value="0"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="web-src-uikit2-Field-Field-module__root web-src-pods-tripTemplate-custom-groups-PassengersLoad-PassengersLoadGroup-module__animal"
+                                >
+                                  <label
+                                    class="web-src-uikit2-Field-Field-module__label"
+                                    for="numAnimals"
+                                    >Animal</label
+                                  >
+                                  <div
+                                    class="ant-input-number ant-input-number-disabled"
+                                    style="width: 100%"
+                                  >
+                                    <div class="ant-input-number-handler-wrap">
+                                      <span
+                                        unselectable="on"
+                                        role="button"
+                                        aria-label="Increase Value"
+                                        aria-disabled="false"
+                                        class="ant-input-number-handler ant-input-number-handler-up"
+                                        ><span
+                                          role="img"
+                                          aria-label="up"
+                                          class="anticon anticon-up ant-input-number-handler-up-inner"
+                                          ><svg
+                                            viewBox="64 64 896 896"
+                                            focusable="false"
+                                            data-icon="up"
+                                            width="1em"
+                                            height="1em"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                          >
+                                            <path
+                                              d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                            ></path></svg></span></span
+                                      ><span
+                                        unselectable="on"
+                                        role="button"
+                                        aria-label="Decrease Value"
+                                        aria-disabled="true"
+                                        class="ant-input-number-handler ant-input-number-handler-down ant-input-number-handler-down-disabled"
+                                        ><span
+                                          role="img"
+                                          aria-label="down"
+                                          class="anticon anticon-down ant-input-number-handler-down-inner"
+                                          ><svg
+                                            viewBox="64 64 896 896"
+                                            focusable="false"
+                                            data-icon="down"
+                                            width="1em"
+                                            height="1em"
+                                            fill="currentColor"
+                                            aria-hidden="true"
+                                          >
+                                            <path
+                                              d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                            ></path></svg></span
+                                      ></span>
+                                    </div>
+                                    <div class="ant-input-number-input-wrap">
+                                      <input
+                                        autocomplete="off"
+                                        role="spinbutton"
+                                        aria-valuemin="0"
+                                        aria-valuenow="0"
+                                        step="1"
+                                        id="numAnimals"
+                                        aria-describedby="numAnimals-errors"
+                                        class="ant-input-number-input"
+                                        disabled=""
+                                        value="0"
+                                      />
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="web-src-pods-tripTemplate-custom-groups-PassengersLoad-PassengersLoadGroup-module__loadList"
+                                  data-id="load-list"
+                                >
+                                  <div class="form-group field field-array">
+                                    <div class="ant-form-item">
+                                      <div class="ant-row ant-form-item-row">
+                                        <div
+                                          class="ant-col ant-form-item-control"
+                                        >
+                                          <div
+                                            class="ant-form-item-control-input"
+                                          >
+                                            <div
+                                              class="ant-form-item-control-input-content"
+                                            >
+                                              <div>
+                                                <div
+                                                  class="ant-col editable-table"
+                                                  style="
+                                                    padding-right: 0px;
+                                                    padding-left: 0px;
+                                                  "
+                                                >
+                                                  <div
+                                                    class="ant-table-wrapper"
+                                                  >
+                                                    <div
+                                                      class="ant-spin-nested-loading"
+                                                    >
+                                                      <div
+                                                        class="ant-spin-container"
+                                                      >
+                                                        <div class="ant-table">
+                                                          <div
+                                                            class="ant-table-container"
+                                                          >
+                                                            <div
+                                                              class="ant-table-content"
+                                                            >
+                                                              <table
+                                                                style="
+                                                                  table-layout: auto;
+                                                                "
+                                                              >
+                                                                <colgroup></colgroup>
+                                                                <thead
+                                                                  class="ant-table-thead"
+                                                                ></thead>
+                                                                <tbody
+                                                                  class="ant-table-tbody"
+                                                                >
+                                                                  <tr
+                                                                    data-row-key="072176fd-9e89-4c26-9d81-b89662bd059a"
+                                                                    class="ant-table-row ant-table-row-level-0"
+                                                                  >
+                                                                    <td
+                                                                      class="ant-table-cell"
+                                                                      style="
+                                                                        width: 100%;
+                                                                      "
+                                                                    >
+                                                                      PRIMARY
+                                                                    </td>
+                                                                    <td
+                                                                      class="ant-table-cell"
+                                                                    >
+                                                                      <div
+                                                                        class="ant-select ant-select-in-form-item ant-select-single ant-select-show-arrow ant-select-disabled"
+                                                                        style="
+                                                                          min-width: 120px;
+                                                                        "
+                                                                      >
+                                                                        <div
+                                                                          class="ant-select-selector"
+                                                                        >
+                                                                          <span
+                                                                            class="ant-select-selection-search"
+                                                                            ><input
+                                                                              type="search"
+                                                                              disabled=""
+                                                                              autocomplete="off"
+                                                                              class="ant-select-selection-search-input"
+                                                                              role="combobox"
+                                                                              aria-expanded="false"
+                                                                              aria-haspopup="listbox"
+                                                                              aria-owns="rc_select_43_list"
+                                                                              aria-autocomplete="list"
+                                                                              aria-controls="rc_select_43_list"
+                                                                              aria-activedescendant="rc_select_43_list_0"
+                                                                              readonly=""
+                                                                              unselectable="on"
+                                                                              value=""
+                                                                              id="rc_select_43"
+                                                                              style="
+                                                                                opacity: 0;
+                                                                              " /></span
+                                                                          ><span
+                                                                            class="ant-select-selection-item"
+                                                                            title="AMB"
+                                                                            >AMB</span
+                                                                          >
+                                                                        </div>
+                                                                        <span
+                                                                          class="ant-select-arrow"
+                                                                          unselectable="on"
+                                                                          aria-hidden="true"
+                                                                          style="
+                                                                            user-select: none;
+                                                                          "
+                                                                          ><span
+                                                                            role="img"
+                                                                            aria-label="down"
+                                                                            class="anticon anticon-down ant-select-suffix"
+                                                                            ><svg
+                                                                              viewBox="64 64 896 896"
+                                                                              focusable="false"
+                                                                              data-icon="down"
+                                                                              width="1em"
+                                                                              height="1em"
+                                                                              fill="currentColor"
+                                                                              aria-hidden="true"
+                                                                            >
+                                                                              <path
+                                                                                d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                                                              ></path></svg></span
+                                                                        ></span>
+                                                                      </div>
+                                                                    </td>
+                                                                  </tr>
+                                                                </tbody>
+                                                              </table>
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="web-src-uikit2-Field-Field-module__root web-src-pods-tripTemplate-custom-groups-PassengersLoad-PassengersLoadGroup-module__equipment"
+                                >
+                                  <label
+                                    class="web-src-uikit2-Field-Field-module__label"
+                                    for="loadEquipment"
+                                    >Equipment</label
+                                  >
+                                  <div class="form-group field field-array">
+                                    <div id="root_$loadEquipment">
+                                      <label> </label>
+                                      <div
+                                        class="ant-list ant-list-split ant-list-bordered"
+                                        tabindex="-1"
+                                        role="group"
+                                        style="outline-width: 0px"
+                                      >
+                                        <div class="ant-spin-nested-loading">
+                                          <div class="ant-spin-container">
+                                            <ul class="ant-list-items">
+                                              <li class="ant-list-item">
+                                                <div class="flex-row">
+                                                  <div
+                                                    style="margin-right: 8px"
+                                                  >
+                                                    <label
+                                                      class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled"
+                                                      ><span
+                                                        class="ant-checkbox ant-checkbox-disabled"
+                                                        ><input
+                                                          tabindex="-1"
+                                                          class="ant-checkbox-input"
+                                                          disabled=""
+                                                          type="checkbox" /><span
+                                                          class="ant-checkbox-inner"
+                                                        ></span></span
+                                                    ></label>
+                                                  </div>
+                                                  <div>CANE</div>
+                                                </div>
+                                              </li>
+                                              <li class="ant-list-item">
+                                                <div class="flex-row">
+                                                  <div
+                                                    style="margin-right: 8px"
+                                                  >
+                                                    <label
+                                                      class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled"
+                                                      ><span
+                                                        class="ant-checkbox ant-checkbox-disabled"
+                                                        ><input
+                                                          tabindex="-1"
+                                                          class="ant-checkbox-input"
+                                                          disabled=""
+                                                          type="checkbox" /><span
+                                                          class="ant-checkbox-inner"
+                                                        ></span></span
+                                                    ></label>
+                                                  </div>
+                                                  <div>CRUTCHES</div>
+                                                </div>
+                                              </li>
+                                              <li class="ant-list-item">
+                                                <div class="flex-row">
+                                                  <div
+                                                    style="margin-right: 8px"
+                                                  >
+                                                    <label
+                                                      class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled"
+                                                      ><span
+                                                        class="ant-checkbox ant-checkbox-disabled"
+                                                        ><input
+                                                          tabindex="-1"
+                                                          class="ant-checkbox-input"
+                                                          disabled=""
+                                                          type="checkbox" /><span
+                                                          class="ant-checkbox-inner"
+                                                        ></span></span
+                                                    ></label>
+                                                  </div>
+                                                  <div>OXYGEN TANK</div>
+                                                </div>
+                                              </li>
+                                              <li class="ant-list-item">
+                                                <div class="flex-row">
+                                                  <div
+                                                    style="margin-right: 8px"
+                                                  >
+                                                    <label
+                                                      class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled"
+                                                      ><span
+                                                        class="ant-checkbox ant-checkbox-disabled"
+                                                        ><input
+                                                          tabindex="-1"
+                                                          class="ant-checkbox-input"
+                                                          disabled=""
+                                                          type="checkbox" /><span
+                                                          class="ant-checkbox-inner"
+                                                        ></span></span
+                                                    ></label>
+                                                  </div>
+                                                  <div>WALKER</div>
+                                                </div>
+                                              </li>
+                                              <li class="ant-list-item">
+                                                <div class="flex-row">
+                                                  <div
+                                                    style="margin-right: 8px"
+                                                  >
+                                                    <label
+                                                      class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled"
+                                                      ><span
+                                                        class="ant-checkbox ant-checkbox-disabled"
+                                                        ><input
+                                                          tabindex="-1"
+                                                          class="ant-checkbox-input"
+                                                          disabled=""
+                                                          type="checkbox" /><span
+                                                          class="ant-checkbox-inner"
+                                                        ></span></span
+                                                    ></label>
+                                                  </div>
+                                                  <div>WHITE CANE</div>
+                                                </div>
+                                              </li>
+                                              <li class="ant-list-item">
+                                                <div class="flex-row">
+                                                  <div
+                                                    style="margin-right: 8px"
+                                                  >
+                                                    <label
+                                                      class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled"
+                                                      ><span
+                                                        class="ant-checkbox ant-checkbox-disabled"
+                                                        ><input
+                                                          tabindex="-1"
+                                                          class="ant-checkbox-input"
+                                                          disabled=""
+                                                          type="checkbox" /><span
+                                                          class="ant-checkbox-inner"
+                                                        ></span></span
+                                                    ></label>
+                                                  </div>
+                                                  <div>NF WALKER</div>
+                                                </div>
+                                              </li>
+                                            </ul>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="web-src-pods-tripTemplate-custom-groups-PassengersLoad-PassengersLoadGroup-module__excludedVehicleCategories"
+                                >
+                                  <div class="ant-form-item">
+                                    <div class="form-group field field-array">
+                                      <div id="root_$excludedVehicleCategories">
+                                        <label>Excluded Vehicle Cat.</label>
+                                        <div
+                                          class="ant-list ant-list-bordered"
+                                          tabindex="-1"
+                                          role="group"
+                                          style="outline-width: 0px"
+                                        >
+                                          <div class="ant-spin-nested-loading">
+                                            <div class="ant-spin-container">
+                                              <ul class="ant-list-items">
+                                                <li
+                                                  class="ant-list-item"
+                                                  style="display: inline-block"
+                                                >
+                                                  <div class="flex-row">
+                                                    <div
+                                                      style="margin-right: 8px"
+                                                    >
+                                                      <label
+                                                        class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled"
+                                                        ><span
+                                                          class="ant-checkbox ant-checkbox-disabled"
+                                                          ><input
+                                                            tabindex="-1"
+                                                            class="ant-checkbox-input"
+                                                            disabled=""
+                                                            type="checkbox" /><span
+                                                            class="ant-checkbox-inner"
+                                                          ></span></span
+                                                      ></label>
+                                                    </div>
+                                                    <div>SEDAN</div>
+                                                  </div>
+                                                </li>
+                                                <li
+                                                  class="ant-list-item"
+                                                  style="display: inline-block"
+                                                >
+                                                  <div class="flex-row">
+                                                    <div
+                                                      style="margin-right: 8px"
+                                                    >
+                                                      <label
+                                                        class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled"
+                                                        ><span
+                                                          class="ant-checkbox ant-checkbox-disabled"
+                                                          ><input
+                                                            tabindex="-1"
+                                                            class="ant-checkbox-input"
+                                                            disabled=""
+                                                            type="checkbox" /><span
+                                                            class="ant-checkbox-inner"
+                                                          ></span></span
+                                                      ></label>
+                                                    </div>
+                                                    <div>VAN</div>
+                                                  </div>
+                                                </li>
+                                              </ul>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    class="web-src-uikit2-Field-Field-module__root"
+                                  >
+                                    <label
+                                      class="web-src-uikit2-Field-Field-module__label web-src-uikit2-Field-Field-module__labelRequired"
+                                      for="serviceMode"
+                                      >Service Mode<span
+                                        class="web-src-uikit2-Field-Field-module__required"
+                                        aria-hidden="true"
+                                        >*</span
+                                      ></label
+                                    >
+                                    <div class="form-group field field-number">
+                                      <div
+                                        class="ant-form-item"
+                                        style="flex: 1 1 0%; width: 100%"
+                                      >
+                                        <div class="ant-row ant-form-item-row">
+                                          <div
+                                            class="ant-col ant-form-item-control"
+                                          >
+                                            <div
+                                              class="ant-form-item-control-input"
+                                            >
+                                              <div
+                                                class="ant-form-item-control-input-content"
+                                              >
+                                                <div
+                                                  class="ant-select ant-select-in-form-item ant-select-single ant-select-show-arrow ant-select-disabled"
+                                                  required=""
+                                                  name="root_serviceMode"
+                                                  aria-describedby="root_serviceMode__error root_serviceMode__description root_serviceMode__help"
+                                                  style="min-width: 100px"
+                                                >
+                                                  <div
+                                                    class="ant-select-selector"
+                                                  >
+                                                    <span
+                                                      class="ant-select-selection-search"
+                                                      ><input
+                                                        type="search"
+                                                        id="root_serviceMode"
+                                                        disabled=""
+                                                        autocomplete="off"
+                                                        class="ant-select-selection-search-input"
+                                                        role="combobox"
+                                                        aria-expanded="false"
+                                                        aria-haspopup="listbox"
+                                                        aria-owns="root_serviceMode_list"
+                                                        aria-autocomplete="list"
+                                                        aria-controls="root_serviceMode_list"
+                                                        aria-activedescendant="root_serviceMode_list_0"
+                                                        aria-describedby="root_serviceMode__error root_serviceMode__description root_serviceMode__help"
+                                                        readonly=""
+                                                        unselectable="on"
+                                                        value=""
+                                                        style="
+                                                          opacity: 0;
+                                                        " /></span
+                                                    ><span
+                                                      class="ant-select-selection-item"
+                                                      title="CURB"
+                                                      >CURB</span
+                                                    >
+                                                  </div>
+                                                  <span
+                                                    class="ant-select-arrow"
+                                                    unselectable="on"
+                                                    aria-hidden="true"
+                                                    style="user-select: none"
+                                                    ><span
+                                                      role="img"
+                                                      aria-label="down"
+                                                      class="anticon anticon-down ant-select-suffix"
+                                                      ><svg
+                                                        viewBox="64 64 896 896"
+                                                        focusable="false"
+                                                        data-icon="down"
+                                                        width="1em"
+                                                        height="1em"
+                                                        fill="currentColor"
+                                                        aria-hidden="true"
+                                                      >
+                                                        <path
+                                                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                                        ></path></svg></span
+                                                  ></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  class="web-src-uikit2-Field-Field-module__root web-src-pods-tripTemplate-custom-groups-PassengersLoad-PassengersLoadGroup-module__loadInstructions"
+                                >
+                                  <label
+                                    class="web-src-uikit2-Field-Field-module__label"
+                                    for="notesLoadDescription"
+                                    >Load Instructions</label
+                                  ><span
+                                    class="ant-input-affix-wrapper ant-input-affix-wrapper-textarea-with-clear-btn"
+                                    style="width: 100%"
+                                  >
+                                    <textarea
+                                      id="notesLoadDescription"
+                                      aria-describedby="notesLoadDescription-errors"
+                                      class="ant-input ant-input-disabled"
+                                      disabled=""
+                                      style="
+                                        height: 30px;
+                                        resize: none;
+                                        min-height: 30px;
+                                      "
+                                    ></textarea
+                                    ><span
+                                      role="button"
+                                      aria-label="close-circle"
+                                      tabindex="-1"
+                                      class="anticon anticon-close-circle ant-input-clear-icon-hidden ant-input-clear-icon"
+                                      ><svg
+                                        fill-rule="evenodd"
+                                        viewBox="64 64 896 896"
+                                        focusable="false"
+                                        data-icon="close-circle"
+                                        width="1em"
+                                        height="1em"
+                                        fill="currentColor"
+                                        aria-hidden="true"
+                                      >
+                                        <path
+                                          d="M512 64c247.4 0 448 200.6 448 448S759.4 960 512 960 64 759.4 64 512 264.6 64 512 64zm127.98 274.82h-.04l-.08.06L512 466.75 384.14 338.88c-.04-.05-.06-.06-.08-.06a.12.12 0 00-.07 0c-.03 0-.05.01-.09.05l-45.02 45.02a.2.2 0 00-.05.09.12.12 0 000 .07v.02a.27.27 0 00.06.06L466.75 512 338.88 639.86c-.05.04-.06.06-.06.08a.12.12 0 000 .07c0 .03.01.05.05.09l45.02 45.02a.2.2 0 00.09.05.12.12 0 00.07 0c.02 0 .04-.01.08-.05L512 557.25l127.86 127.87c.04.04.06.05.08.05a.12.12 0 00.07 0c.03 0 .05-.01.09-.05l45.02-45.02a.2.2 0 00.05-.09.12.12 0 000-.07v-.02a.27.27 0 00-.05-.06L557.25 512l127.87-127.86c.04-.04.05-.06.05-.08a.12.12 0 000-.07c0-.03-.01-.05-.05-.09l-45.02-45.02a.2.2 0 00-.09-.05.12.12 0 00-.07 0z"
+                                        ></path></svg></span
+                                  ></span>
+                                </div>
+                              </div>
+                            </fieldset>
+                            <div
+                              class="web-src-uikit2-Group-Group-module__root"
+                              style="grid-area: right"
+                            >
+                              <div
+                                class="web-src-uikit2-Group-Group-module__body web-src-pods-tripSto-EditorTemplate-module__reservationRight"
+                              >
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                                  disabled=""
+                                  style="grid-area: scheduling"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    Time Scheduling
+                                  </legend>
+                                  <header
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__header"
+                                  >
+                                    Time Scheduling
+                                  </header>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripSto-custom-groups-Scheduling-SchedulingGroup-module__root"
+                                  >
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label web-src-uikit2-Field-Field-module__labelRequired"
+                                        for="requestedTime"
+                                        >Request Pick Up<span
+                                          class="web-src-uikit2-Field-Field-module__required"
+                                          aria-hidden="true"
+                                          >*</span
+                                        ></label
+                                      ><input
+                                        autocomplete="off"
+                                        id="requestedTime"
+                                        required=""
+                                        aria-describedby="requestedTime-errors"
+                                        disabled=""
+                                        class="ant-input ant-input-disabled"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label web-src-uikit2-Field-Field-module__labelRequired"
+                                        for="scheduledTime"
+                                        >Schedule<span
+                                          class="web-src-uikit2-Field-Field-module__required"
+                                          aria-hidden="true"
+                                          >*</span
+                                        ></label
+                                      ><input
+                                        autocomplete="off"
+                                        id="scheduledTime"
+                                        required=""
+                                        aria-describedby="scheduledTime-errors"
+                                        disabled=""
+                                        class="ant-input ant-input-disabled"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="dueTime"
+                                        >Due</label
+                                      ><input
+                                        id="dueTime"
+                                        aria-describedby="dueTime-errors"
+                                        disabled=""
+                                        class="ant-input ant-input-disabled"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                    <div
+                                      class="web-src-uikit2-Field-Field-module__root"
+                                    >
+                                      <label
+                                        class="web-src-uikit2-Field-Field-module__label"
+                                        for="dropoffBy"
+                                        >Drop Off By</label
+                                      ><input
+                                        autocomplete="off"
+                                        id="dropoffBy"
+                                        aria-describedby="dropoffBy-errors"
+                                        disabled=""
+                                        class="ant-input ant-input-disabled"
+                                        type="text"
+                                        value=""
+                                      />
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                                  disabled=""
+                                  style="grid-area: fare"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    Fare
+                                  </legend>
+                                  <header
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__header"
+                                  >
+                                    Fare
+                                  </header>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripTemplate-custom-groups-Fare-FareGroup-module__root"
+                                  >
+                                    <div class="form-group field field-object">
+                                      <label for="FareType-$fareType"
+                                        >Type*</label
+                                      >
+                                      <div
+                                        class="ant-form-item"
+                                        style="flex: 1 1 0%; width: 100%"
+                                      >
+                                        <div class="ant-row ant-form-item-row">
+                                          <div
+                                            class="ant-col ant-form-item-control"
+                                          >
+                                            <div
+                                              class="ant-form-item-control-input"
+                                            >
+                                              <div
+                                                class="ant-form-item-control-input-content"
+                                              >
+                                                <div
+                                                  class="ant-select ant-select-in-form-item ant-select-single ant-select-show-arrow ant-select-disabled"
+                                                >
+                                                  <div
+                                                    class="ant-select-selector"
+                                                  >
+                                                    <span
+                                                      class="ant-select-selection-search"
+                                                      ><input
+                                                        type="search"
+                                                        id="FareType-$fareType"
+                                                        disabled=""
+                                                        autocomplete="off"
+                                                        class="ant-select-selection-search-input"
+                                                        role="combobox"
+                                                        aria-expanded="false"
+                                                        aria-haspopup="listbox"
+                                                        aria-owns="FareType-$fareType_list"
+                                                        aria-autocomplete="list"
+                                                        aria-controls="FareType-$fareType_list"
+                                                        aria-activedescendant="FareType-$fareType_list_0"
+                                                        readonly=""
+                                                        unselectable="on"
+                                                        value=""
+                                                        style="
+                                                          opacity: 0;
+                                                        " /></span
+                                                    ><span
+                                                      class="ant-select-selection-placeholder"
+                                                      >- SELECT -</span
+                                                    >
+                                                  </div>
+                                                  <span
+                                                    class="ant-select-arrow"
+                                                    unselectable="on"
+                                                    aria-hidden="true"
+                                                    style="user-select: none"
+                                                    ><span
+                                                      role="img"
+                                                      aria-label="down"
+                                                      class="anticon anticon-down ant-select-suffix"
+                                                      ><svg
+                                                        viewBox="64 64 896 896"
+                                                        focusable="false"
+                                                        data-icon="down"
+                                                        width="1em"
+                                                        height="1em"
+                                                        fill="currentColor"
+                                                        aria-hidden="true"
+                                                      >
+                                                        <path
+                                                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                                        ></path></svg></span
+                                                  ></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="form-group field field-number">
+                                      <label
+                                        class="control-label"
+                                        for="root_$fareMiles"
+                                        >Miles</label
+                                      >
+                                      <div class="ant-form-item">
+                                        <div class="ant-row ant-form-item-row">
+                                          <div
+                                            class="ant-col ant-form-item-control"
+                                          >
+                                            <div
+                                              class="ant-form-item-control-input"
+                                            >
+                                              <div
+                                                class="ant-form-item-control-input-content"
+                                              >
+                                                <div
+                                                  class="ant-input-number ant-input-number-in-form-item ant-input-number-disabled"
+                                                  style="width: 100%"
+                                                >
+                                                  <div
+                                                    class="ant-input-number-handler-wrap"
+                                                  >
+                                                    <span
+                                                      unselectable="on"
+                                                      role="button"
+                                                      aria-label="Increase Value"
+                                                      aria-disabled="false"
+                                                      class="ant-input-number-handler ant-input-number-handler-up"
+                                                      ><span
+                                                        role="img"
+                                                        aria-label="up"
+                                                        class="anticon anticon-up ant-input-number-handler-up-inner"
+                                                        ><svg
+                                                          viewBox="64 64 896 896"
+                                                          focusable="false"
+                                                          data-icon="up"
+                                                          width="1em"
+                                                          height="1em"
+                                                          fill="currentColor"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <path
+                                                            d="M890.5 755.3L537.9 269.2c-12.8-17.6-39-17.6-51.7 0L133.5 755.3A8 8 0 00140 768h75c5.1 0 9.9-2.5 12.9-6.6L512 369.8l284.1 391.6c3 4.1 7.8 6.6 12.9 6.6h75c6.5 0 10.3-7.4 6.5-12.7z"
+                                                          ></path></svg></span></span
+                                                    ><span
+                                                      unselectable="on"
+                                                      role="button"
+                                                      aria-label="Decrease Value"
+                                                      aria-disabled="false"
+                                                      class="ant-input-number-handler ant-input-number-handler-down"
+                                                      ><span
+                                                        role="img"
+                                                        aria-label="down"
+                                                        class="anticon anticon-down ant-input-number-handler-down-inner"
+                                                        ><svg
+                                                          viewBox="64 64 896 896"
+                                                          focusable="false"
+                                                          data-icon="down"
+                                                          width="1em"
+                                                          height="1em"
+                                                          fill="currentColor"
+                                                          aria-hidden="true"
+                                                        >
+                                                          <path
+                                                            d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                                          ></path></svg></span
+                                                    ></span>
+                                                  </div>
+                                                  <div
+                                                    class="ant-input-number-input-wrap"
+                                                  >
+                                                    <input
+                                                      autocomplete="off"
+                                                      role="spinbutton"
+                                                      step="1"
+                                                      id="root_$fareMiles"
+                                                      name="root_$fareMiles"
+                                                      placeholder=""
+                                                      type="number"
+                                                      aria-describedby="root_$fareMiles__error root_$fareMiles__description root_$fareMiles__help"
+                                                      class="ant-input-number-input"
+                                                      disabled=""
+                                                      value=""
+                                                    />
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                                  disabled=""
+                                  style="grid-area: callout"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    Call-out
+                                  </legend>
+                                  <header
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__header"
+                                  >
+                                    Call-out
+                                  </header>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripTemplate-custom-groups-Callout-CalloutGroup-module__root"
+                                  >
+                                    <div
+                                      class="web-src-uikit2-Table-Table-module__tableWrapper web-src-uikit2-Table-Table-module__nav"
+                                    >
+                                      <table
+                                        class="web-src-uikit2-Table-Table-module__table"
+                                        id="table-687"
+                                        role="grid"
+                                        aria-rowcount="2"
+                                        aria-colcount="3"
+                                        tabindex="-1"
+                                      >
+                                        <thead
+                                          class="web-src-uikit2-Table-Table-module__thead"
+                                        >
+                                          <tr>
+                                            <th
+                                              class="web-src-uikit2-Table-Table-module__th web-src-uikit2-Table-Table-module__leftAlign web-src-uikit2-Table-Table-module__unsortable web-src-uikit2-Table-Table-module__noWrap web-src-uikit2-Table-Table-module__cellFirst"
+                                              tabindex="-1"
+                                              aria-sort="none"
+                                              data-index="check"
+                                            ></th>
+                                            <th
+                                              class="web-src-uikit2-Table-Table-module__th web-src-uikit2-Table-Table-module__leftAlign web-src-uikit2-Table-Table-module__unsortable web-src-uikit2-Table-Table-module__noWrap"
+                                              tabindex="-1"
+                                              scope="col"
+                                              aria-sort="none"
+                                              data-index="type"
+                                            >
+                                              Type
+                                            </th>
+                                            <th
+                                              class="web-src-uikit2-Table-Table-module__th web-src-uikit2-Table-Table-module__leftAlign web-src-uikit2-Table-Table-module__unsortable web-src-uikit2-Table-Table-module__noWrap"
+                                              tabindex="-1"
+                                              scope="col"
+                                              aria-sort="none"
+                                              data-index="phone"
+                                            >
+                                              Phone
+                                            </th>
+                                          </tr>
+                                        </thead>
+                                        <tbody
+                                          class="web-src-uikit2-Table-Table-module__tbody"
+                                          tabindex="-1"
+                                        >
+                                          <tr
+                                            class="web-src-uikit2-Table-Table-module__tr"
+                                            data-page="1"
+                                            aria-rowindex="1"
+                                          >
+                                            <td
+                                              class="web-src-uikit2-Table-Table-module__td web-src-uikit2-Table-Table-module__leftAlign web-src-uikit2-Table-Table-module__noWrap"
+                                              data-align="leftAlign"
+                                              tabindex="-1"
+                                              aria-colindex="1"
+                                            >
+                                              <span
+                                                class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkbox-Checkbox-module__disabled"
+                                                ><input
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                                  disabled=""
+                                                  type="checkbox"
+                                                  value="" /><span
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                                ></span
+                                              ></span>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Table-Table-module__td web-src-uikit2-Table-Table-module__leftAlign web-src-uikit2-Table-Table-module__noWrap"
+                                              data-align="leftAlign"
+                                              tabindex="-1"
+                                              aria-colindex="2"
+                                            >
+                                              <div
+                                                class="web-src-uikit2-Select-Select-module__combo web-src-uikit2-Select-Select-module__disabled"
+                                              >
+                                                <input
+                                                  aria-controls="callOutPropertiesFirst.calloutMedium-listbox"
+                                                  aria-expanded="false"
+                                                  aria-haspopup="listbox"
+                                                  aria-labelledby="callOutPropertiesFirst.calloutMedium-label"
+                                                  id="callOutPropertiesFirst.calloutMedium"
+                                                  class="web-src-uikit2-Select-Select-module__comboInput"
+                                                  role="combobox"
+                                                  tabindex="-1"
+                                                  disabled=""
+                                                  value="NONE"
+                                                />
+                                              </div>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Table-Table-module__td web-src-uikit2-Table-Table-module__leftAlign web-src-uikit2-Table-Table-module__noWrap"
+                                              data-align="leftAlign"
+                                              tabindex="-1"
+                                              aria-colindex="3"
+                                            >
+                                              <input
+                                                placeholder="(___) ___-____"
+                                                id="callOutPropertiesFirst.phone"
+                                                disabled=""
+                                                class="ant-input ant-input-disabled"
+                                                type="text"
+                                                value=""
+                                              />
+                                            </td>
+                                          </tr>
+                                          <tr
+                                            class="web-src-uikit2-Table-Table-module__tr"
+                                            data-page="2"
+                                            aria-rowindex="2"
+                                          >
+                                            <td
+                                              class="web-src-uikit2-Table-Table-module__td web-src-uikit2-Table-Table-module__leftAlign web-src-uikit2-Table-Table-module__noWrap"
+                                              data-align="leftAlign"
+                                              tabindex="-1"
+                                              aria-colindex="1"
+                                            >
+                                              <span
+                                                class="web-src-uikit2-Checkbox-Checkbox-module__root web-src-uikit2-Checkbox-Checkbox-module__disabled"
+                                                ><input
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__input"
+                                                  disabled=""
+                                                  type="checkbox"
+                                                  value="" /><span
+                                                  class="web-src-uikit2-Checkbox-Checkbox-module__inner"
+                                                ></span
+                                              ></span>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Table-Table-module__td web-src-uikit2-Table-Table-module__leftAlign web-src-uikit2-Table-Table-module__noWrap"
+                                              data-align="leftAlign"
+                                              tabindex="-1"
+                                              aria-colindex="2"
+                                            >
+                                              <div
+                                                class="web-src-uikit2-Select-Select-module__combo web-src-uikit2-Select-Select-module__disabled"
+                                              >
+                                                <input
+                                                  aria-controls="callOutPropertiesSecond.calloutMedium-listbox"
+                                                  aria-expanded="false"
+                                                  aria-haspopup="listbox"
+                                                  aria-labelledby="callOutPropertiesSecond.calloutMedium-label"
+                                                  id="callOutPropertiesSecond.calloutMedium"
+                                                  class="web-src-uikit2-Select-Select-module__comboInput"
+                                                  role="combobox"
+                                                  tabindex="-1"
+                                                  disabled=""
+                                                  value="NONE"
+                                                />
+                                              </div>
+                                            </td>
+                                            <td
+                                              class="web-src-uikit2-Table-Table-module__td web-src-uikit2-Table-Table-module__leftAlign web-src-uikit2-Table-Table-module__noWrap"
+                                              data-align="leftAlign"
+                                              tabindex="-1"
+                                              aria-colindex="3"
+                                            >
+                                              <input
+                                                placeholder="(___) ___-____"
+                                                id="callOutPropertiesSecond.phone"
+                                                disabled=""
+                                                class="ant-input ant-input-disabled"
+                                                type="text"
+                                                value=""
+                                              />
+                                            </td>
+                                          </tr>
+                                        </tbody>
+                                      </table>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                                  disabled=""
+                                  style="grid-area: dispatch"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    Dispatch by
+                                  </legend>
+                                  <header
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__header"
+                                  >
+                                    <div style="display: flex">
+                                      <span>Dispatch By</span>
+                                    </div>
+                                  </header>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body"
+                                  >
+                                    <div class="form-group field field-object">
+                                      <label for="DdsFleet-ddsFleet"
+                                        >Dispatch By - Provider*</label
+                                      >
+                                      <div
+                                        class="ant-form-item"
+                                        style="flex: 1 1 0%; width: 100%"
+                                      >
+                                        <div class="ant-row ant-form-item-row">
+                                          <div
+                                            class="ant-col ant-form-item-control"
+                                          >
+                                            <div
+                                              class="ant-form-item-control-input"
+                                            >
+                                              <div
+                                                class="ant-form-item-control-input-content"
+                                              >
+                                                <div
+                                                  class="ant-select ant-select-in-form-item ant-select-single ant-select-show-arrow ant-select-disabled"
+                                                >
+                                                  <div
+                                                    class="ant-select-selector"
+                                                  >
+                                                    <span
+                                                      class="ant-select-selection-search"
+                                                      ><input
+                                                        type="search"
+                                                        id="DdsFleet-ddsFleet"
+                                                        disabled=""
+                                                        autocomplete="off"
+                                                        class="ant-select-selection-search-input"
+                                                        role="combobox"
+                                                        aria-expanded="false"
+                                                        aria-haspopup="listbox"
+                                                        aria-owns="DdsFleet-ddsFleet_list"
+                                                        aria-autocomplete="list"
+                                                        aria-controls="DdsFleet-ddsFleet_list"
+                                                        aria-activedescendant="DdsFleet-ddsFleet_list_0"
+                                                        readonly=""
+                                                        unselectable="on"
+                                                        value=""
+                                                        style="
+                                                          opacity: 0;
+                                                        " /></span
+                                                    ><span
+                                                      class="ant-select-selection-placeholder"
+                                                      >- SELECT -</span
+                                                    >
+                                                  </div>
+                                                  <span
+                                                    class="ant-select-arrow"
+                                                    unselectable="on"
+                                                    aria-hidden="true"
+                                                    style="user-select: none"
+                                                    ><span
+                                                      role="img"
+                                                      aria-label="down"
+                                                      class="anticon anticon-down ant-select-suffix"
+                                                      ><svg
+                                                        viewBox="64 64 896 896"
+                                                        focusable="false"
+                                                        data-icon="down"
+                                                        width="1em"
+                                                        height="1em"
+                                                        fill="currentColor"
+                                                        aria-hidden="true"
+                                                      >
+                                                        <path
+                                                          d="M884 256h-75c-5.1 0-9.9 2.5-12.9 6.6L512 654.2 227.9 262.6c-3-4.1-7.8-6.6-12.9-6.6h-75c-6.5 0-10.3 7.4-6.5 12.7l352.6 486.1c12.8 17.6 39 17.6 51.7 0l352.6-486.1c3.9-5.3.1-12.7-6.4-12.7z"
+                                                        ></path></svg></span
+                                                  ></span>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="form-group field field-boolean">
+                                      <div class="ant-form-item">
+                                        <div class="ant-row ant-form-item-row">
+                                          <div
+                                            class="ant-col ant-form-item-control"
+                                          >
+                                            <div
+                                              class="ant-form-item-control-input"
+                                            >
+                                              <div
+                                                class="ant-form-item-control-input-content"
+                                              >
+                                                <label
+                                                  class="ant-checkbox-wrapper ant-checkbox-wrapper-disabled ant-checkbox-wrapper-in-form-item"
+                                                  ><span
+                                                    class="ant-checkbox ant-checkbox-disabled"
+                                                    ><input
+                                                      id="root_overrideAllocation"
+                                                      name="root_overrideAllocation"
+                                                      aria-describedby="root_overrideAllocation__error root_overrideAllocation__description root_overrideAllocation__help"
+                                                      class="ant-checkbox-input"
+                                                      disabled=""
+                                                      type="checkbox" /><span
+                                                      class="ant-checkbox-inner"
+                                                    ></span></span
+                                                  ><span
+                                                    >Override Allocation</span
+                                                  ></label
+                                                >
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </fieldset>
+                                <fieldset
+                                  class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                                  disabled=""
+                                  style="grid-area: audit"
+                                >
+                                  <legend
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                                  >
+                                    Audit Trail
+                                  </legend>
+                                  <div
+                                    class="web-src-uikit2-Fieldset-Fieldset-module__body"
+                                  ></div>
+                                </fieldset>
+                              </div>
+                            </div>
+                            <fieldset
+                              class="web-src-uikit2-Fieldset-Fieldset-module__root"
+                              style="grid-area: generalNotes"
+                            >
+                              <legend
+                                class="web-src-uikit2-Fieldset-Fieldset-module__legend"
+                              >
+                                General
+                              </legend>
+                              <div
+                                class="web-src-uikit2-Fieldset-Fieldset-module__body web-src-pods-tripTemplate-custom-groups-GeneralNotes-GeneralNotes-module__root"
+                              >
+                                <div
+                                  class="web-src-uikit2-Field-Field-module__root"
+                                >
+                                  <label
+                                    class="web-src-uikit2-Field-Field-module__label"
+                                    for="generalNotes"
+                                    >General Notes</label
+                                  ><textarea
+                                    spellcheck="false"
+                                    id="generalNotes"
+                                    aria-describedby="generalNotes-errors"
+                                    class="ant-input ant-input-disabled"
+                                    disabled=""
+                                  ></textarea>
+                                </div>
+                              </div>
+                            </fieldset>
+                          </section>
+                          <section
+                            class="web-src-uikit2-Tabs-Tabs-module__tabpanel web-src-uikit2-Tabs-Tabs-module__isHidden"
+                            id="tabpanel-subscriptionHold"
+                            role="tabpanel"
+                            aria-labelledby="tab-subscriptionHold"
+                            tabindex="-1"
+                          >
+                            <div
+                              class="web-src-pods-tripSto-EditorTemplate-module__subscriptionTab web-src-pods-tripSto-EditorTemplate-module__createMode"
+                            >
+                              <div class="form-group field field-array">
+                                Save Trip STO First
+                              </div>
+                            </div>
+                          </section>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="buttons-container-modal">
+                      <div
+                        class="web-src-framework-components-InteractionsButtonPanel-module__actionPanel"
+                      >
+                        <div>
+                          <button
+                            data-type="interaction"
+                            type="submit"
+                            class="ant-btn ant-btn-primary web-src-framework-components-InteractionButton-module__interaction"
+                          >
+                            <span>Save [F1]</span>
+                          </button>
+                        </div>
+                        <div>
+                          <button
+                            type="button"
+                            class="ant-btn ant-btn-default"
+                            disabled=""
+                          >
+                            <span>Clear [F9]</span>
+                          </button>
+                        </div>
+                        <div>
+                          <button type="button" class="ant-btn ant-btn-default">
+                            <span>Distribution by Time</span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            tabindex="0"
+            style="width: 0px; height: 0px; overflow: hidden; outline: none"
+          ></div>
+        </div>
+      </div>
+    </div>
+</body>

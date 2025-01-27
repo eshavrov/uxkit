@@ -22,6 +22,7 @@ import { Info } from "./Examples/Autocomplete/Info";
 import s from "App.module.css";
 import { VoiceOver } from "./Examples/Autocomplete/VoiceOver";
 import { Colors } from "./Examples/Color/Color";
+import { Example1 } from "./Examples/Form1";
 
 const _options: any[] = [
   { label: "Apple", value: "apple" },
@@ -177,6 +178,16 @@ const Component = ({ title, children, flex }: { title: string; children?: any; f
 };
 
 export const App = () => {
+
+  // if (!false) {
+  //   return (
+  //     <div className={s.root}>
+  //       <Example1 />
+  //     </div>
+  //   );
+  // }
+
+
   return (
     <div className={s.root}>
       <h1>Components:</h1>
@@ -367,6 +378,9 @@ export const App = () => {
       <Component title="Toolbar" />
       <Component title="TreeSelect" />
       <Component title="Typography" />
+      <Component title="Form">
+        <Example1 />
+      </Component>
     </div>
   );
 };

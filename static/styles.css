@@ -171,8 +171,6 @@
   --dashboard-color: black;
 
   /* Components */
-  --font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   --layout-gap: 8px;
   --layout-fieldset-gap: 6px;
   --line-height: 1.5714285714285714;
@@ -496,4 +494,8 @@
 &::after {
   /* Don't reorder this rule or remove "&" */
   box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-family);
 }

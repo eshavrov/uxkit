@@ -1,0 +1,158 @@
+.wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.reservationTab {
+  display: grid;
+  grid-template:
+    "clientGroup clientGroup"
+    "pickup dropoff"
+    "loadItems right"
+    "generalNotes right";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: var(--layout-gap);
+}
+
+.subscriptionTab.createMode {
+  margin-top: 10px;
+}
+
+.clientGroup {
+  display: grid;
+  grid-template: "service client trips subscription";
+  grid-template-columns: 12rem minmax(40rem, 1fr) 8rem 2fr;
+  grid-gap: var(--layout-gap);
+}
+
+.reservationRight {
+  display: grid;
+  height: 100%;
+  grid-template:
+    "scheduling callout"
+    "fare dispatch"
+    "fare audit";
+  grid-template-columns: minmax(20rem, 1fr) 4fr;
+  grid-template-rows: auto 1fr auto;
+  grid-gap: var(--layout-gap);
+}
+
+/* Used for getting as much space for form as possible */
+:global(.ant-modal-body):has(.wrapper) {
+  padding-top: 0;
+}
+
+:global(#entities-editor-screen .form-group):has(.wrapper) {
+  padding-top: 0 !important;
+}
+
+@container (max-width: 52rem) {
+  .reservationTab {
+    grid-template:
+      "clientGroup"
+      "pickup"
+      "dropoff"
+      "loadItems"
+      "right"
+      "generalNotes";
+    grid-template-columns: 1fr;
+  }
+}
+
+@container (max-width: 105rem) {
+  .clientGroup {
+    grid-template:
+      "service client trips"
+      "subscription subscription subscription";
+    grid-template-columns: 12rem 1fr 8rem;
+  }
+}
+
+@container (max-width: 52rem) {
+  .clientGroup {
+    grid-template:
+      "service"
+      "client"
+      "trips"
+      "subscription";
+    grid-template-columns: 1fr;
+  }
+}
+
+@container (max-width: 40rem) {
+  .reservationRight {
+    grid-template:
+      "scheduling fare"
+      "callout  callout"
+      "dispatch dispatch"
+      "audit audit";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto 1fr auto;
+  }
+}
+
+@container (max-width: 30rem) {
+  .reservationRight {
+    grid-template:
+      "scheduling"
+      "fare"
+      "callout"
+      "dispatch"
+      "audit";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto 1fr auto;
+  }
+}
+
+
+/* ---- */
+.rootClient {
+  grid-area: client;
+  display: grid;
+  grid-template:
+    "clientId clientName clientPhone"
+    "clientNotes clientNotes clientNotes";
+  grid-template-columns: 10rem minmax(12rem, 1fr) 10rem;
+  grid-gap: var(--layout-fieldset-gap);
+}
+
+@container (max-width: 39rem) {
+  .root {
+    display: flex;
+    flex-wrap: wrap;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+}
+
+.clientId {
+  grid-area: clientId;
+}
+
+.clientName {
+  grid-area: clientName;
+}
+
+.clientPhone {
+  grid-area: clientPhone;
+}
+
+.clientNotes {
+  grid-area: clientNotes;
+}
+
+.p + .p {
+  margin-block-start: 1rem;
+}
+
+.warn {
+  color: red;
+  font-weight: 600;
+}
+
+.footer {
+  display: flex;
+  gap: 8px;
+}
+
+
