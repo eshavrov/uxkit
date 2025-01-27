@@ -49,6 +49,8 @@ interface Props<Option extends AutocompleteOption> {
   status?: React.ReactNode;
   assistiveStatus?: string;
 
+  asTable?: boolean;
+
   render?: (option: Option) => React.ReactNode;
 
   onChange: (value: string) => void;
@@ -166,6 +168,7 @@ export const Autocomplete = React.memo(
         openOnChange = false,
         status,
         assistiveStatus,
+        asTable,
         render,
         onChange,
         onEnter,
@@ -866,7 +869,7 @@ export const Autocomplete = React.memo(
 
         return (
           <li
-            className={s.li}
+            className={cn(s.li, {[s.asTable]: asTable})}
             key={value}
             id={generateOptionIndex(value, prefix)}
             data-id={value}
@@ -1006,6 +1009,7 @@ export const Autocomplete = React.memo(
                   ref={listboxNode}
                   className={cn(s.listbox, {
                     [s.focus]: listboxHasVisualFocus,
+                    [s.asTable]: asTable,
                   })}
                   id={getNestedId(inputId, 'listbox')}
                   role="listbox"

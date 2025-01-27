@@ -6,7 +6,7 @@
 .listboxContainer {
   display: none;
   margin: 0;
-  padding: 0;
+  padding: 0 2px;
   outline: none;
   overflow: hidden;
   position: absolute;
@@ -15,7 +15,6 @@
   font-variant: initial;
   z-index: 1050;
   background-color: var(--autocomplete-fill);
-  border: 2px var(--autocomplete-fill) solid;
   border-radius: 8px;
   box-shadow: var(--shadow);
   color: var(--autocomplete-color);
@@ -142,6 +141,24 @@ button[disabled] {
   forced-color-adjust: auto;
 }
 
+.listbox.as-table {
+  display: table;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.li.as-table {
+  list-style: none;
+  display: table-row;
+  width: 100%;
+}
+
+.li.as-table > * {
+  display: table-cell;
+  padding: 5px 8px;
+  box-sizing: border-box;
+}
+
 /* focus and hover styling */
 
 .group.focus:not(.disabled),
@@ -170,10 +187,9 @@ button[disabled] {
 .listbox.focus .li[aria-selected="true"],
 .li:hover {
   background-color: var(--autocomplete-option-fill);
-  border: 2px solid currentColor;
-  padding: 3px 10px;
+  box-shadow: inset 0 0 0 2px currentColor;
 }
 
 .li:hover {
-  border: 2px solid var(--primary-hover);
+  box-shadow: inset 0 0 0 2px var(--primary-hover);
 }
