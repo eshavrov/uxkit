@@ -78,10 +78,10 @@ export const buildLoaders = ({ isDev }: { isDev: boolean }): ModuleOptions['rule
   };
 
   const svgLoader =     {
-      test: /\.svg$/i,
-      type: 'asset',
-      resourceQuery: /url/, // *.svg?url
-    };
+    test: /\.svg$/i,
+    type: 'asset',
+    resourceQuery: /url/, // *.svg?url
+  };
 
   const svgReactLoader = {
     test: /\.svg$/i,
