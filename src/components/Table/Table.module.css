@@ -41,8 +41,8 @@
   display: table-row;
   vertical-align: middle;
   outline: 0;
-  height: var(--table-row-height, 32px);
-  max-height: var(--table-row-height, 32px);
+  height: var(--table-row-height, var(--space-6));
+  max-height: var(--table-row-height, var(--space-6));
   contain: strict;
 }
 
@@ -58,7 +58,6 @@
   font-weight: 500;
   font-size: var(--table-header-font-size);
   line-height: 1.5rem;
-  letter-spacing: 0.01em;
   display: table-cell;
 
   /* vertical-align: inherit; */
@@ -107,7 +106,6 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.43;
-  letter-spacing: 0.01em;
   display: table-cell;
   vertical-align: inherit;
   border-bottom: 1px solid var(--table-row-border-color);

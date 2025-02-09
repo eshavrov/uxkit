@@ -11,7 +11,7 @@
   font-family: var(--font-family);
   font-size: 1rem;
   font-weight: 400;
-  height: 32px;
+  height: var(--space-6);
   line-height: 1.5714285714285714;
   outline: none;
   padding: 4px 15px;

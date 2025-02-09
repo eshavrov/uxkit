@@ -39,7 +39,7 @@
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
-  min-height: 32px;
+  min-height: var(--space-6);
   padding: 5px 12px;
   position: relative;
   transition: background 0.3s ease;
@@ -66,7 +66,7 @@
   font-size: 0.95rem;
   font-weight: 400;
   margin: 0;
-  min-height: 32px;
+  min-height: var(--space-6);
   padding: 5px 12px;
   position: relative;
   user-select: none;

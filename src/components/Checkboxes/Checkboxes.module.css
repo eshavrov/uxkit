@@ -35,7 +35,6 @@
   font-weight: 600;
   font-size: var(--table-header-font-size);
   line-height: 1.5rem;
-  letter-spacing: 0.01em;
   display: table-cell;
   vertical-align: baseline;
   text-align: center;
@@ -71,7 +70,6 @@
   font-weight: 400;
   font-size: 1rem;
   line-height: 1.43;
-  letter-spacing: 0.01em;
   display: table-cell;
   vertical-align: baseline;
   text-align: center;

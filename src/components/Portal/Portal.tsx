@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { Node } from '@components/Node';
 import { useLayoutEffect } from '@hooks/useLayoutEffect';
 
-type PortalElement = React.ElementRef<typeof Node.div>;
+type PortalElement = React.ComponentRef<typeof Node.div>;
 type PortalBaseProps = React.ComponentPropsWithoutRef<typeof Node.div>;
 
 export interface PortalProps extends PortalBaseProps {

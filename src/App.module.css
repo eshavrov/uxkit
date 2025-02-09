@@ -15,6 +15,10 @@
 }
 
 .wrapper {
+  margin-top: 16px;
+}
+
+.flex {
   display: flex;
   gap: 8px;
 }

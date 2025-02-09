@@ -27,6 +27,20 @@ export const Colors = () => {
       <Color token="--white-a11" />
       <Color token="--white-a12" />
     </div>
+    <div >
+      <Color token="--black-a1" />
+      <Color token="--black-a2" />
+      <Color token="--black-a3" />
+      <Color token="--black-a4" />
+      <Color token="--black-a5" />
+      <Color token="--black-a6" />
+      <Color token="--black-a7" />
+      <Color token="--black-a8" />
+      <Color token="--black-a9" />
+      <Color token="--black-a10" />
+      <Color token="--black-a11" />
+      <Color token="--black-a12" />
+    </div>
     <div>
       <Color token="--gray-1" />
       <Color token="--gray-2" />

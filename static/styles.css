@@ -8,14 +8,56 @@
 
   --font-family: var(--default-font-family-1);
 
-  --cursor-link: pointer;
+  --scaling: 1;
 
+  /* Font Weight */
+
+  --font-weight-light: 300;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  /* Font Size */
+
+  --font-size-1: calc(12px * var(--scaling));
+  --font-size-2: calc(14px * var(--scaling));
+  --font-size-3: calc(16px * var(--scaling));
+  --font-size-4: calc(18px * var(--scaling));
+  --font-size-5: calc(20px * var(--scaling));
+  --font-size-6: calc(24px * var(--scaling));
+  --font-size-7: calc(28px * var(--scaling));
+  --font-size-8: calc(35px * var(--scaling));
+  --font-size-9: calc(60px * var(--scaling));
+
+  /* Cursors */
+
+  --cursor-link: pointer;
   --cursor-combobox: default;
   --cursor-button: default;
   --cursor-checkbox: default;
   --cursor-radio: default;
-
   --cursor-disabled: not-allowed;
+
+  --radius-factor: 1;
+  --radius-full: 0px;
+  --radius-thumb: 9999px;
+
+  --space-1: calc(4px * var(--scaling));
+  --space-2: calc(8px * var(--scaling));
+  --space-3: calc(12px * var(--scaling));
+  --space-4: calc(16px * var(--scaling));
+  --space-5: calc(24px * var(--scaling));
+  --space-6: calc(32px * var(--scaling));
+  --space-7: calc(40px * var(--scaling));
+  --space-8: calc(48px * var(--scaling));
+  --space-9: calc(64px * var(--scaling));
+
+  --radius-1: calc(3px * var(--scaling) * var(--radius-factor));
+  --radius-2: calc(4px * var(--scaling) * var(--radius-factor));
+  --radius-3: calc(6px * var(--scaling) * var(--radius-factor));
+  --radius-4: calc(8px * var(--scaling) * var(--radius-factor));
+  --radius-5: calc(12px * var(--scaling) * var(--radius-factor));
+  --radius-6: calc(16px * var(--scaling) * var(--radius-factor));
 
   /* Color tokens */
 
@@ -33,6 +75,19 @@
   --white-a10: rgba(255, 255, 255, 0.719);
   --white-a11: rgba(255, 255, 255, 0.797);
   --white-a12: rgba(255, 255, 255, 0.875);
+
+  --black-a1: rgba(0, 0, 0, 0.05);
+  --black-a2: rgba(0, 0, 0, 0.1);
+  --black-a3: rgba(0, 0, 0, 0.15);
+  --black-a4: rgba(0, 0, 0, 0.2);
+  --black-a5: rgba(0, 0, 0, 0.3);
+  --black-a6: rgba(0, 0, 0, 0.4);
+  --black-a7: rgba(0, 0, 0, 0.5);
+  --black-a8: rgba(0, 0, 0, 0.6);
+  --black-a9: rgba(0, 0, 0, 0.7);
+  --black-a10: rgba(0, 0, 0, 0.8);
+  --black-a11: rgba(0, 0, 0, 0.9);
+  --black-a12: rgba(0, 0, 0, 0.95);
 
   --gray-1: rgb(252, 252, 252);
   --gray-2: rgb(245, 245, 245);
@@ -115,13 +170,49 @@
 
   --accent-invert: var(--white-1);
 
-  --kbd-border-radius: 0.35em;
-  --kbd-background-color: var(--gray-1);
-  --kbd-color: var(--gray-12);
-  --kbd-box-shadow: inset 0 -0.05em 0.5em var(--gray-a2),
-    inset 0 0.05em var(--white-a12), inset 0 0.25em 0.5em var(--gray-a2),
-    inset 0 -0.05em var(--gray-a6), 0 0 0 0.05em var(--gray-a5),
-    0 0.08em 0.17em var(--gray-a7);
+  --shadow-0: inset 0 0 0 1px var(--border-color-base);
+
+  --shadow-1: inset 0 0 0 1px var(--gray-a5), inset 0 1.5px 2px 0 var(--gray-a2),
+    inset 0 1.5px 2px 0 var(--black-a2);
+  --shadow-2: 0 0 0 1px color-mix(in oklab, var(--gray-a3), var(--gray-3) 25%),
+    0 0 0 0.5px var(--black-a1), 0 1px 1px 0 var(--gray-a2),
+    0 2px 1px -1px var(--black-a1), 0 1px 3px 0 var(--black-a1);
+  --shadow-3: 0 0 0 1px color-mix(in oklab, var(--gray-a3), var(--gray-3) 25%),
+    0 2px 3px -2px var(--gray-a3), 0 3px 12px -4px var(--black-a2),
+    0 4px 16px -8px var(--black-a2);
+  --shadow-4: 0 0 0 1px color-mix(in oklab, var(--gray-a3), var(--gray-3) 25%),
+    0 8px 40px var(--black-a1), 0 12px 32px -16px var(--gray-a3);
+  --shadow-5: 0 0 0 1px color-mix(in oklab, var(--gray-a3), var(--gray-3) 25%),
+    0 12px 60px var(--black-a3), 0 12px 32px -16px var(--gray-a5);
+  --shadow-6: 0 0 0 1px color-mix(in oklab, var(--gray-a3), var(--gray-3) 25%),
+    0 12px 60px var(--black-a3), 0 16px 64px var(--gray-a2),
+    0 16px 36px -20px var(--gray-a7);
+
+  --base-card-surface-box-shadow: 0 0 0 1px
+    color-mix(in oklab, var(--gray-a5), var(--gray-5) 25%);
+  --base-card-surface-hover-box-shadow: 0 0 0 1px
+    color-mix(in oklab, var(--gray-a7), var(--gray-7) 25%);
+  --base-card-surface-active-box-shadow: 0 0 0 1px
+    color-mix(in oklab, var(--gray-a6), var(--gray-6) 25%);
+  --base-card-classic-border-color: color-mix(
+    in oklab,
+    var(--gray-a3),
+    var(--gray-3) 25%
+  );
+  --base-card-classic-hover-border-color: color-mix(
+    in oklab,
+    var(--gray-a4),
+    var(--gray-4) 25%
+  );
+  --base-card-classic-active-border-color: color-mix(
+    in oklab,
+    var(--gray-a3),
+    var(--gray-3) 25%
+  );
+
+  --color-surface: var(--white-1);
+
+  /* App */
 
   --app-background: var(--white-1);
   --app-background-color: var(--white-1);
@@ -170,7 +261,6 @@
   --dashboard-background: transparent;
   --dashboard-color: black;
 
-  /* Components */
   --layout-gap: 8px;
   --layout-fieldset-gap: 6px;
   --line-height: 1.5714285714285714;
@@ -180,6 +270,34 @@
   --primary-hover: var(--accent-a8); /* rgba(42, 130, 239, 0.52); */
   --shadow: 0 6px 16px 0 var(--gray-a3), 0 3px 6px -4px var(--gray-a5),
     0 9px 28px 8px var(--gray-a2);
+
+
+    --focus-a5: var(--accent-a5);
+
+  /* Components */
+
+
+  /* Text Field */
+
+  /* size */
+  --text-field-height: var(--space-6);
+  --text-field-padding: calc(var(--space-2) - var(--text-field-border-width));
+  --text-field-font-size: var(--font-size-2);
+  --text-field-native-icon-size: var(--space-4);
+  --text-field-border-width: 1px;
+  --text-field-border-radius: max(var(--radius-2), var(--radius-full));
+  --text-field-selection-color: var(--focus-a5);
+  --text-field-focus-color: var(--primary-focus);
+
+
+  /* Kbd */
+  --kbd-border-radius: 0.35em;
+  --kbd-background-color: var(--gray-1);
+  --kbd-color: var(--gray-12);
+  --kbd-box-shadow: inset 0 -0.05em 0.5em var(--gray-a2),
+    inset 0 0.05em var(--white-a12), inset 0 0.25em 0.5em var(--gray-a2),
+    inset 0 -0.05em var(--gray-a6), 0 0 0 0.05em var(--gray-a5),
+    0 0.08em 0.17em var(--gray-a7);
   --autocomplete-arrow-color: var(--accent-9);
   --autocomplete-border-radius: 4px;
   --autocomplete-color: var(--gray-a12);
@@ -220,6 +338,7 @@
   --table-value-red: rgb(255, 225, 225);
   --table-value-zero: var(--gray-8);
   --tablist-border-color: var(--color-border-muted);
+
 }
 
 /* Desktop theme colors */
