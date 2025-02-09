@@ -1,0 +1,104 @@
+/* Root */
+
+.text-field {
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+  font-style: normal;
+  text-align: start;
+  background-clip: content-box;
+  height: var(--text-field-height);
+  padding: var(--text-field-border-width);
+  font-family: var(--default-font-family);
+  font-size: var(--text-field-font-size);
+  font-weight: var(--font-weight-regular);
+  border-radius: var(--text-field-border-radius);
+  background-color: var(--color-surface);
+  box-shadow: inset 0 0 0 var(--text-field-border-width) var(--border-color-base);
+}
+
+.text-field:has(.text-field-input:focus-visible) {
+  outline-offset: 2px;
+  outline: 2px solid var(--text-field-focus-color);
+}
+
+/* Input */
+
+.text-field-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  text-align: inherit;
+  border-radius: calc(var(--text-field-border-radius) - var(--text-field-border-width));
+  text-indent: var(--text-field-padding);
+}
+
+.text-field-input::selection {
+  background-color: var(--text-field-selection-color);
+}
+
+/* Slot */
+
+.text-field-slot {
+  box-sizing: border-box;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  cursor: text;
+  color: var(--gray-a11);
+}
+
+.text-field .text-field-slot {
+  gap: var(--space-2);
+  padding-left: var(--space-2);
+  padding-right: var(--space-2);
+}
+
+.text-field-slot[data-side=left] {
+  order: -1;
+  margin-left: calc(var(--text-field-border-width)* -1);
+}
+
+.text-field:has(.text-field-slot[data-side=left]) .text-field-input {
+  text-indent: 0;
+}
+
+    /**********************************************/
+   /*     Customize Chrome’s native controls     */
+  /**********************************************/
+
+/* Chrome’s calendar and time icons */
+.text-field-input::-webkit-calendar-picker-indicator {
+  box-sizing: content-box;
+  width: var(--text-field-native-icon-size);
+  height: var(--text-field-native-icon-size);
+  padding: var(--space-1);
+  margin-left: 0;
+  margin-left: var(--space-1);
+  margin-right: calc(var(--space-1));
+  border-radius: calc(var(--text-field-border-radius));
+}
+
+.text-field-input[type='time']::-webkit-datetime-edit {
+  padding-right: calc(var(--text-field-padding)* 2 + var(--space-1));
+} 
+
+.text-field-input::-webkit-calendar-picker-indicator:hover {
+  background-color: var(--gray-a3);
+}
+
+.text-field-input::-webkit-calendar-picker-indicator:focus-visible {
+  outline-offset: -2px;
+  outline: 2px solid var(--text-field-focus-color);
+}
+
+/* Remove focus ring from date fields and use the accent selection color */
+.text-field-input::-webkit-datetime-edit-day-field:focus,
+.text-field-input::-webkit-datetime-edit-month-field:focus,
+.text-field-input::-webkit-datetime-edit-year-field:focus,
+.text-field-input::-webkit-datetime-edit-hour-field:focus,
+.text-field-input::-webkit-datetime-edit-minute-field:focus,
+.text-field-input::-webkit-datetime-edit-week-field:focus {
+  outline: none;
+  background-color: var(--text-field-selection-color);
+}

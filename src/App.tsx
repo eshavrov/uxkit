@@ -17,12 +17,17 @@ import { Radio } from "@components/Radio/Radio";
 import { RadioGroup } from "@components/Radio/RadioGroup";
 import { Table } from "@components/Table";
 import { Kbd } from "@components/Kbd";
-import { Info } from "./Examples/Autocomplete/Info";
+import { InputMask, TextField, Slot as TextFieldSlot } from '@components/TextField';
 
-import s from "App.module.css";
+import s from "./App.module.css";
 import { VoiceOver } from "./Examples/Autocomplete/VoiceOver";
 import { Colors } from "./Examples/Color/Color";
 import { Example1 } from "./Examples/Form1";
+import { Info } from "./Examples/Autocomplete/Info";
+
+import MagnifyingGlassIcon from './asserts/magnifying-glass.svg';
+import GearIcon from './asserts/gear.svg';
+import MobileIcon from './asserts/mobile.svg';
 
 const _options: any[] = [
   { label: "Apple", value: "apple" },
@@ -170,29 +175,109 @@ const Component = ({ title, children, flex }: { title: string; children?: any; f
   return (
     <div className={cn(s.block, { [s.hide]: !children })}>
       <h2>{title}</h2>
-      <div className={cn({[s.wrapper]: flex })}>
-        {children ?? "in progress"}
+      <div className={cn(s.wrapper, {[s.flex]: flex })}>
+        <>{children ?? "in progress"}</>
       </div>
     </div>
   );
 };
 
 export const App = () => {
-
-  // if (!false) {
-  //   return (
-  //     <div className={s.root}>
-  //       <Example1 />
-  //     </div>
-  //   );
-  // }
-
-
   return (
     <div className={s.root}>
       <h1>Components:</h1>
+
       <Component title="Color Tokens">
         <Colors />
+      </Component>
+
+      <Component title="TextFiled" flex>
+        <TextField placeholder="Search the docs…" />
+
+        <TextField placeholder="Search the docs…">
+          <TextFieldSlot side='left'>
+            <MagnifyingGlassIcon />
+          </TextFieldSlot>
+        </TextField>  
+
+        <TextField placeholder="Search the docs…">
+          <TextFieldSlot side='right'>
+            <MagnifyingGlassIcon />
+          </TextFieldSlot>
+        </TextField>  
+        
+        <TextField placeholder="Search the docs…">
+          <TextFieldSlot side='left'>
+            <GearIcon />
+          </TextFieldSlot>
+          <TextFieldSlot side='right'>
+            <MagnifyingGlassIcon />
+          </TextFieldSlot>
+        </TextField> 
+      </Component>
+
+      <Component title="Input mask" flex>
+        <InputMask mask="+7 (000) 000-0000" placeholder="~" type="tel"/>
+
+        <InputMask mask="(000) 000-0000" type="tel" >
+          <TextFieldSlot side='left'>
+            <MobileIcon />
+          </TextFieldSlot>
+        </InputMask>
+      </Component>
+
+      <Component title="Input mask" flex>
+        <Field id="user-phone-1" label="Phone with Country Code">
+          <InputMask mask="+7 (000) 000-0000" placeholder="~" type="tel"/>
+        </Field>
+
+        <Field id="user-phone" label="Phone">
+          <InputMask mask="(000) 000-0000" type="tel">
+            <TextFieldSlot side='left'>
+              <MobileIcon />
+            </TextFieldSlot>
+          </InputMask>
+        </Field>
+
+      </Component>
+
+      <Component title="Custom Chrome’s Calendar and Time fields" flex>
+        <TextField type="date" />
+        <TextField type="datetime-local" />
+        <TextField type="month" />
+        <TextField type="time" />
+        <TextField type="week" />
+      </Component>
+
+      <Component title="Controls in line" flex>
+        <Button type="primary">Primary</Button>
+        <TextField placeholder="Search the docs…">
+          <TextFieldSlot side='left'>
+            <MagnifyingGlassIcon />
+          </TextFieldSlot>
+        </TextField>
+        <TextField placeholder="Search the docs…" />  
+        <Autocomplete
+          id="auto-complete-test"
+          aria-label="Fruits"
+          autocompleteType="list"
+          value={''}
+          onChange={()=>{}}
+          options={_options}
+          onSelect={() => {}}
+        />
+        <Button type="primary">Primary</Button>
+
+        <Select
+          id="auto-complete-test"
+          aria-label="Fruits"
+          value={''}
+          onChange={()=>{}}
+          options={_options}
+          onSelect={() => {}}
+        />
+        <Button type="primary">Primary</Button>
+        <Button type="dashed">Dashed</Button>
       </Component>
 
       <Component title="Autocomplete">
