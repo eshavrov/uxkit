@@ -2,7 +2,7 @@
   appearance: none;
   background-color: transparent;
   background-image: none;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   border: 1px solid transparent;
   box-sizing: border-box;
   color: var(--base-font-color);
@@ -42,11 +42,6 @@
   box-shadow: none;
 }
 
-.button.dashed:focus-visible {
-  outline-offset: 2px;
-  outline: 2px solid var(--primary-focus);
-}
-
 .button.dashed:not(:disabled):hover {
   color: var(--button-primary-color-hover);
   border-color: var(--button-primary-color-hover);
@@ -72,11 +67,6 @@
   box-shadow: none;
 }
 
-.button.default:focus-visible {
-  outline-offset: 2px;
-  outline: 2px solid var(--primary-focus);
-}
-
 .button.default:not(:disabled):hover {
   color: var(--button-primary-color-hover);
   border-color: var(--button-primary-color-hover);
@@ -97,11 +87,6 @@
 .button.link:disabled {
   cursor: var(--cursor-disabled);
   color: var(--base-font-disabled-color);
-}
-
-.button.link:focus-visible {
-  outline-offset: 2px;
-  outline: 2px solid var(--primary-focus);
 }
 
 .button.link:not(:disabled):hover {
@@ -132,11 +117,6 @@
   border-color: var(--button-primary-color-active);
 }
 
-.button.primary:focus-visible {
-  outline-offset: 2px;
-  outline: 2px solid var(--primary-focus);
-}
-
 .button.primary:not(:disabled):hover {
   color: var(--button-primary-font-color);
   background-color: var(--button-primary-color-hover);
@@ -156,11 +136,6 @@
 .button.text:disabled {
   cursor: var(--cursor-disabled);
   color: var(--base-font-disabled-color);
-}
-
-.button.text:focus-visible {
-  outline-offset: 2px;
-  outline: 2px solid var(--primary-focus);
 }
 
 .button.text:not(:disabled):hover {
@@ -194,7 +169,7 @@
   font-size: 16px;
   height: 40px;
   padding: 6.428571428571429px 15px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 .large.loading {
@@ -208,7 +183,7 @@
   font-size: 14px;
   height: 24px;
   padding: 0 7px;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
 }
 
 .small.loading {
@@ -220,4 +195,11 @@
 
 .block {
   width: 100%;
+}
+
+/* Focus */
+
+.button:focus-visible {
+  outline-offset: var(--outline-offset);
+  outline: var(--outline-focus-border-width) solid var(--primary-focus);
 }

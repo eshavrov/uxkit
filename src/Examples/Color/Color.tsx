@@ -4,7 +4,7 @@ import s from './Color.module.css';
 
 export const Color = ({ token }: any) => {
   return <div className={s.token} style={{
-    backgroundColor: `var(${token})`
+    backgroundColor: `var(${token})`,
   }}>{token}</div>
 }
 

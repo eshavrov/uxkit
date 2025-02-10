@@ -5,7 +5,7 @@
 
   align-content: flex-start;
   align-items: center;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   border-style: solid;
   border-width: 1px;
   box-shadow: 0 0 0 2px var(--gray-a2);

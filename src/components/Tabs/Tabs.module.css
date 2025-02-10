@@ -32,7 +32,7 @@
   top: 2px;
   white-space: nowrap;
   z-index: 2;
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius);
 }
 
 .tab[aria-selected="true"]::after {
@@ -44,12 +44,12 @@
   height: 3px;
   content: "";
   bottom: calc(50% - 23px);
-  border-radius: var(--border-radius-medium);
+  border-radius: var(--border-radius);
   background: var(--primary-focus);
 }
 
 .tab span.focus {
-  border-radius: 6px;
+  border-radius: var(--border-radius);
   display: inline-block;
   margin: 2px;
   outline-offset: 0;
@@ -57,12 +57,12 @@
 }
 
 .tab:hover span.focus {
-  outline: 2px solid var(--primary-hover);
+  outline: var(--outline-focus-border-width) solid var(--primary-hover);
 }
 
 .tab:focus-visible span.focus,
 .tab:active span.focus {
-  outline: 2px solid var(--primary-focus);
+  outline: var(--outline-focus-border-width) solid var(--primary-focus);
 }
 
 .tabpanel {

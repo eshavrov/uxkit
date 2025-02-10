@@ -73,7 +73,7 @@
   z-index: 1050;
   background-color: var(--autocomplete-fill);
   border: 2px var(--autocomplete-fill) solid;
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   color: var(--autocomplete-color);
   font-size: 1rem;
@@ -145,15 +145,15 @@
 .comboInput:hover {
   /* border-inline-end-width: 8px; */
   border-radius: var(--select-border-radius);
-  outline-offset: 2px;
+  outline-offset: var(--outline-offset);
   border-color: var(--primary-focus-group-border);
   box-shadow: var(--primary-focus-shadow);
 }
 
 .comboInput:hover {
-  outline: 2px solid var(--primary-hover);
+  outline: var(--outline-focus-border-width) solid var(--primary-hover);
 }
 
 .comboInput:focus {
-  outline: 2px solid var(--primary-focus);
+  outline: var(--outline-focus-border-width) solid var(--primary-focus);
 }

@@ -15,7 +15,7 @@
   font-variant: initial;
   z-index: 1050;
   background-color: var(--autocomplete-fill);
-  border-radius: 8px;
+  border-radius: var(--radius-4);
   box-shadow: var(--shadow);
   color: var(--autocomplete-color);
   font-family: var(--font-family);
@@ -32,7 +32,7 @@
 }
 
 .li {
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-sizing: border-box;
   cursor: var(--cursor-combobox);
   display: block;
@@ -59,7 +59,7 @@
 }
 
 .status {
-  border-radius: 4px;
+  border-radius: var(--border-radius);
   box-sizing: border-box;
   cursor: var(--cursor-disabled);
   display: block;
@@ -170,13 +170,13 @@ button[disabled] {
 }
 
 .group:hover:not(.disabled) {
-  outline: 2px solid var(--primary-hover);
-  outline-offset: 2px;
+  outline: var(--outline-focus-border-width) solid var(--primary-hover);
+  outline-offset: var(--outline-offset);
 }
 
 .group.focus:not(.disabled) {
-  outline: 2px solid var(--primary-focus);
-  outline-offset: 2px;
+  outline: var(--outline-focus-border-width) solid var(--primary-focus);
+  outline-offset: var(--outline-offset);
 }
 
 .group.focus polygon,

@@ -18,8 +18,8 @@
 }
 
 .text-field:has(.text-field-input:focus-visible) {
-  outline-offset: 2px;
-  outline: 2px solid var(--text-field-focus-color);
+  outline-offset: var(--outline-offset);
+  outline: var(--outline-focus-border-width) solid var(--text-field-focus-color);
 }
 
 /* Input */
@@ -89,7 +89,7 @@
 
 .text-field-input::-webkit-calendar-picker-indicator:focus-visible {
   outline-offset: -2px;
-  outline: 2px solid var(--text-field-focus-color);
+  outline: var(--outline-focus-border-width) solid var(--text-field-focus-color);
 }
 
 /* Remove focus ring from date fields and use the accent selection color */

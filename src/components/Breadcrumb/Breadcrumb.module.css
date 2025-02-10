@@ -28,7 +28,7 @@
 }
 
 .breadcrumb a:focus-visible {
-  outline: 2px solid var(--primary-focus);
+  outline: var(--outline-focus-border-width) solid var(--primary-focus);
   outline-offset: 4px;
   border-radius: 1px;
 }
