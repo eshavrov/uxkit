@@ -29,6 +29,16 @@
   --font-size-8: calc(35px * var(--scaling));
   --font-size-9: calc(60px * var(--scaling));
 
+  --line-height-1: calc(16px* var(--scaling));
+  --line-height-2: calc(20px* var(--scaling));
+  --line-height-3: calc(24px* var(--scaling));
+  --line-height-4: calc(26px* var(--scaling));
+  --line-height-5: calc(28px* var(--scaling));
+  --line-height-6: calc(30px* var(--scaling));
+  --line-height-7: calc(36px* var(--scaling));
+  --line-height-8: calc(40px* var(--scaling));
+  --line-height-9: calc(60px* var(--scaling));
+
   /* Cursors */
 
   --cursor-link: pointer;
@@ -249,9 +259,6 @@
   --base-font-color: var(--gray-12);
   --base-font-disabled-color: var(--gray-a7);
   --base-size-48: 3.7rem;
-  --border-radius-small: 3px;
-  --border-radius-medium: 6px;
-  --border-radius-large: 12px;
   --color-border-muted: var(--accent-3); /* rgb(216, 222, 228); */
 
   /* Layout */
@@ -276,6 +283,9 @@
 
   /* Components */
 
+  --outline-focus-border-width: 2px;
+  --outline-offset: -1px;
+  --border-radius: max(var(--radius-2), var(--radius-full));
 
   /* Text Field */
 
@@ -285,10 +295,15 @@
   --text-field-font-size: var(--font-size-2);
   --text-field-native-icon-size: var(--space-4);
   --text-field-border-width: 1px;
-  --text-field-border-radius: max(var(--radius-2), var(--radius-full));
+  --text-field-border-radius: var(--border-radius);
   --text-field-selection-color: var(--focus-a5);
   --text-field-focus-color: var(--primary-focus);
 
+  /* TextArea Field */
+  --text-area-border-radius: var(--border-radius);
+  --text-area-focus-color: var(--primary-focus);
+  --text-area-min-height: var(--space-9);
+  --text-area-border-width: 1px;
 
   /* Kbd */
   --kbd-border-radius: 0.35em;
@@ -299,7 +314,7 @@
     inset 0 -0.05em var(--gray-a6), 0 0 0 0.05em var(--gray-a5),
     0 0.08em 0.17em var(--gray-a7);
   --autocomplete-arrow-color: var(--accent-9);
-  --autocomplete-border-radius: 4px;
+  --autocomplete-border-radius: var(--border-radius);
   --autocomplete-color: var(--gray-a12);
   --autocomplete-disabled-fill: var(--input-disabled-background-color);
   --autocomplete-fill: var(--gray-1);
@@ -326,7 +341,7 @@
   --radio-color: var(--accent-9);
   --radio-hover-color: var(--accent-8);
   --select-arrow-color: var(--accent-9);
-  --select-border-radius: 4px;
+  --select-border-radius: var(--border-radius);
   --select-option-hover-fill: var(--gray-a4);
   --select-option-selected-fill: var(--accent-9);
   --select-option-selected-font-color: var(--accent-invert);
@@ -338,7 +353,6 @@
   --table-value-red: rgb(255, 225, 225);
   --table-value-zero: var(--gray-8);
   --tablist-border-color: var(--color-border-muted);
-
 }
 
 /* Desktop theme colors */

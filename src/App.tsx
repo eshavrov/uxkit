@@ -28,6 +28,7 @@ import { Info } from "./Examples/Autocomplete/Info";
 import MagnifyingGlassIcon from './asserts/magnifying-glass.svg';
 import GearIcon from './asserts/gear.svg';
 import MobileIcon from './asserts/mobile.svg';
+import { TextArea } from "@components/TextArea";
 
 const _options: any[] = [
   { label: "Apple", value: "apple" },
@@ -171,11 +172,11 @@ const RadioComponent = () => {
   );
 };
 
-const Component = ({ title, children, flex }: { title: string; children?: any; flex?: boolean }) => {
+const Component = ({ title, children, flex, rows }: { title: string; children?: any; flex?: boolean; rows?: boolean }) => {
   return (
     <div className={cn(s.block, { [s.hide]: !children })}>
       <h2>{title}</h2>
-      <div className={cn(s.wrapper, {[s.flex]: flex })}>
+      <div className={cn(s.wrapper, {[s.flex]: flex, [s.rows]: rows })}>
         <>{children ?? "in progress"}</>
       </div>
     </div>
@@ -186,9 +187,16 @@ export const App = () => {
   return (
     <div className={s.root}>
       <h1>Components:</h1>
-
       <Component title="Color Tokens">
         <Colors />
+      </Component>
+
+      <Component title="TextArea" rows>
+        <TextArea placeholder="Reply to comment…" resize="vertical" />
+        <TextArea placeholder="Reply to comment…" resize="vertical" disabled />
+        <TextArea placeholder="Reply to comment…" resize="both" />
+        <TextArea placeholder="Reply to comment…" resize="none" />
+        <TextArea />
       </Component>
 
       <Component title="TextFiled" flex>
@@ -280,7 +288,7 @@ export const App = () => {
         <Button type="dashed">Dashed</Button>
       </Component>
 
-      <Component title="Autocomplete">
+      <Component title="Autocomplete" rows>
         <AutocompleteComponent type="list" />
         <AutocompleteComponent type="both" />
         <AutocompleteComponent type="none" />
@@ -312,7 +320,7 @@ export const App = () => {
         <SelectComponent />
       </Component>
 
-      <Component title="Checkbox">
+      <Component title="Checkbox" rows>
         <CheckboxComponent />
         <CheckboxesComponent />
       </Component>
@@ -321,7 +329,7 @@ export const App = () => {
         <DatePicker value="" />
       </Component>
 
-      <Component title="Fieldset, Field">
+      <Component title="Fieldset, Field" rows>
         <Fieldset legend="Settings">
           <Field id="filed1" label="Visibled">
             <Checkbox
